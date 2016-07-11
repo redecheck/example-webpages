@@ -1,0 +1,1203 @@
+@charset "utf-8";
+
+html { margin: 0px; padding: 0px; }
+
+body { font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; font-size: 80%; line-height: 1.7; text-align: center; color: rgb(70, 71, 59); margin: 0px; padding: 0px 0px 20px; background: rgb(221, 223, 221); }
+
+body * { font-size: 100%; text-align: left; }
+
+p { margin: 0px 0px 1em; }
+
+input, select, textarea { font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; padding: 3px 5px; }
+
+sup { vertical-align: middle; position: relative; top: -0.7em; font-size: 0.8em; }
+
+code { margin: 0px; padding: 0px; font-family: monospace; }
+
+.cheat_sheet_output_column_code code { display: block; }
+
+.hoverbox div a, .hoverbox div a:link, a { border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(243, 134, 48); color: rgb(243, 134, 48); margin-bottom: 0px; text-decoration: none; }
+
+.hoverbox div a:visited, a:visited { color: rgb(250, 105, 0); border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(250, 105, 0); }
+
+.hoverbox div a:hover, a:hover { border-bottom-style: solid; color: rgb(250, 105, 0); border-color: rgb(250, 105, 0); }
+
+#footer a:focus, .hoverbox div a:focus, a:focus { }
+
+.hoverbox div a:active, a:active { }
+
+.imagelink a, .imagelink a:active, .imagelink a:focus, .imagelink a:hover, .imagelink a:link, .imagelink a:visited, a#fancybox-close, a#fancybox-close:active, a#fancybox-close:focus, a#fancybox-close:hover, a#fancybox-close:link, a#fancybox-close:visited, a#fdbk_tab:active, a#fdbk_tab:focus, a#fdbk_tab:hover, a#fdbk_tab:link, a#fdbk_tab:visited, a.fancybox-close, a.fancybox-close:active, a.fancybox-close:focus, a.fancybox-close:hover, a.fancybox-close:link, a.fancybox-close:visited, a.fdbk_tab, a.imagelink, a.imagelink:active, a.imagelink:focus, a.imagelink:hover, a.imagelink:link, a.imagelink:visited { border-bottom-style: none; text-decoration: none; }
+
+#content { padding: 0px; margin: 0px; text-align: center; }
+
+#content #content_inner { text-align: left; margin: 0px auto; padding: 0px; width: 980px; border-top-width: 3px; border-top-style: solid; border-top-color: rgb(134, 175, 173); position: relative; background: white; }
+
+#content #content_inner .content_left { float: left; width: 300px; }
+
+#content #content_inner .content_right { float: left; width: 300px; margin-left: 20px; }
+
+#pagetitle { position: relative; margin: 0px 20px 20px; padding: 20px 20px 0px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(224, 228, 204); }
+
+#subnav { margin: 0px 20px 20px; padding: 12px 20px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(224, 228, 204); border-bottom-color: rgb(224, 228, 204); border-left-color: rgb(224, 228, 204); background: rgb(238, 238, 238); }
+
+#subnav h1 { margin: 0px; padding: 0px; }
+
+#subnav .subdesc { margin: 10px 0px 0px 3px; color: rgb(153, 153, 153); }
+
+#subnav ul { margin: 3px 0px 0px; padding: 0px; list-style: none; line-height: 20px; }
+
+#subnav ul li { float: left; padding: 0px 10px; margin: 5px 0px; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); }
+
+#subnav ul li:first-child { padding-left: 2px; }
+
+#subnav ul li:last-child { border-right-style: none; }
+
+.cs_menu { margin: 0px 0px 20px; padding: 12px 20px; border-radius: 5px; border: 1px solid rgb(224, 228, 204); background: rgb(238, 238, 238); }
+
+.cs_menu ul { margin: 3px 0px 0px; padding: 0px; list-style: none; line-height: 20px; }
+
+.cs_menu ul li { float: left; padding: 0px 10px; margin: 5px 0px; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); }
+
+.cs_menu ul li:first-child { padding-left: 2px; }
+
+.cs_menu ul li:last-child { border-right-style: none; }
+
+#body { float: left; display: inline; margin: 0px; padding: 0px; }
+
+#body #body_inner { width: 640px; }
+
+#body #body_inner #body_shadow { margin: 20px; padding: 0px 0px 50px; width: 620px; }
+
+#body_wide #body_wide_inner { padding: 20px; }
+
+#sidebar { float: right; display: inline; width: 300px; margin: 0px 20px 0px 0px; padding: 20px 0px 0px; color: rgb(153, 153, 153); }
+
+#sidebar.sidebar_preview { color: rgb(51, 39, 23); }
+
+#sidebar_inner { margin: 0px; padding: 0px; }
+
+.sidebar a { color: rgb(187, 187, 187); border-color: rgb(187, 187, 187); }
+
+.sidebar_box .sidebar_box_row.sidebar_login_buttons { padding: 15px 0px 0px; text-align: center; }
+
+.sidebar_login_buttons img { margin: 0px 0px 5px; }
+
+.sidebar_box { padding: 0px 0px 20px; margin: 0px 0px 15px; }
+
+.sidebar_box .sidebar_box_row { clear: both; padding: 5px 10px 0px; }
+
+.sidebar_box .sidebar_box_row a { margin: 0px; padding: 0px; line-height: 1; }
+
+.sidebar_box h4 { margin: 0px; padding: 0px 8px; line-height: 32px; color: rgb(238, 238, 238); border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(134, 175, 173); border-radius: 5px 5px 0px 0px; background: rgb(68, 68, 68); }
+
+.sidebar_box .sidebar_box_first_row { border-bottom-style: none; font-weight: bold; }
+
+.sidebar_box .sidebar_box_last_row { border-bottom-style: none; }
+
+#footer .sidebar_event_date { color: rgb(162, 168, 122); }
+
+#footer .footer_recent_activity_4, #footer .footer_recent_activity_5 { display: none; }
+
+#sidebar h5 { padding: 8px 8px 0px; margin: 0px; }
+
+.sidebar_event_date { color: rgb(153, 153, 153); }
+
+#sidebar ul.sidebar_favourites_list { margin: 0px; padding: 0px 8px; list-style: none; }
+
+.left_block ul.small_content_list, .right_block ul.small_content_list, ul.small_content_list { margin: 0px; padding: 0px; list-style: none; }
+
+.left_block ul.small_content_list li, .right_block ul.small_content_list li, ul.small_content_list li { margin: 0px; list-style: none; padding: 5px 8px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgba(0, 0, 0, 0.0980392); background: none; }
+
+.left_block ul.small_content_list li:last-child, .right_block ul.small_content_list li:last-child, ul.small_content_list li:last-child { border-bottom-style: none; }
+
+#header { margin: 0px; padding: 0px; text-align: center; background: rgb(34, 34, 34); }
+
+#header #header_inner { text-align: left; margin: 0px auto; padding: 0px; width: 980px; line-height: 69px; height: 69px; background: rgb(51, 51, 51); }
+
+#screen #header #header_inner { width: 100%; }
+
+#header nav ul { line-height: 40px; list-style: none; border: none; margin: 19px 0px 0px 10px; padding: 0px; float: right; z-index: 100; }
+
+#header nav > ul > li { float: left; margin: 0px; padding: 0px; position: relative; z-index: 500; height: 50px; line-height: 50px; background: none; }
+
+#header nav > ul > li.on > a, #header nav > ul > li:hover > a, #header nav > ul > li > a:hover { border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(134, 175, 173); color: white; }
+
+#header nav ul a, #header nav ul a:visited { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(68, 68, 68); }
+
+#header nav ul a.last, #header nav ul li:last-child a { border-right-style: none; }
+
+#header nav a, #header nav a:visited { border: 0px; text-decoration: none; display: block; float: left; margin: 0px; padding: 5px 10px; line-height: 21px; color: rgb(134, 175, 173); }
+
+#header #user_info { position: relative; float: right; margin: 0px 0px 0px 20px; padding: 0px 20px; white-space: nowrap; line-height: 40px; height: 69px; border-left-width: 1px; border-left-style: solid; border-left-color: rgba(200, 200, 200, 0.0980392); border-right-width: 1px; border-right-style: solid; border-right-color: rgba(200, 200, 200, 0.0980392); background: rgb(68, 68, 68); }
+
+#header #user_info a, #header #user_info a:visited { border: 0px; text-decoration: none; display: block; float: left; margin: 0px; padding: 5px 10px; line-height: 21px; color: rgb(207, 204, 204); }
+
+#header #user_info #user_dropdown a, #header #user_info #user_dropdown a:visited { border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(243, 134, 48); text-decoration: none; display: inline; float: none; margin: 0px; padding: 0px; line-height: 1.7; color: rgb(243, 134, 48); }
+
+#header #user_info #user_dropdown a:hover { border-bottom-style: solid; }
+
+#header #user_info #user_dropdown ul li { padding-left: 0px; background: none; }
+
+#header #user_info ul li .fa { margin-right: 5px; }
+
+#mobileTrigger { display: none; }
+
+#header a.logolink, #header a.logolink:active, #header a.logolink:focus, #header a.logolink:visited { border: 0px; text-decoration: none; float: left; padding: 5px 10px; display: block; width: 156px; margin: 17px 0px 0px 10px; line-height: 1; background: none; }
+
+#user_dropdown { display: none; position: absolute; top: 100%; right: 0px; width: 400px; padding: 30px; z-index: 1000; box-shadow: rgb(51, 51, 51) 0px 0px 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background: white; }
+
+#user_dropdown .biptych1, #user_dropdown .biptych2 { width: 45%; }
+
+#user_dropdown ul { border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(134, 175, 173); margin-bottom: 20px; padding-bottom: 20px; }
+
+#user_dropdown ul:last-child { border-bottom-style: none; margin-bottom: 0px; padding-bottom: 0px; }
+
+#user_dropdown ul li { line-height: 1.7; margin: 0px; }
+
+img.gravatar { padding: 2px; border: none; background: rgba(0, 0, 0, 0.0980392); }
+
+#header nav ul li { position: relative; }
+
+#header nav ul li ul { display: none; position: absolute; box-shadow: rgb(51, 51, 51) 0px 0px 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; margin: 0px; padding: 20px 20px 15px; width: 300px; top: 100%; left: 0px; background: white; }
+
+#header nav ul li ul li { color: rgb(102, 102, 102); width: auto; display: block; float: none; padding-bottom: 5px; font-size: 1em; line-height: 21px; padding-left: 5px; background: none; }
+
+#header nav ul li ul li.on { color: rgb(51, 51, 51); }
+
+#header nav ul li ul li .fa { margin-right: 5px; }
+
+#header nav ul li ul li a, #header nav ul li ul li a:active, #header nav ul li ul li a:hover, #header nav ul li ul li a:link, #header nav ul li ul li a:visited { display: inline; border-right-width: 0px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(243, 134, 48); color: rgb(243, 134, 48); padding: 0px; float: none; background: none; }
+
+#header nav ul li ul li a:hover { border-bottom-style: solid; }
+
+#header nav ul li ul.fallback { display: none; }
+
+#header nav ul li:hover ul.fallback { display: block; }
+
+.menu_separate { border-top-width: 1px; border-top-style: dotted; border-top-color: rgb(134, 175, 173); padding-top: 14px; margin-top: 10px; }
+
+#footer { position: relative; top: -3px; margin: 0px; padding: 150px 0px 20px; color: rgb(98, 104, 58); background: url("body_tail.png") 50% 0px no-repeat rgb(221, 223, 221); }
+
+#footer #footer_inner { text-align: left; margin: 0px auto; padding: 0px; width: 980px; }
+
+#footer a { color: rgb(98, 104, 58); border-color: rgb(98, 104, 58); }
+
+#footer .sidebar_box h4, #footer h2 { margin: 0px; padding: 0px 8px; line-height: 32px; color: rgb(98, 104, 58); border-radius: 3px; border-bottom-style: none; background: rgb(201, 205, 176); }
+
+#footer .legal { margin-top: 50px; padding: 30px; border-top-width: 1px; border-top-style: solid; font-size: 90%; color: rgb(98, 104, 58); border-color: rgb(98, 104, 58); }
+
+#footer .legal a { color: rgb(98, 104, 58); border-color: rgb(98, 104, 58); }
+
+#footer .legal .legal_left { float: left; width: 60%; }
+
+#footer .legal .legal_right { float: right; width: 30%; text-align: right; }
+
+#intro { font-family: "Noto Serif", serif; text-align: center; padding: 50px 80px; }
+
+#intro h1 { text-align: center; color: inherit; font-size: 3em; }
+
+#intro p { text-align: center; color: inherit; font-size: 1.8em; }
+
+#cs_search { font-family: "Noto Serif", serif; text-align: center; margin: 0px 0px 20px; font-size: 1.5em; }
+
+#cs_search p { text-align: center; color: inherit; margin: 0px; }
+
+.hasRating i { color: rgb(255, 204, 0); }
+
+.ratingStars i { cursor: pointer; }
+
+h1 { display: block; font-size: 2em; font-weight: normal; font-family: Georgia, Times, serif; margin: 0px 0px 0.67em; padding: 0px; line-height: 1; color: rgb(134, 175, 173); }
+
+h1 .subhead { font-size: 0.8em; color: rgb(70, 71, 59); }
+
+h1.outside_body { margin: 0px 0px 1em 30px; }
+
+h1.userprofile, h2 { font-weight: bold; font-size: 1em; display: block; font-family: inherit; margin: 35px 0px 0.625em; color: rgb(238, 238, 238); border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(134, 175, 173); border-radius: 5px 5px 0px 0px; padding: 0px 8px; line-height: 32px; background: rgb(68, 68, 68); }
+
+h1.userprofile, h2.notopmargin { margin-top: 0px; }
+
+h2 a, h2 a:focus, h2 a:hover, h2 a:link, h2 a:visited { color: white; border-color: white; }
+
+.upper { text-transform: uppercase; }
+
+.lower { text-transform: lowercase; }
+
+img { border: 0px; }
+
+#sidebar_form { padding: 0px; margin: 0px; }
+
+#sidebar_form fieldset { border: 0px; padding: 0px; margin: 0px; }
+
+#sidebar_form label { float: left; width: 90px; margin-right: 10px; text-align: right; }
+
+#sidebar_form input.with_width { width: 140px; }
+
+#header #user_info .login_button, #header #user_info .login_button:visited { float: none; display: inline; border: 2px solid rgb(243, 134, 48); color: rgba(255, 255, 255, 0.901961); font-weight: bold; padding: 7px 10px; text-transform: uppercase; letter-spacing: 2px; box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0px inset, rgba(255, 255, 255, 0.4) -1px -1px 0px inset, rgba(0, 0, 0, 0.0980392) 1px 0px 0px; background: rgb(243, 134, 48); }
+
+#header #user_info .login_button:hover { border: 2px solid rgb(224, 228, 204); color: rgb(102, 102, 102); background: rgb(224, 228, 204); }
+
+#login_button { margin-left: 100px; }
+
+.facebook_button { vertical-align: middle; background: url("//media.cheatography.com/images/signin_facebook.png") left top no-repeat; }
+
+.facebook_button:focus, .facebook_button:hover { background: url("//media.cheatography.com/images/signin_facebook.png") 0px -24px no-repeat; }
+
+.facebook_button:active { background: url("//media.cheatography.com/images/signin_facebook.png") 0px -48px no-repeat; }
+
+.twitter_button { vertical-align: middle; background: url("//media.cheatography.com/images/signin_twitter.png") left top no-repeat; }
+
+.twitter_button:focus, .twitter_button:hover { background: url("//media.cheatography.com/images/signin_twitter.png") 0px -24px no-repeat; }
+
+.twitter_button:active { background: url("//media.cheatography.com/images/signin_twitter.png") 0px -48px no-repeat; }
+
+.focus_block { color: white; padding: 6px 12px; background: rgb(103, 136, 212); }
+
+.focus_block p { margin: 0px 0px 4px; }
+
+.focus_block fieldset { margin: 0px; border: 0px; padding: 0px; }
+
+.block_wrapper { width: 100%; margin: 0px; }
+
+.left_block { clear: left; float: left; width: 300px; }
+
+.block_wrapper_wide .left_block { clear: left; float: left; width: 620px; }
+
+.right_block { clear: right; float: right; width: 300px; }
+
+.left_block p, .right_block p { margin: 0px 8px 1.5em; }
+
+.left_block ul, .right_block ul { margin: 0px 0px 1.5em; padding: 0px 0px 0px 15px; }
+
+.left_block li, .right_block li { margin: 0px 8px; }
+
+div.padded { margin: 0px 8px; }
+
+p.padded { margin: 0px 8px 1em; }
+
+p.description { margin-left: 0px; margin-right: 0px; }
+
+.hidden, .off { display: none; }
+
+.clear { clear: both; }
+
+.cl { clear: left; }
+
+.cr { clear: right; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.fn { float: none; }
+
+.center, .tac { text-align: center; }
+
+.right, .tar { text-align: right; }
+
+.left, .tal { text-align: left; }
+
+.greyline { clear: both; margin: 20px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 228, 204); }
+
+table.content_block_preview, table.listing_table { border-collapse: collapse; margin: 0px; width: 100%; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(224, 228, 204); }
+
+table.listing_table { margin: 0px 0px 1em; }
+
+table.content_block_preview tr th, table.listing_table tr th { text-align: center; padding: 3px 8px; background: rgb(224, 228, 204); }
+
+table.content_block_preview tr th, table.listing_table tr.group th { padding: 13px 8px 3px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 228, 204); background: none; }
+
+table.content_block_preview tr td, table.listing_table tr td { vertical-align: top; padding: 3px 8px; }
+
+table.content_block_preview tr.altrow td, table.listing_table tr.altrow td { background: rgb(240, 242, 230); }
+
+.preview_column_inner { position: relative; }
+
+.preview_display_loading { text-align: center; padding-top: 20px; position: absolute; width: inherit; }
+
+.cheat_sheet_row, .left_block p.cheat_sheet_row, .right_block p.cheat_sheet_row { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(240, 242, 230); padding: 9px 15px; margin: 0px; }
+
+.cheat_sheet_row { color: rgb(153, 153, 153); font-size: 90%; padding: 0px; margin: 0px 0px 10px; border-radius: 5px; }
+
+.forum .cheat_sheet_row { font-size: 100%; }
+
+.cheat_sheet_row .fa-fw { font-size: 12px; text-align: center; width: 16px; margin-right: 5px; }
+
+.cheat_sheet_row_title { margin: 0px 0px 10px; padding: 8px 10px 10px 0px; border-radius: 3px 3px 0px 0px; z-index: 1; background: rgb(224, 228, 204); }
+
+.cheat_sheet_row_title_inner { margin: 0px 0px 0px 175px; }
+
+.cheat_sheet_row_thumbnail { box-shadow: rgb(102, 102, 102) 1px 1px 3px; z-index: 2; float: left; margin: 10px; position: relative; line-height: 0.1; }
+
+.cheat_sheet_row a { color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
+
+.altrow a { color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
+
+.cheat_sheet_row strong a { font-size: 110%; color: rgb(243, 134, 48); border-color: rgb(243, 134, 48); }
+
+.altrow { background: rgb(240, 242, 230); }
+
+p.rss_link { padding: 9px 15px; margin: 0px 0px 8px; line-height: 28px; }
+
+.rss_link img { margin: 0px 10px 0px 0px; vertical-align: middle; }
+
+.rss_link a { color: rgb(243, 134, 48); border: none; text-decoration: underline; }
+
+p.add, p.delete, p.info, p.star, p.star_add, p.star_delete, p.switch { padding: 9px 15px 9px 35px; margin: 0px 0px 8px; line-height: 28px; }
+
+p.switch { background: url("//media.cheatography.com/images/icons/arrow_switch.png") 15px 50% no-repeat; }
+
+p.add { background: url("//media.cheatography.com/images/icons/add.png") 15px 50% no-repeat; }
+
+p.delete { background: url("//media.cheatography.com/images/icons/delete.png") 15px 50% no-repeat; }
+
+p.info { margin: 10px 20px; list-style: none; padding: 10px 10px 10px 32px; line-height: 20px; background: url("//media.cheatography.com/images/icons/information.png") 10px 12px no-repeat rgb(238, 238, 238); }
+
+p.previous { padding: 9px 15px 9px 35px; margin: 0px 0px 8px; line-height: 28px; float: left; width: 40%; background: url("//media.cheatography.com/images/icons/arrow_left.png") 15px 50% no-repeat; }
+
+p.next { padding: 9px 20px 9px 15px; margin: 0px 15px 8px 0px; line-height: 28px; float: right; text-align: right; width: 40%; background: url("arrow_right.png") 100% 50% no-repeat; }
+
+.button_add, .button_add:active, .button_add:hover, .button_add:visited { padding: 5px; border-radius: 3px; margin: 0px; display: block; white-space: nowrap; border: 1px solid rgb(221, 221, 221); color: rgb(102, 102, 102); background-color: rgb(238, 238, 238); }
+
+.button_add:hover { color: rgb(51, 51, 51); background-color: rgb(221, 221, 221); }
+
+#subnav ul li.icon, .cs_menu ul li.icon, .download_menu ul li.icon, .icon, .icon, .icon { padding-left: 32px; }
+
+#subnav ul li.icon:first-child, .cs_menu ul li.icon:first-child, .download_menu ul li.icon:first-child { padding-left: 24px; background-position: 2px 50%; }
+
+.badge_row { line-height: 30px; margin: 0px 0px 8px; }
+
+.badge_row strong { float: right; width: 70px; }
+
+.badge_description { display: inline; }
+
+.badge_gold, .sidebar_box .sidebar_box_row a.badge_gold, a.badge_gold { border-radius: 3px; padding: 0px 10px 0px 22px; box-shadow: rgb(153, 153, 153) 0px 0px 2px; float: left; vertical-align: middle; margin: 0px 6px 0px 0px; clear: left; color: rgb(70, 71, 59); line-height: 30px; background: url("//media.cheatography.com/images/icons/bullet_yellow.png") 3px 50% no-repeat rgb(255, 255, 204); }
+
+.badge_silver, .sidebar_box .sidebar_box_row a.badge_silver, a.badge_silver { border-radius: 3px; padding: 0px 10px 0px 22px; box-shadow: rgb(153, 153, 153) 0px 0px 2px; float: left; vertical-align: middle; margin: 0px 6px 0px 0px; clear: left; color: rgb(70, 71, 59); line-height: 30px; background: url("//media.cheatography.com/images/icons/bullet_grey.png") 3px 50% no-repeat rgb(238, 238, 238); }
+
+.badge_bronze, .sidebar_box .sidebar_box_row a.badge_bronze, a.badge_bronze { border-radius: 3px; padding: 0px 10px 0px 22px; box-shadow: rgb(153, 153, 153) 0px 0px 2px; float: left; vertical-align: middle; margin: 0px 6px 0px 0px; clear: left; color: rgb(70, 71, 59); line-height: 30px; background: url("//media.cheatography.com/images/icons/bullet_orange.png") 3px 50% no-repeat rgb(255, 198, 135); }
+
+ul { padding-left: 10px; list-style: none; }
+
+ul li { padding-left: 32px; background: url("bullet_blue.png") 10px 3px no-repeat; }
+
+ul.noicon li { padding-left: 10px; background: none; }
+
+.icon_gold { background: url("//media.cheatography.com/images/icons/bullet_yellow.png") 10px 3px no-repeat; }
+
+.icon_newspaper { background: url("//media.cheatography.com/images/icons/newspaper.png") 10px 3px no-repeat; }
+
+.icon_silver { background: url("//media.cheatography.com/images/icons/bullet_grey.png") 10px 3px no-repeat; }
+
+.icon_bronze { background: url("//media.cheatography.com/images/icons/bullet_orange.png") 10px 3px no-repeat; }
+
+.icon_medal { background: url("//media.cheatography.com/images/icons/award_star_gold_3.png") 10px 3px no-repeat; }
+
+.icon_star_add { background: url("//media.cheatography.com/images/icons/award_star_add.png") 10px 3px no-repeat; }
+
+.icon_star_delete { background: url("//media.cheatography.com/images/icons/award_star_delete.png") 10px 3px no-repeat; }
+
+.icon_tick { background: url("//media.cheatography.com/images/icons/tick.png") 10px 3px no-repeat; }
+
+.icon_cross { background: url("//media.cheatography.com/images/icons/cross.png") 10px 3px no-repeat; }
+
+.icon_pdf { background: url("//media.cheatography.com/images/icons/pdf.png") 10px 3px no-repeat; }
+
+.icon_comments { background: url("//media.cheatography.com/images/icons/comments.png") 10px 3px no-repeat; }
+
+.icon_comment { background: url("//media.cheatography.com/images/icons/comment.png") 10px 3px no-repeat; }
+
+.icon_add { background: url("//media.cheatography.com/images/icons/add.png") 10px 3px no-repeat; }
+
+.icon_calendar { background: url("//media.cheatography.com/images/icons/calendar.png") 10px 3px no-repeat; }
+
+.icon_user { background: url("//media.cheatography.com/images/icons/user.png") 10px 3px no-repeat; }
+
+.icon_key { background: url("//media.cheatography.com/images/icons/key.png") 10px 3px no-repeat; }
+
+.icon_pen { background: url("//media.cheatography.com/images/icons/pencil.png") 10px 3px no-repeat; }
+
+.icon_tex { background: url("//media.cheatography.com/images/icons/tex.png") 10px 3px no-repeat; }
+
+.icon_help { background: url("//media.cheatography.com/images/icons/help.png") 10px 3px no-repeat; }
+
+.icon_heart_delete { background: url("//media.cheatography.com/images/icons/heart_delete.png") 10px 3px no-repeat; }
+
+.icon_heart_add { background: url("//media.cheatography.com/images/icons/heart_add.png") 10px 3px no-repeat; }
+
+.icon_heart { background: url("//media.cheatography.com/images/icons/heart.png") 10px 3px no-repeat; }
+
+.icon_magnifier { background: url("//media.cheatography.com/images/icons/magnifier.png") 10px 3px no-repeat; }
+
+.icon_edit { background: url("//media.cheatography.com/images/icons/page_white_edit.png") 10px 3px no-repeat; }
+
+.icon_copy { background: url("//media.cheatography.com/images/icons/page_white_go.png") 10px 3px no-repeat; }
+
+.icon_stack { background: url("//media.cheatography.com/images/icons/page_white_stack.png") 10px 3px no-repeat; }
+
+.icon_computer { background: url("//media.cheatography.com/images/icons/computer.png") 10px 3px no-repeat; }
+
+.icon_delete { background: url("//media.cheatography.com/images/icons/delete.png") 10px 3px no-repeat; }
+
+.icon_unhappy { background: url("//media.cheatography.com/images/icons/emoticon_unhappy.png") 10px 3px no-repeat; }
+
+.icon_tag { background: url("//media.cheatography.com/images/icons/tag_orange.png") 10px 3px no-repeat; }
+
+.icon_group { background: url("//media.cheatography.com/images/icons/group.png") 10px 3px no-repeat; }
+
+.icon_group_edit { background: url("//media.cheatography.com/images/icons/group_edit.png") 10px 3px no-repeat; }
+
+.icon_world { background: url("//media.cheatography.com/images/icons/world.png") 10px 3px no-repeat; }
+
+.icon_house { background: url("//media.cheatography.com/images/icons/house.png") 10px 3px no-repeat; }
+
+.icon_table { background: url("//media.cheatography.com/images/icons/table.png") 10px 3px no-repeat; }
+
+.icon_table_link { background: url("//media.cheatography.com/images/icons/table_link.png") 10px 3px no-repeat; }
+
+.icon_tableadd { background: url("//media.cheatography.com/images/icons/table_add.png") 10px 3px no-repeat; }
+
+.icon_tableedit { background: url("//media.cheatography.com/images/icons/table_edit.png") 10px 3px no-repeat; }
+
+.icon_tablesave { background: url("//media.cheatography.com/images/icons/table_save.png") 10px 3px no-repeat; }
+
+.icon_star { background: url("//media.cheatography.com/images/icons/star.png") 10px 3px no-repeat; }
+
+.icon_link { background: url("//media.cheatography.com/images/icons/link.png") 10px 3px no-repeat; }
+
+.icon_link_add { background: url("//media.cheatography.com/images/icons/link_add.png") 10px 3px no-repeat; }
+
+.icon_new { background: url("//media.cheatography.com/images/icons/new.png") 10px 3px no-repeat; }
+
+.icon_topics { background: url("//media.cheatography.com/images/icons/cup.png") 10px 3px no-repeat; }
+
+.icon_user_add { background: url("//media.cheatography.com/images/icons/user_add.png") 10px 3px no-repeat; }
+
+.icon_user_delete { background: url("//media.cheatography.com/images/icons/user_delete.png") 10px 3px no-repeat; }
+
+.icon_feed { background: url("feed.png") 10px 3px no-repeat; }
+
+.icon_blog { background: url("//media.cheatography.com/images/icons/newspaper.png") 10px 3px no-repeat; }
+
+.icon_twitter { background: url("//media.cheatography.com/images/icons/twitter.png") 10px 3px no-repeat; }
+
+.icon_facebook { background: url("//media.cheatography.com/images/icons/facebook.png") 10px 3px no-repeat; }
+
+.icon_pinterest { background: url("//media.cheatography.com/images/icons/pinterest.png") 10px 3px no-repeat; }
+
+.icon_door { background: url("//media.cheatography.com/images/icons/door.png") 10px 3px no-repeat; }
+
+.icon_back { background: url("//media.cheatography.com/images/icons/arrow_left.png") 10px 3px no-repeat; }
+
+.icon_forward { background: url("arrow_right.png") 10px 3px no-repeat; }
+
+.icon_up { background: url("//media.cheatography.com/images/icons/arrow_up.png") 10px 3px no-repeat; }
+
+.icon_down { background: url("//media.cheatography.com/images/icons/arrow_down.png") 10px 3px no-repeat; }
+
+.icon_monitor { background: url("//media.cheatography.com/images/icons/monitor.png") 10px 3px no-repeat; }
+
+.icon_mouse { background: url("//media.cheatography.com/images/icons/mouse.png") 10px 3px no-repeat; }
+
+.icon_error { background: url("//media.cheatography.com/images/icons/error.png") 10px 3px no-repeat; }
+
+.icon_error_add { background: url("//media.cheatography.com/images/icons/error_add.png") 10px 3px no-repeat; }
+
+.icon_error_delete { background: url("//media.cheatography.com/images/icons/error_delete.png") 10px 3px no-repeat; }
+
+.icon_blank { background: none; }
+
+.icon_default { background: url("bullet_blue.png") 10px 3px no-repeat; }
+
+.icon_download { background: url("//media.cheatography.com/images/icons/disk.png") 10px 3px no-repeat; }
+
+.icon_email { background: url("//media.cheatography.com/images/icons/email_go.png") 10px 3px no-repeat; }
+
+.icon_email_off { background: url("//media.cheatography.com/images/icons/email_off.png") 10px 3px no-repeat; }
+
+.icon_refresh { background: url("//media.cheatography.com/images/icons/arrow_rotate_clockwise.png") 10px 3px no-repeat; }
+
+.edit_menu ul li { padding-left: 0px; }
+
+ul.error { margin: 10px 10px 0px 210px; list-style: none; color: white; padding: 5px 8px; background: rgba(200, 0, 0, 0.498039); }
+
+ul.error li { padding-left: 22px; background: url("//media.cheatography.com/images/icons/error.png") 0px 3px no-repeat; }
+
+.gsfn_topic_list .time { display: block; color: rgb(153, 153, 153); padding-bottom: 15px; }
+
+.gsfn_praise { background: url("//media.cheatography.com/images/icons/heart.png") 10px 3px no-repeat; }
+
+.gsfn_idea { background: url("//media.cheatography.com/images/icons/lightbulb.png") 10px 3px no-repeat; }
+
+.gsfn_question { background: url("//media.cheatography.com/images/icons/help.png") 10px 3px no-repeat; }
+
+.gsfn_problem { background: url("//media.cheatography.com/images/icons/error.png") 10px 3px no-repeat; }
+
+#download_popup_inner { padding: 20px; }
+
+form.pageForm fieldset { border: 1px solid rgb(224, 228, 204); padding: 30px; margin: 10px 20px; background: rgb(240, 242, 230); }
+
+form.pageForm legend { border: 1px solid rgb(224, 228, 204); border-radius: 5px; padding: 8px 16px; font-weight: bold; background: rgb(224, 228, 204); }
+
+.formrow { padding: 10px 0px; border-radius: 5px; }
+
+.formrow:hover { background: rgb(224, 228, 204); }
+
+.buttonrow { padding: 10px 0px; }
+
+.buttonrow button { margin: 0px 0px 0px 210px; }
+
+.formrow label { float: left; width: 30%; }
+
+.formrow input, .formrow select { float: left; width: 55%; }
+
+.formrow textarea { float: none; width: 85%; margin-left: 36px; margin-top: 5px; }
+
+.formrow .autowidth { width: auto; }
+
+.formrow .radiooptions { width: 55%; float: left; }
+
+.formrow .optiontext { width: 55%; float: right; }
+
+.formrow .radiooptions input { width: auto; margin: 5px 0px 0px; }
+
+p.textrow { margin: 10px 0px 0px 210px; }
+
+p.forminfo { width: 16px; height: 19px; position: relative; line-height: 19px; margin: 0px 10px; padding: 0px; float: left; background: url("//media.cheatography.com/images/icons/information.png") 0px 3px no-repeat; }
+
+p.forminfo.valid { background: url("//media.cheatography.com/images/icons/tick.png") 0px 3px no-repeat; }
+
+p.forminfo.invalid { background: url("//media.cheatography.com/images/icons/cross.png") 0px 3px no-repeat; }
+
+p.forminfo span { display: none; position: absolute; top: 0px; left: 22px; width: 200px; color: rgb(70, 71, 59); border-radius: 5px; border: 1px solid white; padding: 10px 16px; line-height: 1.25; box-shadow: rgb(51, 51, 51) 0px 0px 5px; background: rgb(224, 228, 204); }
+
+#comment_form_url { display: none; }
+
+.content_input_row input { width: 90%; margin: 0px 0px 5px; }
+
+table.download_table { line-height: 25px; border-collapse: collapse; margin: 0px 5% 1em; width: 90%; border-top-width: 1px; border-top-style: solid; border-top-color: white; border-left-width: 1px; border-left-style: solid; border-left-color: white; }
+
+table.download_table tr th { width: 40%; font-weight: normal; text-align: left; padding: 3px 8px; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white; color: rgb(86, 66, 39); background: rgb(224, 228, 204); }
+
+table.download_table tr td { width: 20%; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white; }
+
+table.download_table tr td a { display: block; padding: 3px 8px; border: none; color: rgb(107, 172, 191); text-align: center; background: rgb(240, 242, 230); }
+
+table.download_table tr td a:hover { background: rgb(224, 228, 204); }
+
+table.contents_table { line-height: 25px; border-collapse: collapse; margin: 0px 0px 1em; width: 100%; }
+
+table.contents_table tr th { font-weight: normal; padding: 3px 8px; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white; color: rgb(86, 66, 39); background: rgb(224, 228, 204); }
+
+table.contents_table tr th.contents_column { width: 1%; text-align: center; }
+
+table.contents_table tr th.contents_title { width: 490%; }
+
+table.contents_table tr th.contents_author { width: 30%; }
+
+table.contents_table tr th.contents_created { width: 10%; }
+
+table.contents_table tr th.contents_updated { width: 10%; }
+
+table.contents_table tr td { width: 20%; border-right-width: 1px; border-right-style: solid; border-right-color: white; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: white; padding: 3px 8px; background: rgb(240, 242, 230); }
+
+table.contents_table tr td.contents_created { white-space: nowrap; }
+
+table.contents_table tr td.contents_updated { white-space: nowrap; }
+
+#message_wrapper { margin: 0px 50px; text-align: left; }
+
+#message_wrapper_inner { margin: 0px; padding: 20px 0px 0px; }
+
+#message_wrapper ul { margin: 0px 0px 20px; padding: 20px; list-style: none; }
+
+#message_wrapper ul li { margin: 0px; list-style: none; padding: 0px 0px 0px 22px; line-height: 20px; color: white; background-position: 0px 3px; background-repeat: no-repeat; }
+
+#message_wrapper ul li a { color: white; border-color: white; }
+
+#message_wrapper ul.messages_success { background: rgb(86, 144, 84); }
+
+#message_wrapper ul.messages_success li { background-image: url("//media.cheatography.com/images/icons/tick.png"); }
+
+#message_wrapper ul.messages_information { background: rgb(61, 109, 171); }
+
+#message_wrapper ul.messages_information li { background-image: url("//media.cheatography.com/images/icons/information.png"); }
+
+#message_wrapper ul.messages_error { background: rgba(200, 0, 0, 0.498039); }
+
+#message_wrapper ul.messages_error li { background-image: url("//media.cheatography.com/images/icons/error.png"); }
+
+table.cheat_sheet_output { margin: 0px; }
+
+.cheat_sheet_output_wrapper { padding: 0px; margin-bottom: 12px; border-radius: 3px; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(224, 228, 204); }
+
+.cheat_sheet_output_block { background: white; }
+
+.cheat_sheet_output_wrapper .cheat_sheet_note { margin: 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(224, 228, 204); }
+
+.cheat_sheet_output_block table { break-inside: avoid; border-collapse: collapse; margin: 0px; padding: 0px; width: 100%; }
+
+.cheat_sheet_output_wrapper .cheat_sheet_output_title { text-align: left; padding: 6px 8px; margin: 0px; color: white; }
+
+.cheat_sheet_output_block tr td { }
+
+.cheat_sheet_output_onecol .cheat_sheet_output_cell_right, .cheat_sheet_output_qanda .cheat_sheet_output_cell_right { display: none; }
+
+.cheat_sheet_output_onecol .answer_row, .cheat_sheet_output_twocol .answer_row, .cheat_sheet_output_twocolleft .answer_row, .cheat_sheet_output_twocoltinyleft .answer_row { display: none; }
+
+.api { clear: both; margin: 22px; background: rgb(238, 238, 238); }
+
+.api_inner { font-size: 100%; padding: 3px 8px; }
+
+.api_inner { padding: 3px 8px; }
+
+.content_input_row { line-height: 50px; display: block; vertical-align: middle; }
+
+#collectioncol, ul.sortable { list-style-type: none; padding: 4px 4px 0px; margin: 0px; min-height: 10px; background-color: rgb(240, 242, 230); }
+
+#collectioncol li { position: relative; border: 1px solid rgb(224, 228, 204); margin: 0px 0px 4px; background-color: rgb(240, 242, 230); }
+
+ul.sortable li { position: relative; cursor: move; border: 1px solid rgb(224, 228, 204); margin: 0px 0px 4px; background-color: rgb(240, 242, 230); }
+
+#firstcol .addItem, #secondcol .addItem, #thirdcol .addItem { display: none; }
+
+#collectioncol .removeItem { display: none; }
+
+.adsense { text-align: center; padding: 14px 0px 9px; background: rgb(221, 223, 221); }
+
+.adsense_inner { text-align: center; margin: 0px auto; padding: 0px; width: 980px; }
+
+#body_wide .adsense { border: none; background: none; }
+
+.hover_wrap { position: relative; white-space: nowrap; font-style: normal; }
+
+.hoverbox { padding: 0px; position: absolute; top: -8px; left: -10px; font-size: 13px; font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif; line-height: 24px; border-radius: 5px; color: rgb(51, 51, 51); box-shadow: rgb(51, 51, 51) 0px 0px 5px; z-index: 500; border-right-style: none; background: rgb(249, 249, 249); }
+
+.hoverbox ul { border-right-style: none; }
+
+.hoverbox div { display: block; border-right-style: none; float: none; margin: 0px; padding: 0px; }
+
+.hoverboxloading { box-shadow: rgb(51, 51, 51) 0px 0px 5px; padding: 10px; line-height: 1; background: white; }
+
+.commentblock { margin-bottom: 20px; color: rgb(70, 71, 59); border-radius: 3px; padding: 0px; background: rgb(249, 249, 249); }
+
+.commentblock p { margin: 0px 0px 1em; }
+
+.commentreply { margin: 2em 15px 0px 50px; padding: 0px; }
+
+.commentthread { padding: 0px; }
+
+.commentreply p { margin: 0px; }
+
+.commentreply p.commenter { margin: 0px 0px 1em; }
+
+.commentreply #comment_form { margin: 0px; padding: 0px 0px 2em; }
+
+.commenter { color: rgb(70, 71, 59); border-radius: 3px; padding: 5px; line-height: 32px; vertical-align: middle; background: rgb(238, 238, 238); }
+
+.commenter img { vertical-align: middle; }
+
+p.commentext { margin: 0px; padding: 0px 1em 1em; }
+
+.input_tiny { width: 50px; }
+
+.input_small { width: 100px; }
+
+.input_medium { width: 150px; }
+
+.input_large { width: 200px; }
+
+.input_xlarge { width: 250px; }
+
+.input_xxlarge { width: 300px; }
+
+.input_full { width: 100%; }
+
+.input_full_wrap { display: block; padding-right: 8px; }
+
+input[type="search"]::-webkit-search-decoration { display: none; }
+
+a.button:invalid, button:invalid, input:invalid, select:invalid, textarea:invalid { box-shadow: none; }
+
+a.button:focus, button:focus, input:focus, select:focus, textarea:focus { box-shadow: rgb(0, 102, 255) 0px 0px 5px 0px; z-index: 1; }
+
+input[type="checkbox"]:active, input[type="checkbox"]:focus, input[type="file"]:active, input[type="file"]:focus, input[type="radio"]:active, input[type="radio"]:focus { box-shadow: none; }
+
+a.button, button, input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: none; border-radius: 4px; -webkit-background-clip: padding; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(187, 187, 187) rgb(153, 153, 153); cursor: pointer; color: rgb(51, 51, 51); display: inline-block; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 12px; line-height: 1.3; font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif; outline: 0px; overflow: visible; margin: 0px; padding: 3px 10px; text-shadow: white 0px 1px 1px; text-decoration: none; vertical-align: top; width: auto; background: linear-gradient(white, rgb(221, 221, 221)) repeat-x rgb(221, 221, 221); }
+
+a.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover { text-decoration: none; background-image: linear-gradient(white, rgb(238, 238, 238) 1px, rgb(204, 204, 204)); }
+
+a.button:active, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active { box-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 2px 0px inset; border-color: rgb(153, 153, 153) rgb(187, 187, 187) rgb(221, 221, 221); background-image: linear-gradient(rgb(221, 221, 221), rgb(238, 238, 238)); }
+
+a.button { }
+
+button { }
+
+input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea { box-sizing: border-box; -webkit-background-clip: padding; border-radius: 0px; -webkit-appearance: none; border-width: 1px; border-style: solid; border-color: rgb(132, 132, 132) rgb(193, 193, 193) rgb(225, 225, 225); color: black; outline: 0px; margin: 0px; padding: 2px 3px; text-align: left; font-size: 13px; font-family: Arial, "Liberation Sans", FreeSans, sans-serif; height: 1.8em; vertical-align: top; background-color: white; background-clip: padding-box; }
+
+input[type="date"][disabled], input[type="datetime"][disabled], input[type="datetime-local"][disabled], input[type="email"][disabled], input[type="month"][disabled], input[type="number"][disabled], input[type="password"][disabled], input[type="search"][disabled], input[type="tel"][disabled], input[type="text"][disabled], input[type="time"][disabled], input[type="url"][disabled], input[type="week"][disabled], select[disabled], textarea[disabled] { background-color: rgb(238, 238, 238); }
+
+a.button_disabled, button[disabled], input[disabled], select[disabled], select[disabled] optgroup, select[disabled] option, textarea[disabled] { box-shadow: none; -webkit-user-select: none; color: rgb(136, 136, 136); cursor: default; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: rgb(136, 136, 136); }
+
+input.placeholder_text, textarea.placeholder_text { color: rgb(136, 136, 136); }
+
+select[multiple], select[size], textarea { height: auto; }
+
+select[size="0"], select[size="1"] { height: 1.8em; }
+
+@media  { 
+  select[multiple], select[multiple][size], select[size] { padding-right: 3px; }
+  select, select[size="0"], select[size="1"] { padding-right: 20px; background-image: url("//media.cheatography.com/images/select_arrow.gif"); background-position: right center; background-repeat: no-repeat; }
+  ::-webkit-validation-bubble-message { box-shadow: none; border: 0px; color: white; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 13px; line-height: 17px; font-family: "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif; overflow: hidden; padding: 15px 15px 17px; text-shadow: black 0px 0px 1px; min-height: 16px; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(102, 102, 102)), to(black)); }
+  ::-webkit-validation-bubble-arrow, ::-webkit-validation-bubble-top-inner-arrow, ::-webkit-validation-bubble-top-outer-arrow { box-shadow: none; border-color: rgb(102, 102, 102); background: rgb(102, 102, 102); }
+}
+
+textarea { min-height: 40px; overflow: auto; resize: vertical; width: 100%; }
+
+optgroup { color: black; font-style: normal; font-weight: normal; font-family: Arial, "Liberation Sans", FreeSans, sans-serif; }
+
+* html a.button, * html button, .ie6_button { border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(187, 187, 187) rgb(153, 153, 153); cursor: pointer; color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 12px; line-height: 1.2; font-family: Arial, sans-serif; padding: 2px 10px 0px; text-decoration: none; overflow: visible; vertical-align: top; width: auto; background: url("//media.cheatography.com/images/button.png?1298351022") repeat-x rgb(221, 221, 221); }
+
+* html a.button { position: relative; top: 3px; padding-bottom: 2px; }
+
+* html button { padding-top: 1px; padding-bottom: 1px; }
+
+* html select, * html textarea, .ie6_input { border-width: 1px; border-style: solid; border-color: rgb(132, 132, 132) rgb(193, 193, 193) rgb(225, 225, 225); color: black; padding: 2px 3px 1px; font-size: 13px; font-family: Arial, sans-serif; vertical-align: top; background: white; }
+
+* html select { margin-top: 1px; }
+
+.ie6_button_disabled, .ie6_input_disabled, .placeholder_text { color: rgb(136, 136, 136); }
+
+.ie6_input_disabled { background: rgb(238, 238, 238); }
+
+.pagination { text-align: center; margin: 20px 0px 0px; padding: 0px 8px; line-height: 32px; color: rgb(70, 71, 59); border-radius: 3px; background: rgb(240, 242, 230); }
+
+.pagination a.next, .pagination a.previous { margin: 0px 20px; }
+
+.edit_menu_show { position: relative; z-index: 40; float: right; margin: 0px 0px 0px 25px; width: 26px; top: 0px; height: 29px; border-top-right-radius: 2px; border-top-left-radius: 2px; }
+
+.edit_menu_show_on { box-shadow: rgb(51, 51, 51) 0px 0px 3px; }
+
+.edit_menu_button { position: absolute; width: 26px; height: 34px; border-top-right-radius: 2px; border-top-left-radius: 2px; top: 0px; right: 0px; background: url("//media.cheatography.com/images/icons/menu.png") 5px 8px no-repeat; }
+
+.edit_menu_button_on { z-index: 50; background: url("//media.cheatography.com/images/icons/menu_on.png") 5px 8px no-repeat white; }
+
+.edit_menu { display: none; padding: 5px 8px 0px; position: absolute; width: 150px; right: 0px; top: 100%; box-shadow: rgb(51, 51, 51) 0px 0px 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; background: white; }
+
+.edit_menu ul li { padding-bottom: 5px; }
+
+.cheat_sheet_output_wrapper .edit_menu a { color: rgb(250, 105, 0); border-color: rgb(250, 105, 0); }
+
+div.tagsinput { border: 1px solid rgb(204, 204, 204); padding: 5px 5px 0px; overflow-y: auto; float: left; width: 188px; background: white; }
+
+div.tagsinput span.tag { border: 1px solid rgb(204, 204, 204); border-radius: 2px; display: block; float: left; padding: 5px; text-decoration: none; color: rgb(102, 102, 102); margin-right: 5px; margin-bottom: 5px; font-family: helvetica; font-size: 13px; background: rgb(240, 240, 238); }
+
+div.tagsinput span.tag a { font-weight: bold; color: rgb(102, 102, 102); text-decoration: none; font-size: 11px; border: none; }
+
+div.tagsinput input { width: 80px; margin: 0px 5px 5px 0px; font-family: helvetica; font-size: 13px; border: 1px solid transparent; padding: 5px; color: black; outline: 0px; background: transparent; }
+
+div.tagsinput div { display: block; float: left; }
+
+.tags_clear { clear: both; width: 100%; height: 0px; }
+
+#cheat_sheet_tags, #cheat_sheet_tags:focus { box-shadow: none; }
+
+.biptych1, .biptychl { float: left; width: 48.48%; }
+
+.biptych2, .biptychr { float: right; width: 48.48%; }
+
+.triptych1, .tryptic1 { float: left; width: 32%; margin-right: 2%; }
+
+.triptych2, .tryptic2 { float: left; width: 32%; }
+
+.triptych3, .tryptic3 { float: right; width: 32%; }
+
+.triptychdbll, .trypticdbll { float: left; width: 66%; }
+
+.triptychdblr, .trypticdblr { float: right; width: 66%; }
+
+.topic-box-wrapper { float: left; width: 50%; }
+
+.topic-box { box-shadow: rgb(102, 102, 102) 1px 1px 3px; border-radius: 3px; height: 120px; position: relative; }
+
+.topic-title { position: absolute; bottom: 0px; border-radius: 0px 0px 3px 3px; color: rgb(221, 221, 221); opacity: 0.7; margin: 0px; padding: 5px 8px; background: black; }
+
+.topic-home { margin: 0px 5px 10px 0px; background: url("//media.cheatography.com/images/topic-home.jpg") 50% 50% no-repeat white; }
+
+.topic-office { margin: 0px 0px 10px 5px; background: url("//media.cheatography.com/images/topic-office.jpg") 50% 50% no-repeat white; }
+
+.topic-travel { margin: 0px 5px 0px 0px; background: url("//media.cheatography.com/images/topic-travel.jpg") 50% 50% no-repeat white; }
+
+.topic-hobbies { margin: 0px 0px 0px 5px; background: url("//media.cheatography.com/images/topic-hobbies.jpg") 50% 50% no-repeat white; }
+
+.topic-link:hover .topic-box { box-shadow: rgb(51, 51, 51) 1px 1px 3px; }
+
+ul.faq { padding: 0px; }
+
+.faq li { border-radius: 5px; padding: 10px 16px 10px 32px; background: url("//media.cheatography.com/images/icons/help.png") 10px 12px no-repeat; }
+
+.faq li.active { background-color: rgb(224, 228, 204); }
+
+.faq h3 { cursor: pointer; padding: 0px; margin: 0px; }
+
+.faq p { display: none; margin: 10px 0px 0px; }
+
+.page_count { position: absolute; bottom: 5px; left: 5px; padding: 0px 6px; line-height: 22px; color: rgb(51, 51, 51); border: 1px solid rgba(100, 100, 100, 0.298039); background: rgb(238, 238, 238); }
+
+.page_count span { display: none; }
+
+.page_count:hover span { display: inline; }
+
+.blog_intro { color: rgb(51, 51, 51); font-size: 1.3em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); padding-bottom: 20px; margin-bottom: 20px; }
+
+.blog_title { font-size: 1.4em; margin: 50px 0px 0px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(238, 238, 238); padding: 50px 0px 0px; }
+
+.blog_title:first-child { margin-top: 0px; border-top-style: none; padding: 0px; }
+
+.showMobile { display: none; }
+
+.mobileSkin #mobile_wrap_outer { background: rgb(51, 51, 51); }
+
+.mobileSkin #mobile_wrap_inner { position: relative; width: 100%; background: white; }
+
+.mobileSkin #content #content_inner, .mobileSkin #footer #footer_inner, .mobileSkin #header #header_inner, .mobileSkin .adsense .adsense_inner { width: auto; }
+
+.mobileSkin #header #header_inner { height: auto; }
+
+.mobileSkin #footer #footer_inner { padding: 20px; }
+
+.mobileSkin .hideMobile, .mobileSkin table.cheat_sheet_output td.cheat_sheet_output_column_spacer { display: none; }
+
+.mobileSkin .showMobile { display: block; }
+
+.mobileSkin h1 { display: block; clear: both; }
+
+.mobileSkin h1 .subhead { display: block; clear: both; padding: 5px 0px 0px; }
+
+.mobileSkin #intro h1 { font-size: 2em; }
+
+.mobileSkin #intro p { font-size: 1.5em; }
+
+.mobileSkin #subnav ul { border: none; background: none; }
+
+.mobileSkin #subnav ul { margin: 20px 0px; }
+
+.mobileSkin #subnav ul li { float: none; border-right-width: 0px; padding-left: 24px; background-position: 2px 50%; }
+
+.mobileSkin #download_popup_inner { padding: 0px; }
+
+.mobileSkin table.cheat_sheet_output > tbody > tr > td, .mobileSkin table.cheat_sheet_output > tr > td { width: 100%; float: left; clear: left; }
+
+.mobileSkin #header a.logolink, .mobileSkin #header a.logolink:active, .mobileSkin #header a.logolink:focus, .mobileSkin #header a.logolink:visited { float: none; padding: 22px 10px 20px; width: auto; margin: 0px 0px 0px 10px; }
+
+.mobileSkin #header #user_info { position: static; float: none; clear: both; padding: 0px; margin-left: 0px; }
+
+.mobileSkin .biptych1 { float: none; width: 100%; }
+
+.mobileSkin .biptych2 { float: none; width: 100%; }
+
+.mobileSkin .triptych1, .mobileSkin .tryptic1 { float: none; width: 100%; margin-right: 0px; }
+
+.mobileSkin .triptych2, .mobileSkin .tryptic2 { float: none; width: 100%; }
+
+.mobileSkin .mobileSkin.tryptic3, .mobileSkin .triptych3 { float: none; width: 100%; }
+
+.mobileSkin .triptychdbll, .mobileSkin .trypticdbll { float: none; width: 100%; }
+
+.mobileSkin .triptychdblr, .mobileSkin .trypticdblr { float: none; width: 100%; }
+
+.mobileSkin #mobileTrigger { z-index: 1000; display: block; position: absolute; top: 16px; right: 16px; border: 1px solid rgb(85, 85, 85); width: 32px; height: 32px; text-indent: -9999px; background: url("mobile_trigger.png") 50% 50% no-repeat rgb(26, 26, 26); }
+
+.mobileSkin h1 { line-height: 1.3; }
+
+.mobileSkin #header nav { position: absolute; top: 0px; left: -100%; width: 100%; background: rgb(51, 51, 51); }
+
+.mobileSkin #intro { padding: 40px 20px 20px; }
+
+.mobileSkin #header nav h3 { color: rgb(204, 204, 204); padding: 8px 10px; margin: 30px 0px 6px; line-height: 1; }
+
+.mobileSkin #header nav ul { float: none; margin: 0px; }
+
+.mobileSkin #header nav ul li { float: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(68, 68, 68); }
+
+.mobileSkin #header nav ul li a { float: none; padding: 8px 10px; }
+
+.mobileSkin #header nav ul li a:hover, .mobileSkin #header nav ul li.on a, .mobileSkin #header nav ul li.on a:hover, .mobileSkin #header nav ul li.on:hover { border: none; }
+
+.mobileSkin #user_dropdown { display: none; }
+
+.mobileSkin #footer .legal .legal_left, .mobileSkin #footer .legal .legal_right { float: none; width: auto; text-align: left; }
+
+.mobileSkin #footer .legal .legal_right { margin-top: 30px; }
+
+.mobileSkin .formrow label { float: none; text-align: left; }
+
+.mobileSkin .formrow input, .mobileSkin .formrow select, .mobileSkin .formrow textarea { float: none; display: block; width: 90%; }
+
+.mobileSkin .formrow p.forminfo { display: none; }
+
+.mobileSkin .buttonrow button { margin: 0px; }
+
+.mobileSkin p.textrow { margin: 10px 0px 0px; }
+
+.chosen-container { position: relative; display: inline-block; vertical-align: middle; float: left; font-size: 13px; zoom: 1; -webkit-user-select: none; }
+
+.chosen-container .chosen-drop { position: absolute; top: 100%; left: -9999px; z-index: 1010; box-sizing: border-box; width: 100%; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); box-shadow: rgba(0, 0, 0, 0.14902) 0px 4px 5px; background: white; }
+
+.chosen-container.chosen-with-drop .chosen-drop { left: 0px; }
+
+.chosen-container a { cursor: pointer; }
+
+.chosen-container-single .chosen-single { position: relative; display: block; overflow: hidden; padding: 0px 0px 0px 8px; height: 23px; border: 1px solid rgb(170, 170, 170); border-radius: 5px; box-shadow: white 0px 0px 3px inset, rgba(0, 0, 0, 0.0980392) 0px 1px 1px; color: rgb(68, 68, 68); text-decoration: none; white-space: nowrap; line-height: 24px; background: -webkit-linear-gradient(top, white 20%, rgb(246, 246, 246) 50%, rgb(238, 238, 238) 52%, rgb(244, 244, 244) 100%) padding-box; }
+
+.chosen-container-single .chosen-default { color: rgb(153, 153, 153); }
+
+.chosen-container-single .chosen-single span { display: block; overflow: hidden; margin-right: 26px; text-overflow: ellipsis; white-space: nowrap; }
+
+.chosen-container-single .chosen-single-with-deselect span { margin-right: 38px; }
+
+.chosen-container-single .chosen-single abbr { position: absolute; top: 6px; right: 26px; display: block; width: 12px; height: 12px; font-size: 1px; background: url("//media.cheatography.com/images/chosen-sprite.png") -42px 1px no-repeat; }
+
+.chosen-container-single .chosen-single abbr:hover { background-position: -42px -10px; }
+
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover { background-position: -42px -10px; }
+
+.chosen-container-single .chosen-single div { position: absolute; top: 0px; right: 0px; display: block; width: 18px; height: 100%; }
+
+.chosen-container-single .chosen-single div b { display: block; width: 100%; height: 100%; background: url("//media.cheatography.com/images/chosen-sprite.png") 0px 2px no-repeat; }
+
+.chosen-container-single .chosen-search { position: relative; z-index: 1010; margin: 0px; padding: 3px 4px; white-space: nowrap; }
+
+.chosen-container-single .chosen-search input[type="text"] { box-sizing: border-box; margin: 1px 0px; padding: 4px 20px 4px 5px; width: 100%; height: auto; outline: 0px; border: 1px solid rgb(170, 170, 170); font-size: 1em; font-family: sans-serif; line-height: normal; border-radius: 0px; background: url("//media.cheatography.com/images/chosen-sprite.png") 100% -20px no-repeat; }
+
+.chosen-container-single .chosen-drop { margin-top: -1px; border-radius: 0px 0px 4px 4px; background-clip: padding-box; }
+
+.chosen-container-single.chosen-container-single-nosearch .chosen-search { position: absolute; left: -9999px; }
+
+.chosen-container .chosen-results { position: relative; overflow-x: hidden; overflow-y: auto; margin: 0px 4px 4px 0px; padding: 0px 0px 0px 4px; max-height: 240px; }
+
+.chosen-container .chosen-results li { display: none; margin: 0px; padding: 5px 6px; list-style: none; line-height: 15px; background: none; }
+
+.chosen-container .chosen-results li.active-result { display: list-item; cursor: pointer; }
+
+.chosen-container .chosen-results li.disabled-result { display: list-item; color: rgb(204, 204, 204); cursor: default; }
+
+.chosen-container .chosen-results li.highlighted { color: white; background-image: linear-gradient(rgb(56, 117, 215) 20%, rgb(42, 98, 188) 90%); background-color: rgb(56, 117, 215); }
+
+.chosen-container .chosen-results li.no-results { display: list-item; background: rgb(244, 244, 244); }
+
+.chosen-container .chosen-results li.group-result { display: list-item; font-weight: bold; cursor: default; }
+
+.chosen-container .chosen-results li.group-option { padding-left: 15px; }
+
+.chosen-container .chosen-results li em { font-style: normal; text-decoration: underline; }
+
+.chosen-container-multi .chosen-choices { position: relative; overflow: hidden; box-sizing: border-box; margin: 0px; padding: 0px; width: 100%; border: 1px solid rgb(170, 170, 170); cursor: text; height: auto !important; background-image: linear-gradient(rgb(238, 238, 238) 1%, white 15%); background-color: white; }
+
+.chosen-container-multi .chosen-choices li { float: left; list-style: none; background: none; }
+
+.chosen-container-multi .chosen-choices li.search-field { margin: 0px; padding: 0px; white-space: nowrap; }
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] { margin: 1px 0px; padding: 5px; outline: 0px; box-shadow: none; color: rgb(102, 102, 102); font-size: 100%; font-family: sans-serif; line-height: normal; border-radius: 0px; border: 0px !important; background: transparent !important; }
+
+.chosen-container-multi .chosen-choices li.search-field .default { color: rgb(153, 153, 153); }
+
+.chosen-container-multi .chosen-choices li.search-choice { position: relative; margin: 3px 0px 3px 5px; padding: 3px 20px 3px 5px; border: 1px solid rgb(170, 170, 170); border-radius: 3px; box-shadow: white 0px 0px 2px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 0px; color: rgb(51, 51, 51); line-height: 13px; cursor: default; background-image: linear-gradient(rgb(244, 244, 244) 20%, rgb(240, 240, 240) 50%, rgb(232, 232, 232) 52%, rgb(238, 238, 238) 100%); background-color: rgb(228, 228, 228); background-clip: padding-box; }
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close { position: absolute; top: 4px; right: 3px; display: block; width: 12px; height: 12px; font-size: 1px; border: none; background: url("//media.cheatography.com/images/chosen-sprite.png") -42px 1px no-repeat; }
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover { background-position: -42px -10px; }
+
+.chosen-container-multi .chosen-choices li.search-choice-disabled { padding-right: 5px; border: 1px solid rgb(204, 204, 204); color: rgb(102, 102, 102); background-image: -webkit-linear-gradient(top, rgb(244, 244, 244) 20%, rgb(240, 240, 240) 50%, rgb(232, 232, 232) 52%, rgb(238, 238, 238) 100%); background-color: rgb(228, 228, 228); }
+
+.chosen-container-multi .chosen-choices li.search-choice-focus { background: rgb(212, 212, 212); }
+
+.chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close { background-position: -42px -10px; }
+
+.chosen-container-multi .chosen-results { margin: 0px; padding: 0px; }
+
+.chosen-container-multi .chosen-drop .result-selected { display: list-item; color: rgb(204, 204, 204); cursor: default; }
+
+.chosen-container-active .chosen-single { border: 1px solid rgb(88, 151, 251); box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 5px; }
+
+.chosen-container-active.chosen-with-drop .chosen-single { border: 1px solid rgb(170, 170, 170); border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; box-shadow: white 0px 1px 0px inset; background-image: linear-gradient(rgb(238, 238, 238) 20%, white 80%); }
+
+.chosen-container-active.chosen-with-drop .chosen-single div { border-left-style: none; background: transparent; }
+
+.chosen-container-active.chosen-with-drop .chosen-single div b { background-position: -18px 2px; }
+
+.chosen-container-active .chosen-choices { border: 1px solid rgb(88, 151, 251); box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 5px; }
+
+.chosen-container-active .chosen-choices li.search-field input[type="text"] { color: rgb(17, 17, 17) !important; }
+
+.chosen-disabled { cursor: default; opacity: 0.5 !important; }
+
+.chosen-disabled .chosen-single { cursor: default; }
+
+.chosen-disabled .chosen-choices .search-choice .search-choice-close { cursor: default; }
+
+.chosen-rtl { text-align: right; }
+
+.chosen-rtl .chosen-single { overflow: visible; padding: 0px 8px 0px 0px; }
+
+.chosen-rtl .chosen-single span { margin-right: 0px; margin-left: 26px; direction: rtl; }
+
+.chosen-rtl .chosen-single-with-deselect span { margin-left: 38px; }
+
+.chosen-rtl .chosen-single div { right: auto; left: 3px; }
+
+.chosen-rtl .chosen-single abbr { right: auto; left: 26px; }
+
+.chosen-rtl .chosen-choices li { float: right; }
+
+.chosen-rtl .chosen-choices li.search-field input[type="text"] { direction: rtl; }
+
+.chosen-rtl .chosen-choices li.search-choice { margin: 3px 5px 3px 0px; padding: 3px 5px 3px 19px; }
+
+.chosen-rtl .chosen-choices li.search-choice .search-choice-close { right: auto; left: 4px; }
+
+.chosen-rtl .chosen-drop, .chosen-rtl.chosen-container-single-nosearch .chosen-search { left: 9999px; }
+
+.chosen-rtl.chosen-container-single .chosen-results { margin: 0px 0px 4px 4px; padding: 0px 4px 0px 0px; }
+
+.chosen-rtl .chosen-results li.group-option { padding-right: 15px; padding-left: 0px; }
+
+.chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div { border-right-style: none; }
+
+.chosen-rtl .chosen-search input[type="text"] { padding: 4px 5px 4px 20px; direction: rtl; background: url("//media.cheatography.com/images/chosen-sprite.png") -30px -20px no-repeat; }
+
+.chosen-rtl.chosen-container-single .chosen-single div b { background-position: 6px 2px; }
+
+.chosen-rtl.chosen-container-single.chosen-with-drop .chosen-single div b { background-position: -12px 2px; }
+
+.fancybox-image, .fancybox-inner, .fancybox-nav, .fancybox-nav span, .fancybox-outer, .fancybox-skin, .fancybox-tmp, .fancybox-wrap, .fancybox-wrap iframe, .fancybox-wrap object { padding: 0px; margin: 0px; border: 0px; outline: none; vertical-align: top; }
+
+.fancybox-wrap { position: absolute; top: 0px; left: 0px; z-index: 8020; }
+
+.fancybox-skin { position: relative; color: rgb(68, 68, 68); text-shadow: none; border-radius: 4px; background: rgb(249, 249, 249); }
+
+.fancybox-opened { z-index: 8030; }
+
+.fancybox-opened .fancybox-skin { box-shadow: rgba(0, 0, 0, 0.498039) 0px 10px 25px; }
+
+.fancybox-inner, .fancybox-outer { position: relative; }
+
+.fancybox-inner { overflow: hidden; }
+
+.fancybox-type-iframe .fancybox-inner { }
+
+.fancybox-error { color: rgb(68, 68, 68); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: 20px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0px; padding: 15px; white-space: nowrap; }
+
+.fancybox-iframe, .fancybox-image { display: block; width: 100%; height: 100%; }
+
+.fancybox-image { max-width: 100%; max-height: 100%; }
+
+#fancybox-loading, .fancybox-close, .fancybox-next span, .fancybox-prev span { background-image: url("//media.cheatography.com/scripts/fancybox/fancybox_sprite.png"); }
+
+#fancybox-loading { position: fixed; top: 50%; left: 50%; margin-top: -22px; margin-left: -22px; opacity: 0.8; cursor: pointer; z-index: 8060; background-position: 0px -108px; }
+
+#fancybox-loading div { width: 44px; height: 44px; background: url("//media.cheatography.com/scripts/fancybox/fancybox_loading.gif") center center no-repeat; }
+
+.fancybox-close { position: absolute; top: -18px; right: -18px; width: 36px; height: 36px; cursor: pointer; z-index: 8040; }
+
+.fancybox-nav { position: absolute; top: 0px; width: 40%; height: 100%; cursor: pointer; text-decoration: none; -webkit-tap-highlight-color: transparent; z-index: 8040; }
+
+.fancybox-prev { left: 0px; }
+
+.fancybox-next { right: 0px; }
+
+.fancybox-nav span { position: absolute; top: 50%; width: 36px; height: 34px; margin-top: -18px; cursor: pointer; z-index: 8040; visibility: hidden; }
+
+.fancybox-prev span { left: 10px; background-position: 0px -36px; }
+
+.fancybox-next span { right: 10px; background-position: 0px -72px; }
+
+.fancybox-nav:hover span { visibility: visible; }
+
+.fancybox-tmp { position: absolute; top: -99999px; left: -99999px; visibility: hidden; max-width: 99999px; max-height: 99999px; overflow: visible !important; }
+
+.fancybox-lock { width: auto; overflow: hidden !important; }
+
+.fancybox-lock body { overflow: hidden !important; }
+
+.fancybox-lock-test { overflow-y: hidden !important; }
+
+.fancybox-overlay { position: absolute; top: 0px; left: 0px; overflow: hidden; display: none; z-index: 8010; background: url("//media.cheatography.com/scripts/fancybox/fancybox_overlay.png"); }
+
+.fancybox-overlay-fixed { position: fixed; bottom: 0px; right: 0px; }
+
+.fancybox-lock .fancybox-overlay { overflow-x: auto; overflow-y: scroll; }
+
+.fancybox-title { visibility: hidden; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 13px; line-height: 20px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; text-shadow: none; z-index: 8050; }
+
+.fancybox-opened .fancybox-title { visibility: visible; }
+
+.fancybox-title-float-wrap { position: absolute; bottom: 0px; right: 50%; margin-bottom: -35px; z-index: 8050; text-align: center; }
+
+.fancybox-title-float-wrap .child { display: inline-block; margin-right: -100%; padding: 2px 20px; border-radius: 15px; text-shadow: rgb(34, 34, 34) 0px 1px 2px; color: white; font-weight: bold; line-height: 24px; white-space: nowrap; background: rgba(0, 0, 0, 0.8); }
+
+.fancybox-title-outside-wrap { position: relative; margin-top: 10px; color: white; }
+
+.fancybox-title-inside-wrap { padding-top: 10px; }
+
+.fancybox-title-over-wrap { position: absolute; bottom: 0px; left: 0px; color: white; padding: 10px; background: rgba(0, 0, 0, 0.8); }
+
+@media  { 
+  #fancybox-loading, .fancybox-close, .fancybox-next span, .fancybox-prev span { background-image: url("fancybox_sprite@2x.png"); background-size: 44px 152px; }
+  #fancybox-loading div { background-image: url("fancybox_loading@2x.gif"); background-size: 24px 24px; }
+}
+
+.forum .forum_list { padding: 20px; border: none; margin: 0px; border-radius: 0px; }
+
+.forum .big { font-size: 1.7em; }
+
+.forum .forum_official { display: block; margin: 5px 20% 0px; padding: 3px 5px; border-radius: 5px; color: white; text-align: center; background: rgba(0, 0, 0, 0.2); }
+
+.sticky { position: fixed; right: 0px; top: 0px; z-index: 100; border-top-width: 0px; width: 100%; }
+
+#cs_menu { position: relative; top: 0px; margin: 0px auto; padding: 0px; width: 980px; z-index: 100; border-top-width: 3px; border-top-style: solid; border-top-color: rgb(134, 175, 173); border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; }
+
+#cs_menu .download_menu { float: right; position: absolute; top: 0px; right: 0px; margin: 0px; padding: 4px 12px 7px; color: white; border-bottom-left-radius: 13px; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; border-left-width: 2px; border-left-style: solid; border-left-color: white; }
+
+#cs_menu .download_menu ul { margin: 0px; padding: 0px 0px 10px; list-style: none; line-height: 20px; }
+
+#cs_menu .download_menu ul li { float: left; padding: 0px 10px; margin: 5px 0px; border-right-width: 1px; border-right-style: solid; border-right-color: rgba(50, 50, 50, 0.2); }
+
+#cs_menu .download_menu ul li a, #cs_menu .download_menu ul li a:active, #cs_menu .download_menu ul li a:hover, #cs_menu .download_menu ul li a:link, #cs_menu .download_menu ul li a:visited { color: white; border-color: white; }
+
+#cs_menu .download_menu ul li:first-child { padding-left: 2px; }
+
+#cs_menu .download_menu ul li:last-child { padding-right: 0px; border-right-width: 0px; }
+
+.list_row { padding: 20px 20px 20px 92px; overflow: hidden; border-radius: 5px; margin-bottom: 12px; position: relative; background: rgb(238, 238, 238); }
+
+.list_row .list_icon { position: absolute; top: 20px; left: 20px; text-align: center; width: 48px; }
+
+.list_row .list_title { padding-bottom: 12px; margin-bottom: 12px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); font-size: 110%; }
+
+.filterBar { border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-style: solid solid none; border-top-color: rgb(221, 221, 221); border-right-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); margin: 0px 0px 12px; padding: 0px; background: url("//media.cheatography.com/images/ddd.png") left bottom repeat-x rgb(243, 243, 243); }
+
+.filterBar ul { margin: 0px; padding: 0px; list-style: none; }
+
+.filterBar ul li { padding: 0px; list-style: none; float: left; background: none; }
+
+.filterBar ul li div { padding: 5px 8px; display: block; border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); z-index: 200; }
+
+.filterBar ul li:hover { position: relative; }
+
+.filterBar ul li:hover div { position: relative; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(243, 243, 243); }
+
+.filterBar ul li ul { max-height: 200px; overflow: auto; display: none; position: absolute; border: 1px solid rgb(221, 221, 221); margin: -1px 0px 0px; padding: 20px 20px 15px; width: 300px; z-index: 900; top: 100%; left: -1px; background: rgb(243, 243, 243); }
+
+.filterBar ul li ul li { color: rgb(102, 102, 102); width: auto; display: block; float: none; padding-bottom: 5px; font-size: 1em; line-height: 21px; padding-left: 5px; background: none; }
+
+.filterBar ul li ul li label { vertical-align: middle; line-height: 21px; display: block; margin: 0px; padding: 3px 6px 2px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); }
+
+.filterBar ul li ul li:last-child label { border-bottom-style: none; }
+
+.footer_popup { display: none; z-index: 2000; position: fixed; bottom: 0px; width: 940px; box-shadow: rgb(102, 102, 102) 0px 0px 3px; background-color: white; }
+
+.footer_popup .footer_popup_inner { font-size: 1.3em; text-align: center; padding: 20px; }
+
+.footer_popup .footer_popup_close { position: absolute; top: 0px; right: 8px; color: rgb(51, 51, 51); }

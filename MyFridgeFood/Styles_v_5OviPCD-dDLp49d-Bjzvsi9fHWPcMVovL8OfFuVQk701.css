@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, dd, dl, dt, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, section, aside { margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; text-align: left; }
+
+:focus { outline: none; }
+
+body { margin: 0px; padding: 40px 0px 0px; font-family: Verdana, Arial, sans-serif; font-size: 14px; color: rgb(102, 102, 102); background: rgb(255, 255, 255); }
+
+.top-bg { width: 100%; position: absolute; height: 300px; z-index: -1; top: 0px; left: 0px; background: linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%); }
+
+form { position: relative; }
+
+p { margin: 0px 0px 10px; font-size: 14px; font-family: Verdana, Arial, sans-serif; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+sup { display: inline-block; margin-top: -5px; }
+
+sub { display: inline-block; margin-bottom: -3px; }
+
+q::before, q::after, blockquote::before, blockquote::after { content: ""; }
+
+h1, h2, h3, h4, h5, h6 { }
+
+h1 { font-size: 29px; color: rgb(102, 102, 102); font-family: Verdana, Arial, sans-serif; text-transform: uppercase; font-style: italic; font-weight: bold; }
+
+h2 { font-size: 24px; color: rgb(102, 102, 102); font-family: Verdana, Arial, sans-serif; text-transform: uppercase; font-style: italic; font-weight: bold; }
+
+h3 { font-size: 18px; color: rgb(102, 102, 102); font-family: Verdana, Arial, sans-serif; font-style: italic; font-weight: bold; }
+
+h4 { font-size: 16px; color: rgb(102, 102, 102); font-family: Verdana, Arial, sans-serif; padding-bottom: 5px; font-weight: bold; }
+
+h5 { font-size: 13px; color: rgb(102, 102, 102); font-weight: bold; font-family: Verdana, Arial, sans-serif; padding: 5px 0px; margin-bottom: 5px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); }
+
+h6 { }
+
+a { color: rgb(100, 160, 80); text-decoration: none; }
+
+a:link { color: rgb(100, 160, 80); }
+
+a:visited { color: rgb(100, 160, 80); }
+
+a:active { color: rgb(100, 160, 80); }
+
+a:hover { text-decoration: underline; }
+
+.button, .button:active, .button:link, .button:visited { text-transform: capitalize; border-radius: 5px; display: inline-block; color: rgb(255, 255, 255); padding: 5px 10px; text-decoration: none; text-shadow: rgb(102, 102, 102) 1px 1px 2px; font-weight: bold; cursor: pointer; font-size: 14px; font-family: Verdana, Arial, sans-serif; outline: none; border: none; box-shadow: rgba(255, 255, 255, 0.2) 5px 5px 5px 0px inset, rgba(0, 0, 0, 0.2) -5px -5px 5px 0px inset; background: rgb(100, 160, 80); }
+
+.button:hover { }
+
+.button:active { box-shadow: rgba(255, 255, 255, 0.2) -5px -5px 5px 0px inset, rgba(0, 0, 0, 0.2) 5px 5px 5px 0px inset; position: relative; top: 1px; outline: none; }
+
+.button:disabled { opacity: 0.3; }
+
+select { height: 30px; }
+
+textarea { border: 1px solid rgb(153, 153, 153); display: block; width: 100%; min-height: 100px; background: rgb(255, 255, 255); }
+
+.IngredientPushResults { padding: 0px 0px 20px; display: none; margin: 0px 0px 20px; }
+
+.IngredientPushResults h3 { margin: 10px 15px 20px 0px; }
+
+.IngredientPushResultsIngredients { padding-top: 10px; overflow: visible !important; }
+
+.IngredientPushResultsIngredients .tile { display: none; }
+
+.question { text-align: center; padding: 10px 0px; border: 1px solid rgb(204, 204, 204); margin: 30px; box-shadow: rgb(204, 204, 204) 0px 0px 15px 0px; }
+
+.question h2 { margin-bottom: 30px; text-align: center; }
+
+.question .button { margin: 10px; padding: 10px 30px; }
+
+.check-box { width: 196px; display: table; border-spacing: 5px; cursor: pointer; border: 1px solid rgb(204, 204, 204); height: 40px; position: relative; top: 0px; left: 0px; transition: all 0.2s; box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px; font-size: 12px; background: rgb(239, 239, 239); }
+
+.check-box:hover { top: -5px; left: -5px; height: 50px; width: 210px; box-shadow: rgb(204, 204, 204) 0px 0px 3px 0px; background: rgb(238, 238, 238); }
+
+input[type="checkbox"] + span + .ingredient-checkbox-label { display: table-cell; cursor: pointer; position: relative; vertical-align: middle; }
+
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + .ingredient-checkbox { display: table-cell; width: 30px; border: 1px solid rgb(204, 204, 204); border-radius: 3px; transition: all 0.2s; cursor: pointer; position: relative; background: rgb(255, 255, 255); }
+
+.check-box:hover input[type="checkbox"] + .ingredient-checkbox { width: 40px; }
+
+input[type="checkbox"]:checked + .ingredient-checkbox { border: 1px solid rgb(0, 153, 51); border-radius: 50%; color: rgb(51, 51, 51); box-shadow: rgb(255, 255, 255) 5px 5px 5px -5px inset, rgb(102, 102, 102) -5px -5px 5px -5px inset; text-align: center; background: rgb(100, 160, 80); }
+
+input[type="checkbox"]:checked + .ingredient-checkbox::before { display: inline-block; position: absolute; top: 50%; left: 50%; content: "✓"; font-size: 20px; margin: -14px 0px 0px -6px; }
+
+.check-box:hover input[type="checkbox"]:checked + .ingredient-checkbox::before { }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+.page { position: relative; width: 1190px; min-width: 320px; margin: 0px auto; transition: width 0.5s; overflow: hidden; }
+
+.home { transition: all 0.5s; float: left; }
+
+.home a { text-decoration: none; display: inline-block; padding: 0px 10px; background: none !important; }
+
+.home span.title { display: block; font-size: 18px; font-weight: bold; color: rgb(100, 160, 80); line-height: 26px; text-shadow: rgb(255, 255, 255) 0px 0px 2px; }
+
+.home .phrase { display: block; font-size: 9px; color: rgb(255, 255, 255); line-height: 12px; position: relative; top: 0px; }
+
+.header-social { position: absolute; top: 60px; z-index: 3; right: 0px; }
+
+.header-search { position: relative; top: 5px; z-index: 3; float: right; }
+
+.header-search-button { display: none; }
+
+input[type="text"], input[type="password"], input[type="search"] { position: relative; margin-right: 3px; padding: 5px 10px; border: 1px solid rgb(153, 153, 153); background: rgb(255, 255, 255); }
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="search"]:focus { outline: none !important; }
+
+.search { position: relative; }
+
+#searchBox { height: 80px; font-size: 60px; border-radius: 0px; border: none; outline: none; box-shadow: none; width: 100%; display: none; background: rgb(255, 255, 255); }
+
+#searchBoxButton { height: 60px; width: 60px; display: inline-block; cursor: pointer; position: absolute; top: 10px; right: 10px; background: url("search-icon-big.png") center center no-repeat; }
+
+#searchAutoComplete { position: relative; left: 0px; }
+
+#searchAutoComplete > div { overflow: hidden; display: none; background: rgb(255, 255, 255); }
+
+.header-top-navigation-button { display: none; }
+
+.header-top-navigation { position: fixed; top: 0px; height: 40px; left: 0px; width: 100%; z-index: 999999; background: rgba(255, 153, 0, 0.901961); }
+
+.header-top-navigation .page > ul { display: inline-block; width: auto; height: 40px; padding: 0px; margin: 0px 5px; position: relative; }
+
+.header-top-navigation .page > ul > li { display: inline-block; position: relative; padding: 0px; float: left; }
+
+.header-top-navigation .page > ul > li:hover { }
+
+.header-top-navigation .page > ul > li > a { display: inline-block; padding: 0px 10px; line-height: 40px; text-align: center; color: rgb(255, 255, 255); font-weight: bold; height: 40px; text-shadow: rgb(102, 102, 102) 1px 1px 2px; }
+
+.header-top-navigation .page > ul > li > a:hover { color: rgb(255, 255, 255); text-decoration: none; }
+
+.header-top-navigation .page > ul > li > a:active { position: relative; }
+
+.header-top-navigation .page > ul > li.current > a { box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px !important; background: rgb(100, 160, 80) !important; }
+
+.header-top-navigation .page > ul > li:hover > a { color: rgb(255, 255, 255); text-decoration: none; background: rgb(100, 160, 80); }
+
+.header-top-navigation .page > ul > li > ul { position: absolute; top: 30px; left: 0px; display: block; max-height: 0px; padding: 0px; margin: 0px; overflow: hidden; min-width: 100%; }
+
+.header-top-navigation .page > ul > li:hover > ul { max-height: 1000px; }
+
+.header-top-navigation .page > ul > li > ul > li { text-align: left; padding: 0px; margin: 0px; display: block; overflow: hidden; }
+
+.header-top-navigation .page > ul > li:hover > ul > li { }
+
+.header-top-navigation .page > ul > li > ul > li > a { display: block; line-height: 30px; text-align: left; padding: 0px 15px; margin: 0px; overflow: hidden; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(255, 255, 255); text-transform: uppercase; font-weight: bold; color: rgb(255, 255, 255); white-space: nowrap; background: rgb(100, 160, 80); }
+
+.header-top-navigation .page > ul > li:hover > ul > li > a { overflow: visible; }
+
+.header-top-navigation .page > ul > li:hover > ul > li > a:hover { color: rgb(255, 255, 255); text-decoration: none; background: rgb(0, 174, 219); }
+
+.mobile .header-top-navigation .page > ul > li > ul { max-height: 0px; padding: 0px; margin: 0px; }
+
+.mobile .header-top-navigation .page > ul > li > ul > li { display: block; height: 30px; padding: 0px; margin: 0px; overflow: hidden; }
+
+.mobile .header-top-navigation .page > ul > li > ul > li > a { max-height: 0px !important; }
+
+.header-top-navigation .page > ul.utility { position: absolute; top: 0px; display: inline-block; right: 0px; height: 40px; }
+
+.header-top-navigation .page > ul.utility a { padding: 0px; margin: 0px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(255, 255, 255); }
+
+.utility .divider { width: 1px; height: 40px; background: rgb(204, 204, 204); }
+
+.search-icon { height: 40px; padding-left: 40px; padding-right: 5px; display: inline-block; cursor: pointer; background: url("search-icon-white.png") 5px 5px no-repeat; }
+
+#Username span { line-height: 40px; display: inline-block; }
+
+.gear { height: 40px; width: 40px; display: inline-block; cursor: pointer; background: url("/css/Default/Images/Icons/gear-icon-white.png") center center no-repeat; }
+
+.header-top-navigation .page > ul.utility a.Login, .header-top-navigation .page > ul.utility a.Logout { text-align: center; display: inline-block; cursor: pointer; padding: 0px 5px 0px 35px; position: relative; font-size: 10px; }
+
+.header-top-navigation .page > ul.utility a.Login::before, .header-top-navigation .page > ul.utility a.Logout::before { content: ""; width: 30px; height: 30px; position: absolute; left: 5px; top: 5px; background: url("facebook-icon.png") center center no-repeat; }
+
+.content { position: relative; padding: 0px; color: rgb(102, 102, 102); background: url("fridge-bg.png") fixed rgb(255, 255, 255); }
+
+.content > .page { display: table; }
+
+.content-main { display: table-cell; width: 835px; padding: 10px; transition: all 0.5s; position: relative; vertical-align: top; background: rgb(255, 255, 255); }
+
+.content-rail { display: table-cell; width: 300px; padding: 10px; }
+
+.left-wrapper { width: 630px; float: left; }
+
+.right-wrapper { width: 215px; float: right; }
+
+.paging { text-align: center; margin-top: 20px; padding-top: 20px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); }
+
+.paging a { display: inline-block; height: 30px; padding: 0px 10px; min-width: 10px; line-height: 30px; border: 1px solid rgb(204, 204, 204); cursor: pointer; margin: 0px 5px; }
+
+.paging a.current { color: rgb(255, 255, 255); background: rgb(153, 153, 153); }
+
+.push-down > img { display: none; }
+
+.content-left > div { margin-bottom: 20px; }
+
+.recipe-img { width: 100%; }
+
+.RecipeSubmitForm { margin-bottom: 20px; }
+
+.tile-wrapper { position: relative; width: 630px; z-index: 3; float: left; overflow: visible !important; }
+
+.tile { width: 198px; height: auto; margin-right: 10px; margin-bottom: 10px; top: 0px; left: 0px; transition: all 0.5s; transform-style: preserve-3d; z-index: 3; display: none; float: left; }
+
+.tile.recipe:hover { z-index: 999; height: auto !important; }
+
+.tile-title { width: 620px; overflow: hidden; border-width: 1px; border-style: solid; border-color: transparent transparent rgba(255, 153, 0, 0.901961); height: 40px; margin-bottom: 10px; }
+
+.tile-title > h3 { padding: 10px 5px; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(204, 204, 204); margin-bottom: 10px; }
+
+.tile.wide { width: 445px; }
+
+.tile.tall { height: 445px; }
+
+.mobile .tile { width: 200px; float: none; height: auto; position: absolute; transition: all 0s; }
+
+.bannerAdContainer { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); position: relative; background: rgb(239, 239, 239); }
+
+.bannerAds { overflow: hidden; height: 0px; }
+
+.bannerAdContainer .bannerAds { height: auto; padding: 10px 0px; overflow: visible; }
+
+.adWrapper { overflow: hidden; height: 0px; }
+
+.content-rail .adWrapper { width: 300px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); margin-bottom: 10px; padding-top: 10px; overflow: visible; height: auto; }
+
+.content-rail .adWrapper:first-child { border-top-style: none; padding-top: 0px; }
+
+.CheckedIngredients { position: relative; float: right; width: 203px; border: 1px solid rgb(204, 204, 204); margin-bottom: 15px; z-index: 10; background: rgb(239, 239, 239); }
+
+.CheckedIngredients.detailed { margin-top: 52px; }
+
+.CheckedIngredients > h3 { margin: 5px; }
+
+.CheckedIngredients .Empty { margin: 5px 0px; text-align: left; }
+
+.CheckedIngredients .Empty p { margin: 0px 5px; }
+
+.CheckedIngredients .Clear { margin-top: 10px; padding: 0px 5px; display: none; }
+
+.CheckedIngredients .List { margin-top: 10px; padding: 0px 5px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); display: none; overflow: auto; max-height: 260px; }
+
+.CheckedIngredients .remove { border-top-width: 1px; border-top-style: dotted; border-top-color: rgb(204, 204, 204); line-height: 40px; cursor: pointer; }
+
+.CheckedIngredients .Clear .remove { border-top-style: none; font-weight: bold; }
+
+.CheckedIngredients .remove:hover { color: red; }
+
+.CheckedIngredients .List .remove:first-child { border-top-style: none; }
+
+.CheckedIngredients .close { display: inline-block; height: 13px; width: 13px; border: 1px solid rgb(102, 102, 102); margin-right: 5px; position: relative; }
+
+.CheckedIngredients .close::before { content: "x"; position: absolute; font-size: 14px; top: -14px; left: 2px; }
+
+.CheckedIngredients .Submit { margin-top: 20px; text-align: center; display: none; padding: 5px; }
+
+.Filter { position: relative; width: 193px; float: right; border: 1px solid rgb(204, 204, 204); padding: 5px; background: rgb(239, 239, 239); }
+
+.FilterItem { cursor: pointer; }
+
+.FilterItem .check { position: relative; display: inline-block; height: 14px; width: 14px; border: 1px solid rgb(204, 204, 204); border-radius: 3px; box-shadow: none; transition: all 0.5s; background: rgb(254, 254, 254); }
+
+.FilterItem input[type="checkbox"]:checked + .check { border: 1px solid rgb(0, 153, 51); border-radius: 50%; color: rgb(51, 51, 51); box-shadow: rgb(255, 255, 255) 3px 3px 3px -3px inset, rgb(102, 102, 102) -3px -3px 3px -3px inset; text-align: center; background: rgb(100, 160, 80); }
+
+.FilterItem input[type="checkbox"]:checked + .check::before { display: inline-block; position: absolute; top: 50%; left: 50%; content: "✓"; font-size: 12px; margin: -10px 0px 0px -3px; }
+
+.Filter > div { margin-bottom: 10px; }
+
+.Filter .Clear { display: none; }
+
+.Filter .remove { border-top-width: 1px; border-top-style: dotted; border-top-color: rgb(204, 204, 204); line-height: 40px; cursor: pointer; }
+
+.Filter .Clear .remove { border-top-style: none; font-weight: bold; }
+
+.Filter .remove:hover { color: red; }
+
+.Filter .List .remove:first-child { border-top-style: none; }
+
+.Filter .close { display: inline-block; height: 13px; width: 13px; border: 1px solid rgb(102, 102, 102); margin-right: 5px; position: relative; }
+
+.Filter .close::before { content: "x"; position: absolute; font-size: 14px; top: -14px; left: 2px; }
+
+.Filter .Submit { text-align: center; margin-bottom: 0px; }
+
+.RecipeSubmitForm { }
+
+.RecipeSubmitForm ol li { margin-bottom: 20px; }
+
+.RecipeSubmitForm table { width: 100%; margin-top: 30px; }
+
+.RecipeSubmitForm tr:nth-child(2n) { }
+
+.RecipeSubmitForm td { padding: 10px 0px; }
+
+.RecipeSubmitForm td:first-child { width: 31%; vertical-align: top; }
+
+.RecipeSubmitForm td:last-child { width: 65%; min-height: 50px; vertical-align: top; text-align: left; }
+
+.line-item { padding: 10px; border: 1px solid rgb(204, 204, 204); transition: all 0.5s; box-shadow: rgb(100, 160, 80) 0px 0px 0px 0px; background: rgb(239, 239, 239); }
+
+.line-item:hover { box-shadow: rgb(100, 160, 80) 0px 0px 20px 0px; }
+
+.line-item-left { margin-bottom: 20px; }
+
+.line-item-right { margin-bottom: 20px; }
+
+.line-item-image { }
+
+.line-item .line-item-details { }
+
+.comment-wrapper { border: 1px solid rgb(204, 204, 204); margin-bottom: 10px; background: rgb(239, 239, 239); }
+
+.comment { margin: 10px; }
+
+.comment-date { color: rgb(255, 255, 255); padding: 10px; background: rgb(204, 204, 204); }
+
+.comment-comment { padding: 10px; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); background: rgb(255, 255, 255); }
+
+.slideshow { width: 813px; height: 200px; position: relative; z-index: 2; opacity: 0; transition: height 0.5s, width 0.5s; }
+
+.slideshow > .slideshow-slide { overflow: hidden; height: 100% !important; width: 100% !important; }
+
+.slideshow > .slideshow-slide .slideshow-slide-caption { position: absolute; top: 0px; left: 0px; right: 0px; padding: 10px; height: 180px; overflow: hidden; background: rgba(255, 255, 255, 0.8); }
+
+.paging-bullets { position: absolute; bottom: 20px; right: 20px; list-style: none; margin: 0px; padding: 0px; display: inline-block; z-index: 3; }
+
+.paging-bullets li { display: inline-block; margin-left: 5px; }
+
+.paging-bullets li a { display: inline-block; cursor: pointer; height: 10px; width: 10px; border: 1px solid rgb(204, 204, 204); background: rgb(239, 239, 239); }
+
+.paging-bullets li.current a { border: 1px solid rgb(153, 153, 153); background: rgb(255, 153, 0); }
+
+footer { position: relative; padding: 20px; color: rgb(255, 255, 255); transition: all 0.5s; min-height: 100px; background: rgb(153, 153, 153); }
+
+footer a:link, footer a:visited { color: rgb(255, 255, 255); }
+
+footer .footer-social a { width: 33px; height: 32px; display: inline-block; margin-right: 7px; background: url("/css/Default/Images/Icons/social-icons.png"); }
+
+.tweet { overflow: hidden; max-width: 100%; }
+
+.tweet, .tweet * { word-wrap: break-word; }
+
+#tweet .timePosted { display: block; width: 100%; text-align: center; margin-top: 10px; }
+
+#tweet > ul { list-style: none; padding: 0px; margin: 0px; }
+
+#tweet > ul > li { list-style: none; padding: 0px; margin: 0px; }
+
+#tweet > ul > li .user > a > img { float: left; margin: 0px 10px 10px 0px; width: 40px; height: 40px; }
+
+#tweet > ul > li .user > a > span > span:first-child { display: none; }
+
+#tweet > ul > li .user > .tweet { float: left; }
+
+.contest-wrapper { position: relative; }
+
+.contest-wrapper .contest-item { position: relative; margin-bottom: 20px; padding: 10px; border: 1px solid rgb(204, 204, 204); background: rgb(239, 239, 239); }
+
+.survey { margin-bottom: 30px; }
+
+.survey > p { margin-bottom: 30px; font-weight: bold; }
+
+.survey img { max-width: 100%; height: auto !important; }
+
+.survey .survey-answer { padding-bottom: 5px; margin-bottom: 20px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); display: table; width: 100%; }
+
+.survey .survey-answer-radio { display: table-cell; padding: 0px 20px 0px 10px; cursor: pointer; vertical-align: top; }
+
+.survey .survey-answer-content { display: table-cell; }
+
+.survey .survey-answer-votes { color: rgb(255, 153, 0); }
+
+.form { }
+
+.form > div { margin-bottom: 20px; }
+
+.form textarea { min-height: 140px; }
+
+.form [type="text"] { min-width: 50%; }
+
+.clear { clear: both; }
+
+.left-33 { display: block; width: 31%; margin-left: 2%; float: left; margin-bottom: 20px; }
+
+.left-33:first-child { margin-left: 0px; }
+
+.left-50 { display: block; width: 49%; margin-left: 2%; float: left; margin-bottom: 20px; }
+
+.left-50:first-child { margin-left: 0px; }
+
+.left-67 { display: block; width: 67%; margin-left: 0px; float: left; margin-bottom: 20px; }
+
+.dotted { height: 1px; margin-bottom: 15px; margin-top: 5px; background: url("/css/Default/images/backgrounds/dots.png") repeat; }
+
+.bottom-10 { padding-bottom: 10px; }
+
+.mobile-box { display: none; height: 0px; overflow: hidden; }
+
+.mobile-show { position: relative; width: 300px; margin: 0px auto; }
+
+div + .mobile-show { position: absolute; left: -5000px; top: -5000px; }
+
+body { max-height: none !important; max-width: none !important; min-width: 0px !important; width: auto !important; }
+
+@media (max-width: 1189px) and (min-width: 980px) { 
+  .page { width: 980px; }
+  .slideshow { width: 628px; }
+  .content-main { width: 625px; }
+  .left-wrapper { width: 420px; }
+  .right-wrapper { width: 420px; }
+  .tile-wrapper { width: 420px; }
+  .tile.tile-title { width: 410px; }
+  .desktop-only { display: none; }
+}
+
+@media (max-width: 979px) and (min-width: 768px) { 
+  body { }
+  form { }
+  p { }
+  .page { width: 768px; }
+  header { }
+  .utility li { margin: 0px; }
+  .header-top-navigation { width: 100%; border-radius: 0px; }
+  .header-top-navigation-button { height: 40px; width: 50px; display: inline-block; cursor: pointer; background: url("mobile-menu.png") center center no-repeat; }
+  .header-top-navigation .page > ul.menu { display: none; position: absolute; top: 40px; left: 0px; width: 100%; margin: 0px; height: auto; }
+  .header-top-navigation .page > ul.menu > li { display: block; position: relative; height: 40px; float: none; }
+  .header-top-navigation .page > ul.menu > li:hover { }
+  .header-top-navigation .page > ul.menu > li > a { display: block; width: 100%; line-height: 40px; height: 40px; text-align: left; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); border-radius: 0px; background: rgb(100, 160, 80); }
+  .content { }
+  .content-main { width: 425px; }
+  .slideshow { width: 428px; }
+  .content-rail { }
+  .left-wrapper { width: 210px; }
+  .right-wrapper { width: 210px; }
+  .tile-wrapper { width: 210px; }
+  .tile.tile-title { width: 200px; }
+  .mobile .tile { width: 200px; float: none; height: 215px; position: absolute; transition: all 0s; }
+  .desktop-only { display: none; }
+  footer { }
+}
+
+@media (max-width: 767px) { 
+  .page { width: 100%; }
+  textarea { width: 90%; }
+  header { height: auto; padding: 15px; }
+  .header-member-area { position: relative; text-align: right; top: 0px; width: 100%; }
+  .header-logo { max-width: 315px; min-width: 190px; width: 65%; overflow: hidden; }
+  .header-logo-img { width: 100%; overflow: hidden; }
+  .header-search { top: auto; bottom: 6px; right: 15px; }
+  .header-social { position: relative; width: 100%; height: 32px; }
+  .utility li { margin: 0px; }
+  .header-top-navigation { width: 100%; border-radius: 0px; }
+  .header-top-navigation-button { height: 40px; width: 40px; display: inline-block; cursor: pointer; background: url("mobile-menu.png") center center no-repeat; }
+  .header-top-navigation .page > ul.menu { display: none; position: absolute; top: 40px; left: 0px; width: 100%; margin: 0px; height: auto; }
+  .header-top-navigation .page > ul.menu > li { display: block; position: relative; height: 40px; float: none; }
+  .header-top-navigation .page > ul.menu > li:hover { }
+  .header-top-navigation .page > ul.menu > li > a { display: block; width: 100%; line-height: 40px; height: 40px; text-align: left; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); border-radius: 0px; background: rgb(100, 160, 80); }
+  .content { width: auto; padding: 50px 0px 0px; }
+  .content-main { width: auto; float: none; padding: 0px 15px 15px; }
+  .slideshow-wrapper { display: none; }
+  .slideshow { width: 100%; height: auto; }
+  .slideshow > .slideshow-slide .slideshow-slide-caption { max-height: none; max-width: none; position: relative; }
+  .content-rail { float: none; padding: 0px 15px 15px; width: auto; display: none; }
+  .content-left > div { margin-bottom: 10px; }
+  .left-wrapper { width: 100%; float: none; }
+  .right-wrapper { width: 100%; float: none; }
+  .tile-wrapper { width: 100%; height: auto !important; }
+  .tile-title { width: 100%; height: 40px; }
+  .tile { float: none; margin-bottom: 15px; transition: all 0s; width: 100% !important; height: auto !important; position: relative !important; transform: none !important; }
+  .tile.ingredient { float: left; width: 46% !important; margin: 0px 2% 10px !important; }
+  .tile > .check-box { width: 100%; }
+  .tile > .check-box:hover { top: 0px; left: 0px; height: 40px; width: 100%; box-shadow: none; background: rgb(238, 238, 238); }
+  .tile > .check-box:hover input[type="checkbox"] + .ingredient-checkbox { width: 30px; }
+  .CheckedIngredients { float: none; width: 100%; padding: 5px 0px; border: 1px solid rgb(204, 204, 204); clear: both; background: rgb(239, 239, 239); }
+  .CheckedIngredients .Clear { margin: 0px 5px; }
+  .CheckedIngredients .List { margin: 0px 5px; max-height: 99999px; }
+  .line-item { float: none; }
+  .Filter { width: auto; float: none; margin-bottom: 15px; }
+  footer { padding-bottom: 70px; }
+  .left-33 { display: block; width: 100%; margin-left: 0px; float: none; }
+  .left-50 { display: block; width: 100%; margin-left: 0px; float: none; }
+  .mobile-ad { width: 100%; overflow: hidden; }
+  .mobile-gone { display: none; }
+  .desktop-only { display: none; }
+  .mobile-box { height: auto; display: block; max-height: 600px; }
+}

@@ -1,0 +1,560 @@
+@charset "utf-8";
+
+body { overflow-x: hidden; color: rgb(75, 75, 100); font-family: "Open Sans", sans-serif; font-weight: normal; font-size: 10px; line-height: 1.5em; background-color: rgb(255, 255, 255); }
+
+@media (max-width: 979px) { 
+  body { padding-top: 0px; }
+}
+
+@media (max-width: 767px) { 
+  body { padding-left: 0px; padding-right: 0px; }
+}
+
+.container { z-index: 10; }
+
+@media (min-width: 1200px) { 
+  .container { width: 1140px; }
+}
+
+div.modal { outline: none; border: none; border-radius: 13px; box-shadow: rgba(0, 0, 0, 0.0470588) 0px 5px 2px inset, rgba(0, 0, 0, 0.0980392) 0px 5px 3px; -webkit-background-clip: padding-box; background: url("light-gray-noise.png") padding-box; }
+
+.fuelly-blue-btn { color: rgb(255, 255, 255); text-shadow: none; font-weight: 700; text-transform: uppercase; font-size: 1.8em; padding: 1em 3.44em; box-shadow: rgba(0, 0, 0, 0.109804) 0px 4px 2px inset, rgba(0, 0, 0, 0.239216) 0px 5px 2px; background: rgb(45, 186, 174); }
+
+.fuelly-blue-btn:hover { color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.239216) 0px 5px 2px; background: linear-gradient(rgb(41, 169, 158) 0%, rgb(43, 177, 165) 51%, rgb(45, 186, 174) 100%); }
+
+.fuelly-blue-btn:active { position: relative; top: 2px; left: 2px; color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.109804) 0px 4px 2px inset, rgba(0, 0, 0, 0.239216) 0px 2px 2px; background: linear-gradient(rgb(36, 155, 145) 0%, rgb(38, 161, 151) 51%, rgb(40, 170, 159) 100%); }
+
+div.modal-backdrop, div.modal-backdrop.fade.in { background: rgb(45, 186, 174); }
+
+body .section { position: relative; }
+
+body .section .inner { overflow: hidden; }
+
+body .section h3 { font-weight: 800; color: rgb(253, 182, 22); font-size: 3.7em; text-align: right; text-transform: uppercase; margin: 0px; padding-right: 10%; padding-top: 1.86486em; padding-bottom: 1.48em; }
+
+.section h3::after, .section h3 .pointer { content: ""; position: absolute; width: 31px; height: 15px; top: 1.86486em; margin-top: 10px; right: 15px; opacity: 1; visibility: visible; transition: top 0.5s, opacity 0.5s, visibility 0.5s; background: url("yellow-line-pointer-sprite.png") 0px 0px no-repeat; }
+
+.section h3.left .pointer { right: auto; left: 15px; background: url("yellow-line-pointer-sprite.png") -53px 0px no-repeat; }
+
+.section h3.left { text-align: left; padding-right: 0px; padding-left: 16%; }
+
+.section p.intro-text { font-size: 2.2em; line-height: 1.36364em; padding-bottom: 3.09091em; margin: 0px auto; letter-spacing: -1px; font-weight: 400; width: 76%; }
+
+.video-wrapper { position: relative; padding-bottom: 53.25%; padding-top: 25px; height: 0px; }
+
+.video-wrapper iframe { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+
+.slider-navigation { position: absolute; z-index: 100; width: 100%; height: 24px; line-height: 24px; bottom: 10px; text-align: center; }
+
+.slider-navigation a { position: relative; display: inline-block; width: 10px; height: 0px; padding-top: 10px; margin: 0px 5px; overflow: hidden; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.0470588) 2px 2px 3px, rgba(0, 0, 0, 0.14902) 1px 3px 1px inset; background: rgb(220, 220, 220); }
+
+.slider-navigation a.active { background: rgb(42, 175, 160); }
+
+@media (max-width: 979px) { 
+  .fuelly-blue-btn { padding-left: 2.4em; padding-right: 2.4em; }
+  .section h3::after { right: 35px; }
+  .section h3.left::after { right: auto; left: 35px; }
+}
+
+@media (max-width: 767px) { 
+  body .section h3, body .section h3.left { text-align: center; padding-right: 0px; padding-left: 0px; }
+  .section h3::after, .section h3.left::after { right: 35px; left: auto; background-position: 0px 0px; }
+}
+
+@media (max-width: 480px) { 
+  .section h3::after { display: none; }
+}
+
+#nav-header-wrapper { padding-top: 2.5em; overflow: visible; color: rgb(255, 255, 255); position: relative; z-index: 50; background-image: url("bg-green-noise.jpg"); }
+
+.header-overflow #nav-header-wrapper { overflow: hidden; }
+
+#nav-header-wrapper #header { position: relative; z-index: 5; }
+
+.navigation { position: relative; z-index: 11; }
+
+.navigation ul { float: right; margin-right: 8em; }
+
+.navigation ul li { float: left; margin-left: 0.25em; padding-left: 1em; padding-right: 1em; padding-top: 0.55em; }
+
+.navigation ul li a { display: block; color: rgb(255, 255, 255); padding: 0.1em 0px; font-weight: 600; text-transform: uppercase; font-size: 1.3em; border: 1px solid transparent; }
+
+.navigation ul li a:hover { text-decoration: none; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); }
+
+.navigation ul li.log-in { margin-left: 1em; padding-left: 0px; padding-right: 0px; padding-top: 0px; }
+
+.navigation ul li.log-in a { padding: 0.6em 1.5em; border: 1px solid rgb(255, 255, 255); border-radius: 0.45em; background: rgb(43, 178, 167); }
+
+.navigation ul li.log-in a:hover { padding: 0.6em 1.5em; border: 1px solid rgb(255, 255, 255); border-radius: 0.45em; background: linear-gradient(rgb(42, 177, 166) 0%, rgb(36, 168, 155) 100%); }
+
+#header { padding-bottom: 3.5em; }
+
+#header-content { position: relative; z-index: 3; }
+
+@media (max-width: 979px) { 
+  #header { font-size: 9px; }
+}
+
+@media (max-width: 767px) { 
+  #header { font-size: 7px; }
+}
+
+#nav-header-wrapper #logo { float: left; display: block; width: 130px; height: 100px; text-indent: -200%; background: url("fuelly-logo.8bit.png") -20px -149px no-repeat; }
+
+#nav-header-wrapper h1 { padding-top: 0.2em; padding-bottom: 0.1em; font-size: 5.2em; line-height: 1.17241em; }
+
+#nav-header-wrapper h4 { position: relative; width: 50%; font-weight: 400; font-size: 1.9em; line-height: 1.36364em; padding-bottom: 1.63636em; padding-left: 70px; }
+
+#nav-header-wrapper h4::before { position: absolute; top: 5px; left: 0px; content: ""; width: 61px; height: 53px; background: url("white-gas-pump.png") no-repeat; }
+
+#header .play-video { font-size: 1.4em; text-transform: uppercase; font-weight: 700; color: rgb(255, 255, 255); padding-left: 3em; }
+
+#header .play-video:hover { text-decoration: none; }
+
+#header .play-video:hover span { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(255, 255, 255); padding-bottom: 2px; }
+
+#header .play-video::after { content: ""; display: inline-block; width: 25px; height: 25px; vertical-align: middle; font-size: 1.4em; margin-left: 0.55em; margin-top: -0.2em; background: url("white-small-arrow-cutout.png") 0px 0px no-repeat; }
+
+#header .btn-large { color: rgb(75, 75, 100); font-weight: 900; text-transform: uppercase; font-size: 1.8em; padding: 1.388em 3.44em; box-shadow: rgba(0, 0, 0, 0.109804) 0px 4px 2px inset, rgba(0, 0, 0, 0.239216) 0px 5px 2px; background: linear-gradient(rgb(255, 255, 255) 0%, rgb(241, 241, 241) 100%); }
+
+#header .btn-large:hover { box-shadow: rgba(0, 0, 0, 0.239216) 0px 5px 2px; background: linear-gradient(rgb(237, 237, 237) 0%, rgb(241, 241, 241) 100%); }
+
+#header .btn-large:active { position: relative; top: 2px; left: 2px; box-shadow: rgba(0, 0, 0, 0.239216) 0px 1px 2px; background: linear-gradient(rgb(228, 228, 228) 0%, rgb(233, 232, 232) 100%); }
+
+#nav-header-wrapper .button-wrapper { display: inline-block; }
+
+@media (min-width: 1200px) { 
+  #nav-header-wrapper #logo { width: 147px; height: 114px; background: url("fuelly-logo.8bit.png") -20px -20px no-repeat; }
+}
+
+@media (max-width: 767px) { 
+  .navigation ul { margin-right: 17%; }
+  #nav-header-wrapper #logo, #nav-header-wrapper #header-content { margin-left: 5%; }
+  #nav-header-wrapper .button-wrapper { display: block; }
+  #nav-header-wrapper .play-video { display: block; padding-top: 3em; padding-left: 0px; float: left; width: auto; }
+}
+
+@media (max-width: 480px) { 
+  #nav-header-wrapper #logo, #nav-header-wrapper #header-content { margin-left: 5%; }
+  #nav-header-wrapper h1 { font-size: 4.6em; }
+  #nav-header-wrapper h4 { width: auto; }
+  #nav-header-wrapper .button-wrapper .btn { font-size: 1.6em; display: block; width: 95%; box-sizing: border-box; }
+  #nav-header-wrapper .play-video { display: block; float: none; width: 100%; text-align: center; }
+}
+
+#vertical-car { position: absolute; width: 61px; height: 620px; left: 50%; top: 50px; margin-left: 431px; visibility: visible; opacity: 1; transition: height 0.52s ease-in-out, opacity 0.28s cubic-bezier(1, 0.02, 0.915, 0.99), visibility 0.28s cubic-bezier(1, 0.02, 0.915, 0.99); background: url("zooming-car.png") center bottom no-repeat; }
+
+@media (max-width: 979px) { 
+  #vertical-car { margin-left: 324px; }
+}
+
+@media (max-width: 767px) { 
+  #vertical-car { margin-left: 0px; right: -1px; left: auto; }
+}
+
+@media (max-width: 480px) { 
+  #vertical-car { display: none; }
+}
+
+@media (min-width: 1200px) { 
+  #vertical-car { margin-left: 531px; }
+}
+
+#nav-header-wrapper #white-bars { display: block; position: absolute; bottom: 0px; right: -100px; z-index: 1; width: 312px; height: 470px; background: url("/nonmember_img/white-bars.png") no-repeat; }
+
+@media (max-width: 979px) { 
+  #nav-header-wrapper #white-bars { background: url("white-bars-faded.png") no-repeat; }
+}
+
+#nav-header-wrapper #white-bars .yellow-bar { display: block; position: absolute; bottom: 0px; right: 100px; top: 12px; width: 16px; background: rgb(253, 182, 22); }
+
+@media (max-width: 767px) { 
+  #nav-header-wrapper #white-bars { right: -73px; }
+}
+
+#drive-smarter-wrapper { background: url("curved-dropshadow.png") center top no-repeat; }
+
+#drive-smarter { position: relative; z-index: 5; min-height: 500px; }
+
+#drive-smarter::after { content: ""; display: block; position: absolute; z-index: 3; top: 0px; right: 0px; bottom: -8px; left: 45%; border-right-width: 16px; border-right-style: solid; border-bottom-width: 16px; border-bottom-style: solid; border-bottom-right-radius: 90px; border-color: rgb(253, 182, 22); transition: all 0.3s; }
+
+#drive-smarter { text-align: right; }
+
+#drive-smarter div.row-fluid { margin-right: 10%; }
+
+#drive-smarter div.row-fluid { width: 80%; float: right; }
+
+#drive-smarter div.span4 { text-align: center; }
+
+#drive-smarter div.span4 img { max-width: 100%; }
+
+#drive-smarter div.span4 p { padding-top: 2.0625em; padding-bottom: 5.5em; margin: 0px auto; width: 60%; color: rgb(45, 186, 174); font-size: 1.6em; line-height: 1.5625em; }
+
+@media (max-width: 979px) { 
+  #drive-smarter h3::after { right: 13px; }
+}
+
+@media (max-width: 767px) { 
+  #drive-smarter::after { border-style: none solid none none; border-right-width: 16px; border-right-color: rgb(253, 182, 22); border-radius: 0px; left: 0px; right: 22px; }
+  #drive-smarter { text-align: center; }
+  #drive-smarter h3::after { right: 35px; }
+  #drive-smarter div.span4 { float: left; width: 33.333%; }
+  #drive-smarter div.span4 img { max-width: 80%; }
+}
+
+@media (max-width: 640px) { 
+  #drive-smarter div.span4 img { max-width: 100%; }
+  #drive-smarter div.span4 { float: none; width: auto; clear: both; overflow: hidden; font-size: 9px; }
+  #drive-smarter div.span4 img { max-width: 40%; float: left; }
+  #drive-smarter div.span4 p { float: left; text-align: left; width: 60%; margin: 0px; padding: 2.5em 0px 0px 1em; box-sizing: border-box; }
+  #drive-smarter div.span4.even img { max-width: 40%; float: right; }
+  #drive-smarter div.span4.even p { float: left; text-align: right; width: 60%; padding: 2.5em 1em 0px 0px; }
+}
+
+#accessible-anywhere-wrapper { overflow-x: hidden; margin-top: -8px; padding-top: 8px; margin-bottom: -8px; padding-bottom: 8px; overflow-y: visible !important; }
+
+#accessible-anywhere { position: relative; z-index: 5; min-height: 500px; }
+
+#accessible-anywhere .row-fluid { position: relative; z-index: 10; }
+
+#accessible-anywhere::after { content: ""; display: block; position: absolute; z-index: 3; top: -8px; right: 45%; bottom: -8px; left: 0px; border-top-width: 16px; border-left-width: 16px; border-style: solid none solid solid; border-bottom-width: 16px; border-bottom-left-radius: 90px; border-top-left-radius: 90px; border-color: rgb(253, 182, 22); transition: all 0.3s; }
+
+#accessible-anywhere h3.left { padding-left: 0px; padding-bottom: 0.5em; }
+
+#accessible-anywhere h3.left::after { display: none; }
+
+#accessible-anywhere .row-fluid div.left { padding-left: 16%; width: 70%; margin-bottom: 5em; }
+
+#accessible-anywhere .intro-text { padding-bottom: 0px; width: 100%; }
+
+#anywhere-slider-wrapper { position: relative; z-index: 10; width: 801px; height: 0px; overflow: visible; padding-bottom: 630px; margin-top: -24em; margin-bottom: 7em; opacity: 0; visibility: hidden; transition: opacity 1.8s, visibility 1.8s; }
+
+#anywhere-slider-wrapper.show { opacity: 1; visibility: visible; }
+
+#anywhere-slider-wrapper .slider-navigation { bottom: -20px; padding-left: 2em; text-align: left; }
+
+#anywhere-slider { position: absolute; z-index: 5; overflow: hidden; top: 0px; right: -100%; width: 100%; height: 100%; transition: all 0.7s cubic-bezier(0.545, 0.775, 0.56, 1); }
+
+#anywhere-slider-wrapper.show #anywhere-slider { right: 0px; }
+
+#anywhere-slider img.foreground { position: absolute; display: inline-block; top: 50%; left: 50%; width: 36.7041%; }
+
+#anywhere-slider img.foreground.scale { transform: scale(0.01); opacity: 0.3; transition: all 0.3s 0.25s; }
+
+#anywhere-slider .larger img.foreground.scale { transform: scale(1); opacity: 1; }
+
+#anywhere-slider .slide-1 img.foreground { width: 36.4544%; top: 6%; left: 0%; }
+
+#anywhere-slider .slide-2 img.foreground { top: 39.5%; left: 15%; }
+
+#anywhere-slider .slide-3 img.foreground { top: 36%; left: 33%; }
+
+#anywhere-slider .slide-4 img.foreground { top: 36.5%; left: 26%; }
+
+#anywhere-slider-nav li { position: relative; color: rgb(45, 186, 174); font-size: 1.6em; line-height: 1.5625em; padding-bottom: 1.25em; padding-left: 80px; cursor: pointer; opacity: 0.4; text-align: left; transition: opacity 0.5s; }
+
+#anywhere-slider-nav li::after { content: ""; position: absolute; top: 0px; left: 0px; width: 80px; height: 71px; opacity: 0.4; transition: opacity 0.5s; background: url("slider-icon-sprite.png") 0px 0px no-repeat; }
+
+#anywhere-slider-nav li.slide-2::after { background-position: 0px -190px; }
+
+#anywhere-slider-nav li.slide-3::after { background-position: 0px -384px; }
+
+#anywhere-slider-nav li.slide-4::after { background-position: 0px -575px; }
+
+#anywhere-slider-nav li.active, #anywhere-slider-nav li.active::after { opacity: 1; cursor: default; }
+
+#accessible-anywhere .row-fluid.reverse-float .span6 { float: right; margin-right: 0px; margin-left: 0px; width: 50%; }
+
+@media (max-width: 979px) { 
+  #anywhere-slider-nav { width: 130%; }
+  #accessible-anywhere h3.left .pointer { left: 35px; }
+  #accessible-anywhere .row-fluid div.left { padding-left: 25%; }
+  #accessible-anywhere .intro-text { padding-bottom: 0px; width: 130%; }
+  #anywhere-slider-wrapper { width: 600px; padding-bottom: 472px; margin-left: 10em; margin-top: -18em; }
+  #accessible-anywhere::after { top: -7px; right: 45%; bottom: -7px; left: 22px; border-top-width: 14px; border-left-width: 14px; border-style: solid none solid solid; border-top-color: rgb(253, 182, 22); border-left-color: rgb(253, 182, 22); border-bottom-width: 14px; border-bottom-color: rgb(253, 182, 22); border-bottom-left-radius: 90px; border-top-left-radius: 90px; }
+}
+
+@media (max-width: 767px) { 
+  #accessible-anywhere-wrapper { margin-top: -2em; }
+  #accessible-anywhere .intro-text { width: 76%; }
+  #anywhere-slider-wrapper::after { content: ""; position: absolute; z-index: 1; top: 69%; left: 3em; right: 3em; height: 11px; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 25px 10px; background: rgba(0, 0, 0, 0.2); }
+  #anywhere-slider-nav { height: 4em; position: relative; top: -8.8em; width: 100%; }
+  #anywhere-slider-nav li { font-size: 1.4em; opacity: 0; visibility: hidden; position: absolute; top: 0px; left: 6em; right: 6em; }
+  #anywhere-slider-nav li.active { opacity: 1; visibility: visible; }
+  #accessible-anywhere h3.left .pointer { display: none; }
+  #accessible-anywhere { text-align: center; }
+  #accessible-anywhere .row-fluid div.left { padding-left: 0px; width: 100%; }
+  #accessible-anywhere .row-fluid.reverse-float .span6 { float: none; width: auto; }
+  #anywhere-slider-wrapper { padding-bottom: 72.5%; width: 80%; margin: -3em auto 0px; }
+  #anywhere-slider { height: 71%; }
+  #anywhere-slider-wrapper .slider-navigation { bottom: 0px; text-align: center; }
+  #accessible-anywhere::after { border-style: none solid none none; border-right-width: 16px; border-right-color: rgb(253, 182, 22); border-radius: 0px; left: 0px; right: 22px; }
+}
+
+@media (max-width: 480px) { 
+  #accessible-anywhere-wrapper { margin-top: -1em; }
+  #anywhere-slider-nav li { left: 3em; right: 3em; }
+  #anywhere-slider-nav { top: -5em; }
+  #anywhere-slider-nav li { font-size: 1.3em; }
+  #anywhere-slider-wrapper .slider-navigation { display: none; }
+}
+
+#miles-tracked { position: relative; z-index: 5; min-height: 500px; }
+
+#miles-tracked::after { content: ""; display: block; position: absolute; z-index: 3; top: -8px; right: 0px; bottom: 0px; left: 45%; border-top-width: 16px; border-top-style: solid; border-right-width: 16px; border-right-style: solid; border-top-right-radius: 90px; border-color: rgb(253, 182, 22); transition: all 0.3s; }
+
+#miles-tracked .row-fluid.reverse-float .span6 { float: right; margin-right: 0px; margin-left: 0px; width: 50%; position: relative; z-index: 10; }
+
+#miles-tracked .row-fluid.reverse-float .right.span6 { text-align: right; position: relative; z-index: 10; }
+
+#miles-tracked ul.points, #miles-tracked ul.points li { margin: 0px; padding: 0px; list-style-type: none; }
+
+#miles-tracked ul.points { padding-bottom: 5.5em; }
+
+#miles-tracked ul.points li { color: rgb(58, 190, 179); font-size: 2.2em; font-weight: 100; line-height: 1.8em; clear: both; }
+
+#miles-tracked ul.points li::before { content: ""; float: right; position: relative; top: -10px; display: inline-block; width: 69px; height: 58px; margin-left: 1.1em; background: url("medium-green-icons-sprite.png") 0px 0px no-repeat; }
+
+#miles-tracked h3, #miles-tracked ul.points { padding-right: 20%; }
+
+#miles-tracked .btn { margin-right: 20%; }
+
+#miles-tracked ul.points li.people::before { background-position: 0px 3px; }
+
+#miles-tracked ul.points li.car::before { background-position: 0px -56px; }
+
+#miles-tracked ul.points li.pump::before { background-position: 0px -116px; }
+
+#miles-tracked #cars-slider-module, #miles-tracked #cars-slider-module .inner { box-shadow: rgba(0, 0, 0, 0.109804) 0px 5px 2px inset; }
+
+#miles-tracked #cars-slider-module { overflow: hidden; position: relative; margin: 7em auto 5em; width: 31em; height: 0px; padding-bottom: 46.2em; border-radius: 22px; text-align: center; background: rgb(189, 191, 191); }
+
+#miles-tracked #cars-slider-module .inner { border-radius: 16px; position: absolute; top: 8px; right: 8px; bottom: 8px; left: 8px; background: url("cream-noise.jpg"); }
+
+#miles-tracked #cars-slider-module .car-name { text-transform: uppercase; font-size: 1.4em; font-weight: 700; }
+
+#miles-tracked #cars-slider-module .car-name::before { content: ""; display: block; width: 100%; height: 160px; background: url("large-car.png") center center no-repeat; }
+
+#miles-tracked #cars-slider-module .milage, #miles-tracked #cars-slider-module .css-slider .row-fluid { color: rgb(45, 186, 174); text-transform: uppercase; }
+
+#miles-tracked #cars-slider-module .number { display: block; font-size: 10em; font-weight: 700; line-height: 1em; }
+
+#miles-tracked #cars-slider-module .ordinal { display: block; font-size: 1.4em; font-weight: 400; margin-bottom: 1em; }
+
+#miles-tracked #cars-slider-module .css-slider { position: relative; width: 100%; height: 100%; }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid { font-size: 1.4em; line-height: 1.28571em; width: 90%; margin: 0px auto; }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid .span4 { height: 4em; display: inline-block; position: relative; margin: 0px; padding: 0px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-style: solid solid solid none; border-top-color: rgb(171, 224, 218); border-right-color: rgb(171, 224, 218); border-bottom-color: rgb(171, 224, 218); width: 33%; box-sizing: border-box; }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid .span4 div.outer-center { display: table; width: 100%; height: 100%; }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid .span4 .inner-center { display: table-cell; vertical-align: middle; color: rgb(45, 186, 174); background: linear-gradient(rgb(255, 255, 255) 0%, rgb(241, 241, 241) 100%); }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid .span4 .inner-center:hover { text-decoration: none; }
+
+#miles-tracked #cars-slider-module .css-slider .row-fluid .span4:first-child { border: 1px solid rgb(171, 224, 218); }
+
+@media (max-width: 979px) { 
+  #miles-tracked ul.points { font-size: 90%; }
+  #miles-tracked::after { top: -7px; right: 22px; bottom: 0px; left: 45%; border-top-width: 14px; border-top-style: solid; border-top-color: rgb(253, 182, 22); border-right-width: 14px; border-right-style: solid; border-right-color: rgb(253, 182, 22); border-top-right-radius: 90px; }
+}
+
+@media (max-width: 767px) { 
+  #miles-tracked-wrapper { margin-top: -8em; }
+  #miles-tracked ul.points li { display: inline-block; padding-left: 2em; }
+  #miles-tracked ul.points li:first-child { padding-left: 0px; }
+  #miles-tracked ul.points li .number { display: block; }
+  #miles-tracked ul.points { overflow: hidden; }
+  #miles-tracked h3, #miles-tracked ul.points { padding-right: 0px; }
+  #miles-tracked h3 { padding-left: 2em; padding-right: 2em; }
+  #miles-tracked .btn { margin-right: 0px; }
+  #miles-tracked .row-fluid.reverse-float .span6.right { text-align: center; }
+  #miles-tracked ul.points li::before { float: none; display: block; margin: 0px auto; }
+  #miles-tracked #cars-slider-module .span4 { float: left; width: 33%; }
+  #miles-tracked .row-fluid.reverse-float .span6 { float: none; width: auto; }
+  #miles-tracked #cars-slider-module { width: 66.7%; padding-bottom: 31.2em; }
+  #miles-tracked #cars-slider-module .inner { background: rgb(228, 229, 227); }
+  #miles-tracked::after { border-style: none solid none none; border-right-width: 16px; border-right-color: rgb(253, 182, 22); border-radius: 0px; left: 0px; right: 22px; }
+  #miles-tracked #cars-slider-module .car-name { padding-top: 2em; display: block; }
+  #miles-tracked #cars-slider-module .car-name::before { display: none; }
+}
+
+@media (max-width: 480px) { 
+  #miles-tracked h3 { padding-left: 0px; padding-right: 0px; }
+  #miles-tracked ul.points li { display: block; padding-left: 0px; padding-bottom: 1.1em; }
+  #miles-tracked ul.points li::before { margin-bottom: -13px; }
+  #miles-tracked ul.points li:first-child { padding-left: 0px; }
+  #miles-tracked ul.points li .number { display: inline; }
+  #miles-tracked #cars-slider-module .span4 { float: none; display: block; width: 100%; }
+  #miles-tracked #cars-slider-module { padding-bottom: 37em; }
+  #miles-tracked #cars-slider-module .css-slider .row-fluid .span4 br { display: none; }
+  #miles-tracked #cars-slider-module .css-slider .row-fluid .span4, #miles-tracked #cars-slider-module .css-slider .row-fluid .span4:first-child { height: 3em; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: none solid solid; border-right-color: rgb(171, 224, 218); border-bottom-color: rgb(171, 224, 218); border-left-color: rgb(171, 224, 218); float: none; width: 100%; overflow: hidden; display: block; }
+  #miles-tracked #cars-slider-module .css-slider .row-fluid .span4:first-child { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(171, 224, 218); }
+  #miles-tracked #cars-slider-module .car-name { padding-top: 2em; display: block; }
+  #miles-tracked #cars-slider-module .car-name::before { display: none; }
+}
+
+#register-vehicle-wrapper { position: relative; z-index: 1; background: url("cream-noise.jpg"); }
+
+#register-vehicle-wrapper::after { content: ""; position: absolute; display: block; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 2; box-shadow: rgba(0, 0, 0, 0.14902) 0px 15px 2px -10px inset; border-color: rgb(253, 182, 22); transition: all 0.3s; }
+
+#register-vehicle { position: relative; overflow: visible; min-height: 300px; text-align: right; }
+
+#register-vehicle .fuelly-blue-btn { margin-right: 25%; margin-bottom: 3.5em; }
+
+#register-vehicle::after { content: ""; position: absolute; top: 0px; right: 0px; left: auto; width: 250px; height: 72px; border-bottom-width: 16px; border-bottom-style: solid; border-right-width: 16px; border-right-style: solid; border-bottom-right-radius: 90px; border-color: rgb(253, 182, 22); transition: all 0.3s; }
+
+#register-vehicle-wrapper .car-icon { display: block; z-index: 4; width: 50%; height: 70px; position: absolute; top: 46px; right: 24%; margin-right: -18px; font-family: "Permanent Marker"; text-align: right; padding-right: 145px; font-weight: normal; color: rgb(253, 182, 22); font-size: 2.2em; line-height: 1.35em; background: url("car-sprite.png") right top no-repeat; }
+
+#register-vehicle-wrapper ol { margin-top: -2em; margin-right: 25%; margin-bottom: 4em; }
+
+#register-vehicle-wrapper ol li { text-align: right; font-size: 1.6em; font-weight: 600; line-height: 1.5625em; margin-bottom: 1.2em; clear: right; }
+
+#register-vehicle-wrapper ol li .step-number { float: right; display: inline-block; width: 27px; height: 27px; text-align: center; border-radius: 50%; margin-left: 20px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 2px inset; background: rgb(238, 174, 21); }
+
+#register-vehicle-wrapper .brand { display: block; position: relative; overflow: hidden; width: 151px; height: 0px; padding-top: 157px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; box-shadow: rgba(0, 0, 0, 0.14902) 0px 15px 2px -10px inset; background: rgb(43, 178, 166); }
+
+#register-vehicle-wrapper .brand::after { content: ""; display: block; position: absolute; bottom: 15px; left: -9px; width: 151px; height: 99px; background: url("fuelly-logo.8bit.png") 0px -149px no-repeat; }
+
+@media (max-width: 979px) { 
+  #register-vehicle .fuelly-blue-btn { margin-right: 11%; }
+  #register-vehicle-wrapper ol { margin-top: 3em; margin-right: 11%; }
+  #register-vehicle::after { top: 0px; right: 20px; width: 25%; height: 72px; border-bottom-width: 14px; border-bottom-style: solid; border-bottom-color: rgb(253, 182, 22); border-right-width: 14px; border-right-style: solid; border-right-color: rgb(253, 182, 22); border-bottom-right-radius: 90px; }
+}
+
+@media (max-width: 767px) { 
+  #register-vehicle-wrapper ol { margin-top: 13em; }
+  #register-vehicle-wrapper .brand { left: 2.5%; }
+  #register-vehicle-wrapper .car-icon span { position: absolute; top: 6.2em; width: 100%; right: -14%; }
+  #register-vehicle::after { top: 0px; right: 22px; width: 25%; height: 72px; border-bottom-width: 14px; border-bottom-style: solid; border-bottom-color: rgb(253, 182, 22); border-right-width: 14px; border-right-style: solid; border-right-color: rgb(253, 182, 22); border-bottom-right-radius: 90px; }
+}
+
+@media (max-width: 480px) { 
+  #register-vehicle .fuelly-blue-btn { margin-right: 0px; }
+  #register-vehicle-wrapper ol { margin-top: 13em; margin-left: auto; margin-right: auto; width: 70%; }
+  #register-vehicle-wrapper ol li { text-align: center; clear: both; }
+  #register-vehicle-wrapper ol li .step-number { float: none; margin: 0px; padding: 0px; }
+  #register-vehicle-wrapper ol li .step-text { display: block; }
+  #register-vehicle-wrapper .car-icon { font-size: 2.2em; width: 100%; right: 5.5%; box-sizing: border-box; }
+  #register-vehicle-wrapper .car-icon span { position: absolute; top: 6.55em; left: 15%; width: 70%; text-align: center; }
+  #register-vehicle-wrapper .car-icon br { display: none; }
+  #register-vehicle { text-align: center; }
+  #register-vehicle::after { right: 0px; width: 25%; height: 72px; border-bottom-width: 14px; border-bottom-style: solid; border-bottom-color: rgb(253, 182, 22); border-right-style: none; border-bottom-right-radius: 0px; }
+}
+
+footer .inner { position: relative; color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase; background: url("curved-dropshadow.png") center top no-repeat rgb(43, 179, 167); }
+
+footer .container { position: relative; }
+
+footer a.help { position: absolute; overflow: hidden; top: 1.65em; left: 0px; text-transform: none; color: rgb(255, 255, 255); font-size: 1.4em; font-weight: 600; }
+
+footer a.help::before { content: ""; display: block; width: 87px; height: 52px; background: url("envelope.png"); }
+
+footer ul li a { color: rgb(255, 255, 255); }
+
+footer ul.navigation, footer ul.legal { text-align: right; margin-right: 20%; }
+
+footer ul.navigation li, footer ul.legal li { display: inline-block; }
+
+footer ul.navigation { font-size: 1.4em; margin-bottom: 2.5em; padding-top: 2em; }
+
+footer a { color: rgb(255, 255, 255); text-decoration: none; }
+
+footer a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+
+footer ul.legal { font-size: 1.2em; font-weight: 300; margin-bottom: 2em; }
+
+@media (max-width: 979px) { 
+  footer ul.navigation, footer ul.legal { margin-right: 5%; }
+}
+
+@media (max-width: 767px) { 
+  footer a.help { left: 2%; }
+  footer ul.navigation, footer ul.legal { font-size: 1.055em; margin-right: 10.5%; }
+}
+
+@media (max-width: 480px) { 
+  footer a.help, footer a.help::before { display: none; }
+  footer ul.navigation, footer ul.legal { font-size: 0.95em; width: 100%; display: table; text-align: center; margin-right: 0px; }
+  footer ul.navigation li, footer ul.legal li { display: table-cell; }
+}
+
+#register-form .modal-header { height: 110px; position: relative; }
+
+#register-form .modal-header h4 { position: absolute; left: 165px; bottom: 6px; font-size: 1.7em; line-height: 1.294em; font-weight: 600; color: rgb(45, 186, 174); }
+
+#register-form .modal-header .brand { display: block; position: absolute; top: 0px; left: 35px; overflow: hidden; width: 109px; height: 0px; padding-top: 113px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background: rgb(43, 178, 166); }
+
+#register-form .modal-header .brand::after { content: ""; display: block; position: absolute; bottom: 15px; left: -9px; width: 151px; height: 99px; background: url("fuelly-logo.8bit.png") 4px -371px no-repeat; }
+
+#register-form .modal-body { max-height: 680px; }
+
+#register-form .controls { margin: 0px auto 1em; width: 90%; display: block; box-shadow: rgba(0, 0, 0, 0.0470588) 0px 3px 3px; }
+
+#register-form .controls.noshadow { box-shadow: none; }
+
+#register-form .controls.submit { text-align: right; }
+
+#register-form .controls.submit button { width: auto; display: inline-block; text-align: right; padding: 0.75em 2em; }
+
+#register-form ::-webkit-input-placeholder { color: rgba(45, 186, 174, 0.498039); }
+
+#register-form input[type="text"], #register-form input[type="email"], #register-form input[type="password"] { font-size: 1.85em; color: rgb(45, 186, 174); padding: 0.33em; height: 2em; line-height: 2em; width: 100%; border-color: rgb(255, 255, 255); box-shadow: none; box-sizing: border-box; }
+
+#register-form select { width: 100%; }
+
+#register-form select:focus, #register-form textarea:focus, #register-form input[type="text"]:focus, #register-form input[type="email"]:focus, #register-form input[type="password"]:focus, #register-form .uneditable-input:focus { border-color: rgb(45, 186, 174); box-shadow: rgb(45, 186, 174) 0px 0px 5px 2px; }
+
+#register-form select.usertouched:invalid, #register-form textarea.usertouched:invalid, #register-form input[type="text"].usertouched:invalid, #register-form input[type="email"].usertouched:invalid, #register-form input[type="password"].usertouched:invalid, #register-form .uneditable-input:invalid { border-color: rgb(253, 182, 22); box-shadow: rgb(253, 182, 22) 0px 0px 5px 2px; }
+
+#register-form #register-modal-terms { font-size: 1.4em; line-height: 1.85714em; font-weight: 700; color: rgb(45, 186, 174); padding-top: 0.3em; padding-bottom: 0.4em; }
+
+#register-form #register-modal-terms a { color: rgb(75, 75, 100); text-decoration: underline; }
+
+#register-form #register-modal-email-warn { font-size: 1.4em; line-height: 1.85714em; font-style: italic; font-weight: 300; padding-bottom: 1em; }
+
+#register-form #register-modal-terms, #register-form #register-modal-email-warn { margin: 0px auto; width: 90%; }
+
+#register-form #email_warning, #register-form #username_warning { position: absolute; left: 70px; width: 390px; color: white; padding: 10px; line-height: 1.5em; font-size: 1.5em; border-color: rgb(253, 182, 22); box-shadow: rgb(253, 182, 22) 0px 0px 5px 2px; background-color: rgb(253, 182, 22); }
+
+#register-form .warning_hidden { display: none; }
+
+.warning { color: orangered; }
+
+#register-terms .modal-header { position: relative; }
+
+#register-terms .modal-body { max-height: 680px; }
+
+#register-terms .modal-body h4 { font-size: 1.7em; line-height: 1.294em; font-weight: 600; }
+
+#register-terms ::-webkit-input-placeholder { color: rgba(45, 186, 174, 0.498039); }
+
+#register-terms #terms-modal-copy a { color: rgb(75, 75, 100); text-decoration: underline; }
+
+#register-terms #terms-modal-copy { font-size: 1.3em; line-height: 1.75714em; font-weight: 300; padding-bottom: 0.9em; }
+
+#register-terms #terms-modal-copy { margin: 0px auto; width: 90%; }
+
+@media (max-width: 979px) { 
+  #drive-smarter::after, #accessible-anywhere::after, #miles-tracked::after { border-width: 14px; }
+  #nav-header-wrapper #white-bars { right: -100px; }
+  #nav-header-wrapper #white-bars .yellow-bar { width: 14px; }
+}
+
+@media (max-width: 767px) { 
+  #nav-header-wrapper #white-bars { right: -78px; }
+}
+
+@media (max-width: 480px) { 
+  #drive-smarter::after, #accessible-anywhere::after, #miles-tracked::after, #nav-header-wrapper #white-bars { display: none; }
+  #nav-header-wrapper #header { min-height: auto; }
+}
+
+body.transparent-lines #drive-smarter::after, body.transparent-lines #accessible-anywhere::after, body.transparent-lines #miles-tracked::after, body.transparent-lines #register-vehicle::after { border-color: transparent; }
+
+body.transparent-lines h3::after, body.transparent-lines h3 .pointer { opacity: 0; visibility: hidden; }
+
+body.driving-car #vertical-car, body.driving-car #vertical-car { height: 1200px; }
+
+body.hide-car #vertical-car, body.hide-car #vertical-car { opacity: 0; visibility: hidden; }

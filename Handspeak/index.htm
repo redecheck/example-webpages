@@ -1,0 +1,807 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="
+A free ASL video dictionary online. Browse or search ASL signed words and phrases in the comprehensive ASL dictionary produced accurately and naturally by bilingual ASL natives. 
+  ">
+<meta name="author" content="Jolanta A. Lapiak">
+<title>
+American Sign Language (ASL) Dictionary
+</title>
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="dictionary.css">
+
+<style type="text/css">
+/* multiple columns */
+.col-abc {
+text-align: left;
+-moz-column-count: 4;
+-moz-column-width: 5em;
+-moz-column-gap: 1em;
+-webkit-column-count: 4;
+-webkit-column-width: 5em;
+-webkit-column-gap: 1em;
+}	
+
+/* FILTER WORD LIST */
+.dictlist {clear:both;}
+.dictlist ul li {list-style:none; line-height:1.6em; }
+.dictlist a, .col-abc a {
+font: 1.0em arial,verdana, lucida, sans-serif;
+color: #b44745;
+}
+.dictlist a:hover, .col-abc a:hover {color: #cd5c5c;}
+.dictlist a:visited, .col-abc a:visited {color:#666666; font-weight:normal;}
+.dictlist ul li a.active {background:#f1bf35; padding: 5px; color:#a33446;
+-moz-border-radius: 2px; -moz-border-radius:2px;
+-webkit-border-radius: 2px; -webkit-border-radius: 2px;}
+/* end word list menu */
+
+
+.search-button { /* unused */
+	background: #c79e2c; color:#fff; border:0px; padding:15px; cursor:hand; font-size:16px;
+	margin-left:1px; border-radius: 1px 4px 4px 1px; 
+-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.5);
+-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.5);
+box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.5);
+}
+/* FORM */
+select {
+flex: 1 0 auto; -webkit-flex: 1 0 auto; }
+
+input, select {
+background:#fbfbfb; border:1px solid #efefef; padding:10px; margin-top:3px; font-size:0.9em;color:#000;}
+	
+/* collapse/expand */
+.closeable {
+  overflow: hidden;
+  transition: height 1s ease;
+}
+.closeable.close {
+  height: 2em;
+}
+.expand {
+	border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6;
+}
+
+
+</style>
+<style type="text/css"></style></head>
+<body>
+
+<div class="header">
+<!-- header.css APRIL 2015-->
+<nav role="custom-dropdown">
+    <input type="checkbox" id="button">
+    <label for="button" onclick=""></label>
+    
+<ul class="menusite">
+<li class=""><a itemprop="url" href="http://www.handspeak.com/" title="Home"><img itemprop="logo" src="icon-home.png" width="10" height="10" alt="Home"></a>
+</li>
+<li class="active"><a href="index.htm" title="Sign Language dictionary">ASL Dictionary</a></li>
+        <li class=""><a href="http://www.handspeak.com/learn/" title="ASL tutorials">Learn ASL</a></li>
+        <li class=""><a href="http://www.handspeak.com/kid/" title="Signing with children">Signing kids</a></li>
+
+<li class=""><a href="http://www.handspeak.com/translate/" title="Translation">Translation</a>
+	</li>
+    
+<li class=""><a href="http://www.handspeak.com/spell/" title="Fignerspelling">Fingerspelling</a>
+	</li>
+<li class=""><a href="http://www.handspeak.com/culture/" title="Sign language culture">Culture</a>
+	</li>
+
+<li class=""><a href="http://www.handspeak.com/write/" title="written signed language">ASL writing</a>
+	</li>
+    
+<li class=""><a href="http://www.handspeak.com/study/" title="Deaf cultural studies">Library</a>
+	</li>
+    
+<li class=""><a href="http://www.handspeak.com/info/" title="Search" rel="nofollow"><img src="icon-search.png" width="10" height="10" alt="Search"></a>
+	</li>
+    
+    </ul>
+</nav>
+</div>
+
+<div>
+<ul class="crumbs">
+<li><a href="http://www.handspeak.com/word/search/" class="active">Search Word</a></li>
+<li><a href="http://www.handspeak.com/word/list/">Browse Wordlist</a></li>
+<li><a href="http://www.handspeak.com/word/most-used/">First 100+ words</a></li>
+<li><a href="http://www.handspeak.com/word/asl-eng/">Reverse Dictionary</a></li>
+<li><a href="http://www.handspeak.com/translate/">Search Phrase</a></li>
+<li> <a href="http://www.handspeak.com/word/category/">Categories</a></li>
+<li> <a href="http://www.handspeak.com/word/review/">Word review</a></li>
+<li> <a href="http://www.handspeak.com/kid/asl/">Kid's Wordbook</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="grid-main">
+<section class="article">
+<h1>American Sign Language Dictionary</h1>
+<!--<p>
+This ASL dictionary consists of over 6,000 ASL words (English glosses) and growing 
+ plus other counts of ASL phrases, stories, and more. These words are signed accurately and naturally by the bilingual ASL natives.
+</p> -->
+
+<!-- SEACRCH WORDLIST BEGIN-->
+<div ng-app="appWordSearch" class="search-grid ng-scope">
+<div ng-controller="wordlistCtrl" class="ng-scope">
+
+<div class="search-form">
+<input type="text" ng-model="search" ng-change="filter()" placeholder="Search ASL word" class="search-input ng-pristine ng-valid">
+</div>
+
+<div class="grid-row">
+<section ng-show="filteredItems > 0" class="">
+<ul class="col-abc">
+<!-- ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6773" class="ng-binding">alike</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=60" class="ng-binding">all</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5856" class="ng-binding">all afternoon</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=2671" class="ng-binding">all day</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5857" class="ng-binding">all gone</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5858" class="ng-binding">all morning</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5859" class="ng-binding">all night</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=62" class="ng-binding">all right</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=63" class="ng-binding">allergy</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=64" class="ng-binding">allergy attack</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6619" class="ng-binding">alleviate</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5906" class="ng-binding">alliance</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=1644" class="ng-binding">alligator</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6661" class="ng-binding">allocate</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=65" class="ng-binding">allow</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5905" class="ng-binding">ally</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=66" class="ng-binding">almost</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=68" class="ng-binding">alone</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6520" class="ng-binding">Alpha Sigma Pi</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3295" class="ng-binding">alphabet</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3296" class="ng-binding">alphabet soup</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6383" class="ng-binding">already</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=69" class="ng-binding">also</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=1120" class="ng-binding">alter</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=2954" class="ng-binding">alternative</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=4988" class="ng-binding">although</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=70" class="ng-binding">altogether</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=2946" class="ng-binding">alumni</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=71" class="ng-binding">always</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3611" class="ng-binding">amateurish</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3810" class="ng-binding">amazing</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=6947" class="ng-binding">ambassador</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3812" class="ng-binding">ambiguous</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=4034" class="ng-binding">ambitious</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=3811" class="ng-binding">ambivalent</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=4997" class="ng-binding">amble</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=72" class="ng-binding">ambulance</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=1847" class="ng-binding">ambulance siren</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5452" class="ng-binding">ameliorate</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit --><li ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="ng-scope"><a href="http://www.handspeak.com/word/search/index.php?id=5685" class="ng-binding">Amen</a></li><!-- end ngRepeat: data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit -->
+</ul>
+</section>
+</div>
+
+<div class="grid-row ng-hide" ng-show="filteredItems == 0">
+<h4>No words found</h4>
+</div>
+
+<div class="grid-row" ng-show="filteredItems > 0"> 
+<ul class="pagination ng-isolate-scope" pagination="" page="currentPage" max-size="14" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" previous-text="«" next-text="»">
+  <!-- ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">First</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">«</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope active"><a ng-click="selectPage(page.number)" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">6</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">7</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">8</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">9</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">10</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">11</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">12</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">13</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">14</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">»</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">Last</a></li><!-- end ngRepeat: page in pages -->
+</ul>
+<section>
+<select ng-model="entryLimit" class="form-control ng-pristine ng-valid"><option value="? number:40 ?"></option>
+<option value="5">page size: 5</option>
+<option value="10" selected="">page size: 10</option>
+<option value="20">page size: 30</option>
+<option value="50">page size: 50</option>
+<option value="75">page size: 75</option>
+</select>
+</section>
+</div>
+<div>
+<p>
+<small>
+Videos are exclusively used on this website. Any duplicates of these videos on any other website, dictionary, or app violate copyright laws.
+</small>
+</p>
+</div>
+</div>
+</div>
+<!-- SEARCH WORDLIST END -->
+
+
+<div style="margin-bottom:20px; margin-top:20px;">
+
+<!-- Dictionary Main Flex -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2906511074664644" data-ad-slot="5663161407" data-ad-format="auto"></ins>
+
+</div>
+
+
+<div style="margin-bottom:20px; margin-top:20px; background-color:#f8f8f8; padding:20px; display: flex;  display: -webkit-flex;flex-flow: row wrap;  -webkit-flex-flow: row wrap;">
+<p>
+<b>Browse by alphabetical letters</b>
+</p>
+<!--for word/index  /tool/css/menudict.css included in /word/ index page -->
+<style>
+.ac-container{
+display: flex;      display: -webkit-flex;flex-flow: row wrap;      -webkit-flex-flow: row wrap; background:#c6e1ec;
+}
+
+.ac-container label{
+-webkit-flex: 1 0 auto;	flex: 1 0 auto; margin-bottom:1px;
+background:#c6e1ec;
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	padding: 5px 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: #777;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 33px;
+	font-size: 19px;
+}
+
+
+.ac-container label:hover{
+background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+}
+
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #c6e1ec;
+	color: #3d7489;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+
+
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 8px;
+	top: 7px;
+	background: transparent url(sign-plus.gif) no-repeat center center;	
+}
+
+.ac-container input:checked + label:hover:after{
+	background-image: url(/pix/sign-minus.gif);
+}
+
+.ac-container input{
+	display: none;
+}
+
+.ac-container ul{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px; list-style:none;
+	overflow:hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 
+		height 0.3s ease-in-out, 
+		box-shadow 0.6s linear;
+}
+.ac-container input:checked ~ ul{
+	transition: 
+		height 0.5s ease-in-out, 
+		box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.ac-container input:checked ~ ul.ac-small{
+	height: inherit;padding: 20px;text-shadow: 1px 1px 1px rgba(255,255,255,0.8); overflow:visible;
+}
+.ac-container input:checked ~ ul li{
+padding: 10px 0px;
+}
+.ac-container input:checked ~ ul li:hover{
+background: #f6f6f6;
+}
+
+</style>
+
+<section class="ac-container">
+<div>
+		<input id="ac-a" name="accordion-1" type="checkbox">
+		<label for="ac-a">A</label>
+<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=aa">AA</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ae">AE</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=am">AM</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ar">AR</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=au">AU</a></li>
+</ul>
+	</div>
+	<div>
+		<input id="ac-b" name="accordion-1" type="checkbox">
+		<label for="ac-b">B</label>
+<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ba">BA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=be">BE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=bi">BI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=bo">BO</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=br">BR</a></li>
+       	<li><a href="http://www.handspeak.com/word/list/index.php?abc=bu">BU</a></li>
+</ul>
+	</div>
+    <div>
+		<input id="ac-c" name="accordion-1" type="checkbox">
+		<label for="ac-c">C</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ca">CA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=ce">CE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=ci">CI</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=co">CO</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=con">CON</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=coo">COO</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=cr">CR</a></li>
+</ul>
+		
+	</div>
+    <div>
+		<input id="ac-d" name="accordion-1" type="checkbox">
+		<label for="ac-d">D</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=da">DA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=di">DI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=do">DO</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=dr">DR</a></li>
+</ul>
+	</div>
+<div>
+		<input id="ac-e" name="accordion-1" type="checkbox">
+		<label for="ac-e">E</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ea">EA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=em">EM</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=en">EN</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=ex">EX</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-f" name="accordion-1" type="checkbox">
+		<label for="ac-f">F</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=fa">FA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=fe">FE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=fl">FL</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=fo">FO</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=fr">FR</a></li>
+</ul>
+</div>    
+<div>
+		<input id="ac-g" name="accordion-1" type="checkbox">
+		<label for="ac-g">G</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ga">GA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=gi">GI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=gr">GR</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-h" name="accordion-1" type="checkbox">
+		<label for="ac-h">H</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ha">HA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=he">HE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=hi">HI</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=hr">HR</a></li>
+
+</ul>
+</div>
+<div>
+		<input id="ac-i" name="accordion-1" type="checkbox">
+		<label for="ac-i">I</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ia">IA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=in">IN</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=ins">INS</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-j" name="accordion-1" type="checkbox">
+		<label for="ac-j">J</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ja">J</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-k" name="accordion-1" type="checkbox">
+		<label for="ac-k">K</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ka">K</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-l" name="accordion-1" type="checkbox">
+		<label for="ac-l">L</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=la">LA</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=le">LE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=li">LI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=lo">LO</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-m" name="accordion-1" type="checkbox">
+		<label for="ac-m">M</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ma">MA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=me">ME</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=mi">MI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=mo">MO</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=mor">MOR</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-n" name="accordion-1" type="checkbox">
+		<label for="ac-n">N</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=na">NA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=ni">NI</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-o" name="accordion-1" type="checkbox">
+		<label for="ac-o">O</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=oa">OA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=op">OP</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-p" name="accordion-1" type="checkbox">
+		<label for="ac-p">P</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=pa">PA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=pe">PE</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=pi">PI</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=po">PO</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=pra">PRA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=pro">PRO</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=pu">PU</a></li>
+
+</ul>
+</div>
+<div>
+		<input id="ac-q" name="accordion-1" type="checkbox">
+		<label for="ac-q">Q</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=qa">Q</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-r" name="accordion-1" type="checkbox">
+		<label for="ac-r">R</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ra">RA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=re">RE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=reg">REG</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=res">RES</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=rh">RH</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-s" name="accordion-1" type="checkbox">
+		<label for="ac-s">S</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=sa">SA</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=sc">SC</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=se">SE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=sh">SH</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=si">SI</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=sk">SK</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=so">SO</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=sp">SP</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=st">ST</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=su">SU</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-t" name="accordion-1" type="checkbox">
+		<label for="ac-t">T</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ta">TA</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=te">TE</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=th">TH</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=ti">TI</a></li>
+		<li><a href="http://www.handspeak.com/word/list/index.php?abc=tr">TR</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=tu">TU</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-uv" name="accordion-1" type="checkbox">
+		<label for="ac-uv">UV</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ua">U</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=va">V</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-w" name="accordion-1" type="checkbox">
+		<label for="ac-w">W</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=wa">WA</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=wh">WH</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=wi">WI</a></li>
+        <li><a href="http://www.handspeak.com/word/list/index.php?abc=wo">WO</a></li>
+</ul>
+</div>
+<div>
+		<input id="ac-xyz" name="accordion-1" type="checkbox">
+		<label for="ac-xyz">XYZ</label>
+		<ul class="ac-small">
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=xa">X</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=ya">Y</a></li>
+<li><a href="http://www.handspeak.com/word/list/index.php?abc=za">Z</a></li> 
+</ul>
+</div>
+</section>
+</div>
+
+<div style="margin-bottom:20px; margin-top:20px;">
+
+<!-- Dictionary Main Flex -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2906511074664644" data-ad-slot="5663161407" data-ad-format="auto"></ins>
+
+</div>
+
+<div class="grid-quicklink">
+<section class="quicklink">
+<h4>Current trends</h4>
+<p>
+</p><ul>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=6557">ASL sign Father's Day</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=2113">ASL sign for summer</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=6741">ASL sign for summer solstice</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1060">ASL sign for hot</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=2136">ASL sign for swimming</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=2262">ASL sign for travel</a></li>
+</ul>
+<p></p>
+</section>
+
+<section class="quicklink">
+<p>
+<b>Words of the Day</b>
+</p>
+
+
+<div>
+ <video width="auto" height="auto" src="http://www.handspeak.com/word/b/banquet.mp4" controls="">
+  <p>Sign language videos visible in HTML5-based browsers.</p>
+  </video>
+</div>
+<p>
+Equivalent to English: <span class="asl">banquet</span>
+</p>
+
+
+
+</section>
+
+<section class="quicklink">
+<h4>ASL vocabulary</h4>
+<ul>
+<li><a href="http://www.handspeak.com/word/review/">Back to school: word review</a></li>
+<li><a href="http://www.handspeak.com/word/most-used/index.php?dict=100">First 100 ASL signs</a></li>
+<li><a href="http://www.handspeak.com/word/most-used/index.php?dict=200">Second 100 ASL signs</a></li>
+<li><a href="http://www.handspeak.com/word/most-used/index.php?dict=300">Third 100 ASL signs</a></li>
+<li><a href="http://www.handspeak.com/word/category/">Word list categories</a></li>
+</ul>
+</section>
+
+</div><!-- end quicklink-->
+
+<div style="margin-bottom:20px; margin-top:20px;">
+
+<!-- Dictionary Main Flex -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2906511074664644" data-ad-slot="5663161407" data-ad-format="auto"></ins>
+
+</div>
+
+<div class="grid-quicklink">
+
+<section class="quicklink">
+<p>
+<b>Sign language for...</b>
+</p>
+<ul>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1316">love / I love you</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1658">please</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=2186">thank you</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=926">good</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=982">happy</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1889">school</a></li>
+</ul>
+</section>
+<section class="quicklink">
+<ul>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=704">excuse me</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1017">help</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=645">eat</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1433">more</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1076">hungry</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1496">no</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=1657">play</a></li>
+<li> <a href="http://www.handspeak.com/word/search/index.php?id=2225">tired</a></li>
+</ul>
+</section>
+
+<section class="quicklink">
+
+</section>
+
+</div><!-- end quicklink-->
+
+<div class="grid-quicklink" style="margin:20px 0px;">
+<section class="quicklink">
+<p>
+<b>ASL to English Search</b>
+</p>
+<div style="display: flex;      display: -webkit-flex; flex-flow: row wrap;      -webkit-flex-flow: row wrap;">
+<form name="fmSearch" method="get" action="http://www.handspeak.com/word/asl-eng/index.php">
+
+<!--<label for="frmHandshape">Handshapes</label>
+<input type="text" name="fmFig" id="frmHandshape" list="hsType" placeholder="handshape number">
+    <datalist id="hsType">
+      <option value="0-num">
+      <option value="0-flat">
+      <option value="0-baby">
+    </datalist>-->
+    
+<select name="fmFig" size="1" class="">
+<option value="Fig" selected="">Handshape</option>
+<option value="0-num">0-round</option>
+<option value="0-flat">0-flat</option>
+<option value="1-num">1</option>
+<option value="1-d">1-d (D)</option>
+<option value="1-claw">1-claw</option>
+<option value="1-i">1-i (I)</option>
+<option value="1-thumb">1-thumb (L)</option>
+<option value="2-num">2 (V)</option>
+<option value="2-claw">2-claw</option>
+<option value="2-bent">2-bent</option>
+<option value="2-close">2-close (H,U)</option>
+<option value="2-cross">2-cross (R)</option>
+<option value="3-num">3</option>
+<option value="3-claw">3-claw</option>
+<option value="3-bent">3-bent</option>
+<option value="3-k">3-K (up) or 3-P (down)</option>
+<option value="4-num">4</option>
+<option value="4-close">4-close (B)</option>
+<option value="4-claw">4-claw</option>
+<option value="4-bent">4-bent</option>
+<option value="5-num">5</option>
+<option value="5-close">5-close</option>
+<option value="5-claw">5-claw</option>
+<option value="5-half">5-half</option>
+<option value="5-bent">5-bent</option>
+<option value="5-c">5-c (C)</option>
+<option value="6-num">6</option>
+<option value="6-claw">6-claw</option>
+<option value="6-inverse">6-inverse (Y)</option>
+<option value="7-num">7</option>
+<option value="8-num">8</option>
+<option value="8-open">8-open</option>
+<option value="9-num">9 (F)</option>
+<option value="10-num">10, A</option>
+<option value="10-s">10-s (S)</option>
+<option value="10-t">10-t (American T)</option>
+<option value="10-t2">10-t2 (European T)</option>
+<option value="20-num">20-num</option>
+<option value="20-c">20-c, claw L</option>
+<option value="20-g">20-g (G)</option>
+<option value="ily">ILY</option>
+   </select>
+
+<div>
+<a href="index.htm#" onclick="NewWin=window.open('/byte/p/phonology/hs-primes-popup.php','NewWin','menubar=no,status=no,scrollbars=yes,width=700,height=800,top=10,left=50');">ASL handshape chart</a>
+</div>
+
+<select name="fmMov" size="1" class="">
+<option value="Mov" selected="">Movement</option>
+<option value="repeat">repeated</option>
+<option value="unidir">unidirectional</option>
+<option value="circular">circular or arc</option>
+<option value="upward">upward</option>
+<option value="downward">downward</option>
+<option value="forward">forward (from signer)</option>
+<option value="backward">backward (toward signer)</option>
+<option value="convergent">convergent action (approach)</option>
+<option value="divergent">divergent action (separate)</option>
+<option value="twist">twisting</option>
+<option value="wiggle">wiggling</option>
+</select>
+<div>
+<a href="index.htm#" onclick="NewWin=window.open('/byte/p/phonology/mov-primes-popup.php','NewWin','menubar=no,status=no,scrollbars=yes,width=700,height=800,top=10,left=50');">ASL movement chart</a>
+</div>
+<div>
+<select name="fmLoc" size="1" class="">
+	<option value="Loc" selected="">Location</option>
+<option value="zero">neutral space</option>
+<option value="head-side">head-side or head-back</option>
+<option value="head-low">head-low (neck to mouth level)</option>
+<option value="head-high">head-high (nose to forehead)</option>
+<option value="face">front face or whole face</option>
+<option value="palm">palm (non-dominant)</option>
+<option value="10-s">hand "S" (non-dominant)</option>
+<option value="10-num">hand "10" (non-dominant)</option>
+<option value="1-num">hand "1" (non-dominant)</option>
+<option value="5-num">hand "5" (non-dominant)</option>
+<option value="9-num">hand "9" (non-dominant)</option>
+<option value="hand">hand (non-dominant, unspecific)</option>
+<option value="torso">torso (chest or shoulders)</option>
+    <option value="arm">arm or elbow</option>
+    </select>
+</div>
+
+<select name="fmBoth" size="1" class="">
+<option value="0" selected="">None (two-handed movement type)</option>
+<option value="1">alternating (same handshape, alternating)</option>
+<option value="2">mirror (same handshape, same movement)</option>
+</select>
+           
+<input type="submit" class="search-button raised" value="SEARCH">
+</form></div>
+</section>
+</div><!-- end grid-->
+
+<div class="closeable close">
+<h3 class="expand">+ Pointers to remember</h3>
+<!--<p>
+The American Sign Language (ASL) dictionary consists of the ASL signs, some variants of these ASL signs, some verb inflections and more, produced and signed by native ASL bilinguals. 
+</p>-->
+<p>
+This dictionary is not exhaustive (yet). The ASL signs are constantly added to the dictionary. If you don't find the word/sign, you can send your request via email. Browse the alphabetical letters or search a signed word above.
+</p>
+
+<p>
+<b>Regional variation</b>: there may be regional variations of some ASL words across the regions of North America.
+</p>
+<p>
+<b>Inflection</b>: most ASL words in the dictionary are a "base", but many of them are grammatically inflectable within ASL sentences.
+</p>
+<p>
+<b>Contextual meaning</b>: These ASL signs in the dictionary may not mean the same in different contexts and/or ASL sentences. You will see some examples in video sentences.
+</p>
+<p>
+ASL is very much alive and indefinitely constructable as any spoken language. The best way to use ASL right is to immerse in daily interaction with Ameslan people (ASLers).
+</p>
+<!--<h4 class="title-bar">About sign language</h4>
+<li><a href="/word/index.php?byte=signlan" >Sign language: myths and facts</a></li>
+<li><a href="/word/index.php?byte=asl" >American Sign Language</a></l-->i&gt;
+
+</div></section>
+</div><!-- end row-->
+
+
+
+
+
+
+
+
+<footer>
+<!-- HS FOOTER -->
+<div class="footlink">
+<ul>
+<li><a href="http://www.handspeak.com/info/" rel="nofollow">SEARCH</a></li>
+<li><a href="http://www.handspeak.com/tool/email/" rel="nofollow">CONTACT</a></li>
+<li><a href="http://www.handspeak.com/info/index.php?info=donate" rel="nofollow">GIVE BACK ❤ TO THIS SITE</a></li>
+</ul>
+</div> <!-- end id navtool -->
+<div class="footer" style="clear:both;">
+<section class="footer-grid">
+<h4 class="footer-title" style="margin-bottom:10px;">About the site</h4>
+<p>
+<img src="hslogoimage2011-90.jpg" width="60" height="60" alt="handspeak.com logo" style="padding-right:20px; padding-bottom:20px; float:left;">
+<!--<img src="/info/about/jolanta.jpg" width="100" height="100" alt="jolanta lapiak">-->
+</p>
+<p>
+This site is made of authentic culturally Deaf people and codas who speak ASL and other signed languages as their first language. The creator is an ASL instructor and native signer. This work is a labor of love and passion for our language and culture <a href="http://www.handspeak.com/info/index.php?info=about" title="about the site">...</a>
+</p>
+</section>
+
+<section class="footer-grid">
+<h4 class="footer-title">Follow or share</h4>
+<ul style="list-style-type:none;">
+<li>
+<a href="http://www.youtube.com/user/TheHandspeak" target="_blank" rel="nofollow">YouTube</a></li>
+<li>
+<a href="https://plus.google.com/117046585397298185856" target="_blank" rel="nofollow">Google Plus</a>
+</li> 
+<li>
+<a href="https://www.facebook.com/pages/Handspeak/135791766826" target="_blank" rel="nofollow">Facebook</a></li>
+<li><a href="http://www.twitter.com/handspeak/" target="_blank" rel="nofollow">Twitter</a></li>
+</ul>
+</section>
+</div>
+
+<div class="grid-100 copyright">
+<a href="http://www.handspeak.com/info/index.php?info=copyright" rel="nofollow">Copyright</a> © 1996-2016 Jolanta Lapiak, 
+Handspeak®. All Rights Reserved. Handspeak® trademarked. 
+| <a href="http://www.handspeak.com/info/index.php?info=copyright" rel="nofollow">privacy policy</a> |
+<a href="http://www.handspeak.com/info/index.php?info=linkus" rel="nofollow">link to us</a> | <a href="javascript:window.external.addFavorite('http://www.handspeak.com','HandSpeak: Sign Language Online');" rel="nofollow">bookmark</a>
+</div></footer>
+
+<!-- three files for wordlist search-->
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+form > div > * { display: none; }
+
+form > div > .content { display: block; }
+
+.content-main { display: block; }
+
+.content-rail { display: none; }
+
+.bread-crumb { display: none; }
+
+.comment-wrapper { display: none; }
+
+.contentAd { display: none; }
+
+.bannerAdContainer { display: none !important; }
+
+.tile-wrapper.tiles { display: none; }

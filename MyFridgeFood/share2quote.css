@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.pw-sharetoquote { position: absolute; z-index: 9998; display: none; padding: 5px; border-radius: 5px; background: padding-box rgba(51, 51, 51, 0.0980392); }
+
+.pw-sharetoquote__outer { border: 1px solid rgb(191, 191, 191); border-radius: 3px; text-align: left; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+
+.pw-sharetoquote__inner { padding: 4px 6px 8px 9px; text-align: left !important; }
+
+.pw-sharetoquote__inner .pw-widget { margin: 0px !important; }
+
+.pw-sharetoquote__inner .ra1-pw-icon-post { background-position: 0px -500px !important; }
+
+.pw-sharetoquote__lbl { color: rgb(102, 102, 102); display: block; padding-bottom: 6px; font-style: normal !important; font-variant: normal !important; font-weight: normal !important; font-stretch: normal !important; font-size: 12px !important; line-height: 1.2 !important; font-family: Arial, Helvetica, sans-serif !important; }
+
+.pw-sharetoquote__cpr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(208, 228, 241); box-shadow: rgb(255, 255, 255) 0px 1px 0px inset; border-radius: 0px 0px 3px 3px; text-align: right; padding: 3px 9px 2px; font-style: normal !important; font-variant: normal !important; font-weight: normal !important; font-stretch: normal !important; font-size: 9px !important; line-height: 1.2 !important; font-family: Arial, Helvetica, sans-serif !important; background-image: linear-gradient(rgb(229, 243, 249), rgb(249, 252, 254)); background-color: rgb(237, 247, 251); background-clip: padding-box; background-repeat: repeat-x; }
+
+.pw-sharetoquote__cpr a { color: rgb(29, 120, 191) !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important; font-stretch: normal !important; font-size: 9px !important; line-height: 1.2 !important; font-family: Arial, Helvetica, sans-serif !important; text-decoration: none !important; }
+
+.pw-sharetoquote__close { position: absolute; right: -8px; top: -8px; cursor: pointer; width: 26px; height: 23px; padding-top: 3px; background: url("../img/sharequote-ico.png") -22px 0px no-repeat; }
+
+.pw-sharetoquote__close__inner { display: block; width: 22px; height: 22px; margin: 0px auto !important; background: url("../img/sharequote-ico.png") -96px 0px no-repeat; }
+
+.pw-sharetoquote__close:hover { background-position: -70px 0px; }
+
+.pw-sharetoquote__close:hover .pw-sharetoquote__close__inner { background-position: -144px 0px; }

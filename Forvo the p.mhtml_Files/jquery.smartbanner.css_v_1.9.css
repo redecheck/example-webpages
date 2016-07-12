@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#smartbanner { position: absolute; left: 0px; top: -82px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(232, 232, 232); width: 100%; height: 80px; font-family: "Helvetica Neue", sans-serif; box-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 2px; z-index: 9998; -webkit-font-smoothing: antialiased; overflow: hidden; background: rgb(0, 0, 0); }
+
+#smartbanner, html.sb-animation { transition: all 0.3s ease; }
+
+#smartbanner .sb-container { margin: 0px auto; }
+
+#smartbanner .sb-close { position: absolute; left: 5px; top: 5px; display: block; border: 2px solid rgb(255, 255, 255); width: 14px; height: 14px; font-family: ArialRoundedMTBold, Arial; font-size: 15px; line-height: 15px; text-align: center; color: rgb(255, 255, 255); text-decoration: none; text-shadow: none; border-radius: 14px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 3px; -webkit-font-smoothing: subpixel-antialiased; background: rgb(7, 7, 7); }
+
+#smartbanner .sb-close:active { font-size: 13px; color: rgb(170, 170, 170); }
+
+#smartbanner .sb-icon { position: absolute; left: 30px; top: 10px; display: block; width: 57px; height: 57px; border-radius: 10px; background:  0% 0% / cover rgba(0, 0, 0, 0); }
+
+#smartbanner.no-icon .sb-icon { display: none; }
+
+#smartbanner .sb-info { position: absolute; left: 98px; top: 10px; width: 40%; font-size: 8.5px; line-height: 1.2em; font-weight: bold; color: rgb(106, 106, 106); }
+
+#smartbanner #smartbanner.no-icon .sb-info { left: 34px; }
+
+#smartbanner .sb-info strong { display: block; font-size: 12px; color: rgb(77, 77, 77); line-height: 15px; }
+
+#smartbanner .sb-info > span { display: block; }
+
+#smartbanner .sb-info em { font-style: normal; text-transform: uppercase; }
+
+#smartbanner .sb-button { position: absolute; right: 20px; top: 28px; padding: 0px 12px; min-width: 10%; height: 24px; font-size: 14px; line-height: 24px; text-align: center; font-weight: bold; color: rgb(106, 106, 106); text-transform: uppercase; text-decoration: none; text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px; border-radius: 3px; box-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px, rgba(255, 255, 255, 0.701961) 0px 1px 0px inset; background: -webkit-linear-gradient(top, rgb(239, 239, 239) 0%, rgb(220, 220, 220) 100%); }
+
+#smartbanner .sb-button:active, #smartbanner .sb-button:hover { background: -webkit-linear-gradient(top, rgb(220, 220, 220) 0%, rgb(239, 239, 239) 100%); }
+
+#smartbanner .sb-icon.gloss::after { content: ""; position: absolute; left: 0px; top: -1px; border-top-width: 1px; border-top-style: solid; border-top-color: rgba(255, 255, 255, 0.8); width: 100%; height: 50%; border-radius: 10px 10px 12px 12px; background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.701961) 0%, rgba(255, 255, 255, 0.2) 100%); }
+
+#smartbanner.android { border-color: rgb(33, 34, 40); box-shadow: none; background: url("data:image/gif;base64,R0lGODlhCAAIAIABAFVVVf///yH5BAEHAAEALAAAAAAIAAgAAAINRG4XudroGJBRsYcxKAA7") rgb(61, 61, 61); }
+
+#smartbanner.android .sb-close { border: 0px; width: 17px; height: 17px; line-height: 17px; color: rgb(177, 177, 179); text-shadow: rgb(0, 0, 0) 0px 1px 1px; box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 2px inset, rgba(255, 255, 255, 0.298039) 0px 1px 1px; background: rgb(28, 30, 33); }
+
+#smartbanner.android .sb-close:active { color: rgb(238, 238, 238); }
+
+#smartbanner.android .sb-info { color: rgb(204, 204, 204); text-shadow: rgb(0, 0, 0) 0px 1px 2px; }
+
+#smartbanner.android .sb-info strong { color: rgb(255, 255, 255); }
+
+#smartbanner.android .sb-button { min-width: 12%; padding: 1px; color: rgb(209, 209, 209); border-radius: 0px; box-shadow: none; min-height: 28px; background: none; }
+
+#smartbanner.android .sb-button span { text-align: center; display: block; padding: 0px 10px; text-transform: none; text-shadow: none; box-shadow: none; background-color: rgb(29, 132, 198); }
+
+#smartbanner.android .sb-button:active, #smartbanner.android .sb-button:hover { background: none; }
+
+#smartbanner.android .sb-button:active span, #smartbanner.android .sb-button:hover span { background: rgb(29, 132, 198); }
+
+#smartbanner.windows .sb-icon { border-radius: 0px; }

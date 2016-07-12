@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!--
+   I wrote this project as a quick proof of concept in 2011 for my friend Keith Simons.
+   Since then it has slowly been improved over the years as it makes popular news feed
+   sites. Keith and myself have always wanted to work for Google. If you work for Google
+   and are reading this please consider reaching out to your local HR for considering
+   us for employment. My email is brian.folts@gmail.com. My one goal for this site
+   was to be contacted by Google (either positive or negative), but I have yet to hear
+   anything.
+ -->
+ 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Google Maps Streetview Player</title>
+ <meta name="description" content="Google Maps Streetview Player : Play any set of directions from google maps. View google maps streetview images in sequence creating a video of a route. View route data for driving, biking, or walking. Created videos can be downloaded to use in various projects.">
+ <link rel="icon" href="http://www.brianfolts.com/driver/images/favicon.ico">
+ <link rel="stylesheet" type="text/css" href="c.css">
+ <link href="bootstrap.min.css" rel="stylesheet">
+ <meta name="google-translate-customization" content="3939594f8eabe68d-f9ee46c3d54711d5-gccd11ff5a5b030f8-1a">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="translateelement.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v2/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body style="position: relative; min-height: 100%; top: 0px;">
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-md-4">
+   <div class="jumbotron">
+    <h1 class="page-header">Google Maps <small>Streetview Player</small></h1>
+    <p class="lead">The google maps streetview player will take in either a starting point and end point, or a provided file of a route and 
+              provide a playthrough of the google streetview images that are available.</p>
+    <div id="google_translate_element"><div class="skiptranslate goog-te-gadget" dir="ltr"><div id=":0.targetLanguage" style="display: inline;"><select class="goog-te-combo"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>&nbsp;&nbsp;Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com/" target="_blank"><img src="googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px">Translate</a></span></div></div>
+    <div class="row">
+     <div class="col-sm-12" style="text-align:right">
+      <div class="fb-like fb_iframe_widget" data-href="index.htm" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=409406982533198&amp;container_width=822&amp;href=http%3A%2F%2Fwww.brianfolts.com%2Fdriver%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 134px; height: 20px;"><iframe name="f83fec909001ac" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="like.php_action_like_app_id_409406982533198_channe.com_2Fdri.htm" style="border: none; visibility: visible; width: 134px; height: 20px;" class=""></iframe></span></div>
+      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="tweet_button.b41e99df00581dc95d7fdd63f3283511.en.html" style="position: static; visibility: visible; width: 61px; height: 20px;" data-url="http://brianfolts.com/driver/"></iframe>
+      
+
+
+<a href="https://play.google.com/store/apps/details?id=com.baf.gmsvp&amp;hl=en&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="en-play-badge.png" height="50"></a>
+
+   </div>
+  </div>
+ </div>
+          <div class="panel panel-primary">
+			<div class="panel-heading">Options</div>
+            <div class="panel-body">
+              <form id="mainform" class="form-horizontal" onsubmit="initMovie();return false">
+                <div class="form-group">
+                  <label for="origin" class="col-sm-2 control-label">Origin</label>
+                  <div class="col-sm-10">
+                    <input name="origin" class="form-control" onchange="buildLink()" placeholder="origin" type="text" id="origin">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="destination" class="col-sm-2 control-label">Destination</label>
+                  <div class="col-sm-10">
+                    <input name="destination" class="form-control" onchange="buildLink()" placeholder="destination" type="text" id="destination">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                      <label>
+                        <input name="advanced" id="advanced" type="checkbox" onclick="toggleAdvanced(this)"> Advanced Options
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="advanced-area" class="hidden">
+                  <div class="form-group">
+                    <label for="fps" class="col-sm-2 control-label">FPS</label>
+                    <div class="col-sm-10">
+                      <input name="fps" class="form-control" onchange="buildLink()" placeholder="frames per second" type="text" id="fps" value="1">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="travelmode" class="col-sm-2 control-label">Travel mode</label>
+                    <div class="col-sm-10">
+                      <select name="travelmode" class="form-control" onchange="buildLink()" id="travelmode">
+                        <option value="DRIVING">Driving</option>
+                        <option value="BICYCLING" selected="">Bicycling</option>
+                        <option value="TRANSIT">Transit</option>
+                        <option value="WALKING">Walking</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="gxp-file" class="col-sm-2 control-label">Upload coordinates</label>
+                    <div class="col-sm-10">
+                      <input type="file" id="gxp-file" class="btn btn-secondary">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="routename" class="col-sm-2 control-label">Route Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" id="routename" name="rn" onchange="buildLink()" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-primary" value="Play">
+                  </div>
+                </div>
+              </form>
+              <a href="http://www.brianfolts.com/driver/rss.xml" target="_blank" class="rss-link">version 1.3.3 (last updated 04/09/2016)</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8" style="margin-top:20px">
+          <div id="statusbox" class="alert alert-danger" style="display:none"></div>
+          <div class="panel panel-info" id="stage" style="display:none">
+            <div class="panel-heading">
+              <span style="float:right" id="route-distance"></span>
+              <span id="route-name-label"></span>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div style="width:512px;margin:auto">
+                    <canvas id="draw"></canvas>
+                    <div id="progress" class="progress">
+                      <div class="progress-bar progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="progressbar" style="width:0%"></div>
+                      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="bufferbar" style="width:0%"></div>
+                    </div>
+                    <div class="btn-group" id="controls" style="visibility:hidden;height:20px">
+                      <input class="btn btn-sm btn-primary" id="btn_playpause" onclick="pauseMovie(this)" type="button" value="Pause">
+                      <input class="btn btn-sm" onclick="speedUpMovie()" type="button" value="Faster">
+                      <input class="btn btn-sm" onclick="slowDownMovie()" type="button" value="Slower">
+                      <input class="btn btn-sm" type="button" data-toggle="modal" data-target="#downloadModal" value="Download">
+                      <input class="btn btn-sm" onclick="shareMovie()" type="button" value="Share" data-toggle="modal" data-target="#shareModal">
+                      <input class="btn btn-sm" onclick="fullScreen()" type="button" value="Fullscreen">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div id="map"></div>
+                  <div id="directions"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- STREETVIEW_PLAYER -->
+      <div class="row">
+        <div class="col-md-6">
+          <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1225680890389163" data-ad-slot="9699540536"></ins>
+        </div>
+        <div class="col-md-6">
+          <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1225680890389163" data-ad-slot="4739460535"></ins>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Download Modal -->
+    <div class="modal fade" id="downloadModal" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Downloading Route</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin-bottom:10px">
+              <div class="col-sm-12">
+                <p>Exprting your route as a GIF</p>
+                <p class="help-block">Only as much of the movie which has loaded in the browser will be added to the GIF. Image will appear below when ready.</p>
+		<div class="progress">
+			<div class="progress-bar progress-bar" role="progressbar" id="downloadProgress" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+		</div>
+              </div>
+            </div>
+            <div class="row" id="downloadResult">
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Share Modal -->
+    <div class="modal fade" id="shareModal" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Share</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" style="margin-bottom:10px">
+              <div class="col-sm-12">
+                <p>Share your route with the world.</p>
+                <input onclick="this.select()" id="routeURL" class="form-control" value="">
+                <p class="help-block">Copy and paste the above URL to share</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+	
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="translate_24dp.png" width="20" height="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="xd_arbiter.php_versi_9.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="xd_arbiter.php_versi_10.htm" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe></body></html>

@@ -1,0 +1,53 @@
+@charset "windows-1252";
+
+@import url("font-awesome.css");
+
+.somediv { }
+
+.evenrow1 { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(255, 255, 255); }
+
+.evenrow1:hover { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(255, 248, 248); }
+
+.oddrow_public { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(224, 255, 255); }
+
+.oddrow_public:hover { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(248, 248, 255); }
+
+.oddrow_private { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(224, 241, 241); }
+
+.oddrow_private:hover { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(248, 248, 255); }
+
+.oddrow_saved { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(224, 245, 245); }
+
+.oddrow_saved:hover { margin: 0px; padding: 10px 5px 10px 10px; white-space: nowrap; overflow-x: hidden; background-color: rgb(248, 248, 255); }
+
+#showmaildivcontent { align-content: initial; align-items: initial; align-self: initial; alignment-baseline: initial; animation: initial; backface-visibility: initial; background: initial; }
+
+.round-button-on { display: inline-block; width: 30px; height: 30px; line-height: 25px; border: 2px solid rgb(245, 245, 245); border-radius: 50%; cursor: pointer; color: rgb(0, 0, 0); text-align: center; text-decoration: none; box-shadow: gray 0px 0px 3px; font-size: 13px; background: lightgreen; }
+
+.round-button-on:hover { background: green; }
+
+.round-button-off { display: inline-block; width: 30px; height: 30px; line-height: 25px; border: 2px solid rgb(245, 245, 245); border-radius: 50%; cursor: pointer; color: rgb(246, 246, 246); text-align: center; text-decoration: none; box-shadow: gray 0px 0px 3px; font-size: 13px; background: darkred; }
+
+.round-button-off:hover { background: red; }
+
+#showmaildivcontent::before, #showmaildivcontent::after, #showmaildivcontent *, #showmaildivcontent ::before, #showmaildivcontent ::after { align-content: initial; align-items: initial; align-self: initial; }
+
+.red { background-color: red; }
+
+input[type="checkbox"] { display: none; color: rgb(255, 0, 0); }
+
+input[type="checkbox"] + label::before { font-family: FontAwesome; display: inline-block; }
+
+input[type="checkbox"] + label::before { content: "&#61590;"; }
+
+input[type="checkbox"] + label::before { letter-spacing: 10px; }
+
+input[type="checkbox"]:checked + label::before { content: "&#61510;"; }
+
+input[type="checkbox"]:checked + label::before { letter-spacing: 5px; }
+
+.outermail { white-space: nowrap; padding: 0px; margin: 0px; }
+
+.innermail { overflow: hidden; padding: 8px 0px 0px; margin: 0px; }
+
+.someviewport { overflow: auto; font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; max-height: 100%; margin: 0px -100px 0px 0px; padding: 0px 100px 0px 0px; height: 850px; }

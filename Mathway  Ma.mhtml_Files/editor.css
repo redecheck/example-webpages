@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.MWEditor { display: inline; font-family: "Segoe UI", "Lucida Grande", Tahoma, Arial; font-size: 1em; font-style: normal; color: black; z-index: 3000; cursor: default; }
+
+.MWEditor.Empty { display: inline-block; color: rgb(204, 204, 204); cursor: text; font-size: 24pt; margin: 3px 0px 0px 5px; white-space: nowrap; }
+
+.MWSubEditor { display: inline-block; position: relative; width: 200px; min-height: 40px; margin: 5px; border: 1px solid rgb(204, 204, 204); cursor: text; }
+
+.MWSubEditor .Error { color: red !important; }
+
+.MWEditorCursor { position: absolute; display: none; color: rgb(68, 68, 68); font-family: "Segoe UI", "Lucida Grande", Tahoma, Arial; font-size: 1em; font-style: normal; z-index: 3002; cursor: text; pointer-events: none; }
+
+.MWMeasureString { display: none; white-space: pre; }
+
+.MWEditorControlsContainer { float: right; margin: 0px 6px 30px 0px; font-size: 0pt; white-space: nowrap; z-index: 3000; }
+
+.MWEditorCanvasWrapper { float: left; }
+
+.MWEditorCanvasWrapper canvas { position: relative; }
+
+.MWEditorCanvasControls { float: left; margin: 0px 0px 0px 20px; }
+
+.MWEditorSpecialControls { margin-left: 15px; font-size: 0pt; z-index: 3001; white-space: nowrap; position: static !important; }
+
+.MWEditorLabel { font-size: 14pt; font-weight: bold; white-space: nowrap; }
+
+.MWEditorControlButton { display: inline-table; height: 32px; width: 32px; margin-left: 5px; text-align: center; border: 1px solid rgb(229, 229, 229); cursor: pointer; border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset; background-color: rgb(242, 242, 242); }
+
+.MWEditorControlButtonHover { display: inline-table; height: 32px; width: 32px; margin-left: 5px; text-align: center; border: 1px solid rgb(193, 207, 231); cursor: pointer; border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset; background-color: rgb(219, 227, 241); }
+
+.MWEditorControlButtonClick { display: inline-table; height: 32px; width: 32px; margin-left: 5px; text-align: center; border: 1px solid rgb(153, 179, 217); white-space: nowrap; cursor: pointer; border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px inset; background-color: rgb(212, 221, 238); }
+
+.MWEditorControlButton *, .MWEditorControlButtonHover *, .MWEditorControlButtonClick * { display: table-cell; vertical-align: middle; margin-left: auto; margin-right: auto; border: 0px; }
+
+.MathJax span { pointer-events: none; }
+
+.MWEditor .mi, .MWEditor .mn, .MWEditor .mtext, .MWEditor .mo, .MWEditor .mstyle { position: relative; font-size: 1em; pointer-events: auto; }
+
+.MWEditor .mstyle { padding-left: 0px !important; }
+
+.MWEditor .mfrac { padding-left: 0.1em !important; padding-right: 0.1em !important; }
+
+.MWEditor .Linebreak { height: 20px !important; }
+
+.MWEditor .Placeholder { color: rgb(255, 255, 255); padding: 2px; cursor: text; background-color: rgb(212, 221, 238); }
+
+.MWEditor .Space { display: inline-block; font-style: italic; cursor: text; width: 0.1em !important; padding: 0px !important; }
+
+.MWEditor .mfenced.Unclosed > .mo:last-child { color: rgb(204, 204, 204); }
+
+.math span:last-of-type { border-left-width: 0px !important; }
+
+.MWLog { position: fixed; left: 0px; bottom: 0px; width: 50%; height: 300px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(229, 229, 229); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(229, 229, 229); cursor: n-resize; z-index: 4000; background-color: rgb(242, 242, 242); }
+
+.MWLog pre { height: 100%; padding: 0px 10px; overflow: auto; margin: 0px !important; }
+
+.MWClearLog { position: absolute; top: 10px; right: 20px; }
+
+.MWConsole { position: fixed; right: 0px; bottom: 0px; width: 50%; height: 300px; overflow: auto; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(229, 229, 229); border-left-width: 1px; border-left-style: solid; border-left-color: rgb(229, 229, 229); cursor: n-resize; z-index: 4000; background-color: rgb(242, 242, 242); }
+
+.MWConsole table { width: 100%; border-collapse: collapse; }
+
+.MWConsole th, .MWConsole td { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(229, 229, 229); padding: 10px; vertical-align: top; }
+
+pre { display: block; font-family: "Segoe UI", "Lucida Grande", Tahoma, Arial; color: rgb(68, 68, 68); font-size: 10pt; white-space: pre; margin: 1em 0px; }
+
+.MWEditorCursor { position: absolute; color: rgb(68, 68, 68); font-family: "Segoe UI", "Lucida Grande", Tahoma, Arial; font-size: 1em; font-style: normal; pointer-events: none; animation: cursorAnimation 0.8s ease infinite; }
+
+@keyframes cursorAnimation { 
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes cursorAnimation { 
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

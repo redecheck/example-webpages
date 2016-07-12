@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.foot { text-align: center; }
+
+a { color: rgb(34, 34, 34); text-decoration: none; }
+
+h1 { font-size: 18px; font-weight: normal; }
+
+h2 { font-size: 16px; font-weight: normal; }
+
+h3 { font-weight: normal; }
+
+.info a { color: rgb(255, 255, 255); text-decoration: underline; }
+
+.info { display: none; position: relative; margin: 60px auto; width: 80%; max-width: 600px; min-width: 200px; line-height: 18px; font-size: 13px; font-family: "Open Sans", sans; color: rgb(255, 255, 255); height: auto; padding: 1em 2em; opacity: 0.9; background-color: rgb(0, 0, 0); }
+
+html, body { height: 100%; min-height: 100%; padding: 0px; margin: 0px; }
+
+body { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: 18px; font-family: "Open Sans", sans-serif; color: rgb(64, 64, 64); background: rgb(52, 152, 219); }
+
+.notepad, .notepad::before, .notepad::after { border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.14902) 0px 0px 0px 1px, rgba(0, 0, 0, 0.498039) 0px 0px 4px; background-image: linear-gradient(rgb(246, 171, 202) 1px, transparent 1px), linear-gradient(rgb(246, 171, 202) 1px, transparent 1px), linear-gradient(rgb(232, 232, 232) 1px, transparent 1px); background-color: rgb(255, 255, 255); background-size: 1px 1px, 1px 1px, 30px 30px; background-position: 22px 0px, 25px 0px, 0px 50px; background-repeat: repeat-y, repeat-y, repeat; }
+
+.notepad { position: relative; margin: 40px auto; padding: 0px 23px 14px 35px; width: 80%; max-width: 600px; min-width: 200px; min-height: 76%; height: auto; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: 30px; font-family: Cambria, Georgia, serif; color: rgb(40, 38, 37); }
+
+.notepad p, .notepad blockquote { margin-bottom: 30px; }
+
+.notepad :last-child { margin-bottom: 0px; }
+
+.notepad::before, .notepad::after { content: ""; position: absolute; z-index: -1; top: 100%; left: 3px; right: 3px; margin-top: -2px; height: 4px; background-size: 1px 1px, 1px 1px, 0px 0px; }
+
+.notepad::before { z-index: -2; left: 6px; right: 6px; height: 6px; background-color: rgb(238, 238, 238); }
+
+.notepad-heading { position: relative; margin: 0px -23px 20px -35px; height: 60px; border-radius: 2px 2px 0px 0px; box-shadow: rgb(47, 129, 173) 0px 1px inset, rgba(0, 0, 0, 0.4) 0px 2px 1px, rgba(0, 0, 0, 0.498039) 0px 0px 0px 1px, rgb(0, 0, 0) 0px 1px; background: linear-gradient(rgb(34, 103, 151), rgb(12, 52, 82)) rgb(20, 70, 106); }
+
+.notepad-heading > h1 { line-height: 60px; font-size: 18px; font-weight: normal; text-transform: uppercase; color: rgb(255, 255, 255); text-align: center; text-shadow: rgba(0, 0, 0, 0.701961) 0px -1px; }
+
+.notepad-heading::before, .notepad-heading::after { content: ""; position: absolute; bottom: 2px; left: 1px; right: 1px; height: 0px; border-top-width: 1px; border-top-style: dashed; border-color: rgba(255, 255, 255, 0.34902); }
+
+.notepad-heading::after { bottom: 3px; border-color: rgba(0, 0, 0, 0.498039); }
+
+#speech { padding-bottom: 2em; }
+
+#labnol { min-height: 80%; height: auto; clear: both; }
+
+#labnol:focus { outline: none; }
+
+.heading { margin: 1em; padding: 1em; }
+
+.whatisthis { position: absolute; bottom: 10px; width: 94%; }
+
+#status { display: none; float: right; position: absolute; bottom: 0px; right: 5px; }
+
+.top { text-align: center; padding: 10px; opacity: 0.9; background-color: rgb(34, 34, 34); }
+
+a.btn { display: inline; padding: 5px 10px; border-radius: 4px; color: rgb(238, 238, 238); transition: all 200ms ease-out; text-decoration: none; margin: 0px 6px 0px 0px; text-transform: uppercase; font-size: 11px; }
+
+a.btn:hover, a.btn:active { color: rgb(255, 255, 255); background: rgb(41, 128, 185); }
+
+#messages a { display: inline; padding: 4px 10px; border-radius: 4px; color: rgb(238, 238, 238); transition: all 200ms ease-out; text-decoration: none; margin: 0px 5px 0px 0px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 18px; font-family: "Open Sans", sans-serif; text-transform: uppercase; background: rgb(68, 68, 68); }
+
+#messages a:hover, #messages a.active { color: rgb(250, 239, 222); background: rgb(41, 128, 185); }
+
+#notfinal { color: rgb(102, 102, 102); }
+
+#messages { float: left; }
+
+#warning { display: block; color: rgb(51, 51, 51); width: 100%; opacity: 0.9; }
+
+.social { margin: 2em auto 1em; width: 220px; }
+
+.platforms { color: white; text-align: center; }
+
+.platforms a, .platforms a:link { color: white; text-decoration: none; }
+
+@media (max-width: 480px) { 
+  .top { display: none; }
+  .notepad-heading > h1 { margin: 0px; }
+  .notepad { margin: 0px; width: auto; }
+  body { padding: 0px; background: rgb(255, 255, 255); }
+}

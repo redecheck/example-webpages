@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 400; src: local("Lora Italic"), local("Lora-Italic"), url("https://fonts.gstatic.com/s/lora/v9/fCoJt7FyRSVNwXkC_nvEPX-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 400; src: local("Lora Italic"), local("Lora-Italic"), url("https://fonts.gstatic.com/s/lora/v9/sGaC9t9HYN4ok_W_UWzQF3-_kf6ByYO6CLYdB4HQE-Y.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 400; src: local("Lora Italic"), local("Lora-Italic"), url("https://fonts.gstatic.com/s/lora/v9/_MYF_5lLoOGnzKiQsUc_vevvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 700; src: local("Lora Bold Italic"), local("Lora-BoldItalic"), url("https://fonts.gstatic.com/s/lora/v9/66KG1MDzU5Zo36weZ_yx-YX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 700; src: local("Lora Bold Italic"), local("Lora-BoldItalic"), url("https://fonts.gstatic.com/s/lora/v9/1wR3aOJ69QwyZ9B-WDmIqYX0hVgzZQUfRDuZrPvH3D8.woff2") format("woff2"); unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Lora; font-style: italic; font-weight: 700; src: local("Lora Bold Italic"), local("Lora-BoldItalic"), url("_IxjUs2lbQSu0MyFEAfa7ZBw1xU1rKptJj_0jans920.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#draw { position: relative; overflow: hidden; width: 512px; height: 512px; }
+
+#progress { margin-bottom: 0px; }
+
+#progressbar, #bufferbar { cursor: pointer; }
+
+.jumbotron { padding-bottom: 0px !important; padding-top: 10px !important; }
+
+#map { width: 512px; height: 512px; }
+
+.loading { background: url("../images/load.gif") center center no-repeat rgb(204, 204, 204) !important; }
+
+.loading div { display: none; }
+
+.adp { display: none; }
+
+.rss-link { padding-left: 20px; float: right; background: url("rss-icon.png") no-repeat; }
+
+.fb-like { top: -8px; margin-right: 10px; }
+
+#twitter-widget-0 { position: relative; top: -3px; }
+
+.netlog { position: relative; top: -9px; }

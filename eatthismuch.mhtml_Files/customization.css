@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#groove-feedback #groove-button, #groove-feedback #gw-footer { background-color: rgb(66, 139, 202); }
+
+#groove-feedback #groove-button #gw-header, #groove-feedback #gw-footer a { color: rgb(255, 255, 255); }
+
+#groove-feedback #groove-button #gw-header-content { background-image: url("arrow_up.png") !important; }
+
+#groove-feedback.opened #groove-button #gw-header-content { background-image: url("https://eatthismuch.groovehq.com/widgets/55be9b44-0d5f-42f8-8b33-d3c4b4702b36/ticket/arrow_down.png") !important; }

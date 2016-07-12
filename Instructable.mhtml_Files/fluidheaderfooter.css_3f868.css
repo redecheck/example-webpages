@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+#gbl-header .container.content-match, #gbl-footer .container.content-match { width: calc(100% - 40px); }
+
+#gbl-header .container.content-match { min-width: 1000px; }
+
+#footer-robot { float: left; left: auto; }

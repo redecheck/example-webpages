@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@media screen and (max-width: 480px) { 
+  .post { width: 100% !important; height: auto !important; }
+  .post-image { padding: 10px; float: left !important; margin: 0px !important; height: auto !important; width: 100px !important; }
+  .single .post-image { padding: 0px; float: none !important; width: 100% !important; }
+  .single .post-image img { max-width: 100%; }
+  .post-title { padding-left: 10px; font-size: 120% !important; }
+  .single .post-title { padding-left: 0px; font-size: 200% !important; }
+  .loops-wrapper { margin-left: 0px !important; }
+  .post-content { padding: 10px !important; }
+  .single .post-content { padding: 10px 0px !important; }
+  .grid4 .post-meta { margin: 20px 0px 0px; clear: none; text-align: left; position: relative !important; }
+  .single .post-meta { margin: 10px 0px; }
+  .grid4 .post-tag { width: 100%; }
+  .grid4 .post-category { width: 100%; }
+}
+
+@media screen and (max-width: 980px) { 
+  body { padding-top: 100px; }
+  #site-logo { text-align: center; }
+  #main-nav-wrap { left: 0px; top: 15px; right: auto; }
+  .mobile-button { float: left; height: 20px; width: 30px; }
+}

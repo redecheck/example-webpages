@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+body { padding-top: 70px; padding-bottom: 30px; }
+
+.theme-dropdown .dropdown-menu { position: static; display: block; margin-bottom: 20px; }
+
+.theme-showcase > p > .btn { margin: 5px 0px; }
+
+.theme-showcase .navbar .container { width: auto; }
+
+a.anchor { display: block; position: relative; top: -50px; visibility: hidden; }
+
+a.titleanchor { font-size: 0.7em; }
+
+.jumbotron { padding: 10px 0px; }
+
+.share-btn { display: inline-block; color: rgb(255, 255, 255); border: none; padding: 1em; width: 8em; opacity: 0.9; box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px; outline: none; text-align: center; }
+
+.share-btn:hover { color: rgb(238, 238, 238); }
+
+.share-btn:active { position: relative; top: 2px; box-shadow: none; color: rgb(226, 226, 226); outline: none; }
+
+.fa { font-size: 1.8em; }
+
+.share-btn.twitter { background: rgb(85, 172, 238); }
+
+.share-btn.google-plus { background: rgb(221, 75, 57); }
+
+.share-btn.facebook { background: rgb(59, 89, 152); }
+
+.share-btn.stumbleupon { background: rgb(235, 72, 35); }
+
+.share-btn.reddit { background: rgb(255, 87, 0); }
+
+.share-btn.linkedin { background: rgb(72, 117, 180); }
+
+.share-btn.email { background: rgb(68, 68, 68); }

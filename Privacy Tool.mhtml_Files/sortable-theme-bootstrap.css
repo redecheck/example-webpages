@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+table[data-sortable] { border-collapse: collapse; border-spacing: 0px; }
+
+table[data-sortable] th { vertical-align: bottom; font-weight: bold; }
+
+table[data-sortable] th, table[data-sortable] td { text-align: left; padding: 10px; }
+
+table[data-sortable] th:not([data-sortable="false"]) { -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer; }
+
+table[data-sortable] th::after { content: ""; visibility: hidden; display: inline-block; vertical-align: inherit; height: 0px; width: 0px; border: 5px solid transparent; margin-right: 1px; margin-left: 10px; float: right; }
+
+table[data-sortable] th[data-sorted="true"]::after { visibility: visible; }
+
+table[data-sortable] th[data-sorted-direction="descending"]::after { border-top-color: inherit; margin-top: 8px; }
+
+table[data-sortable] th[data-sorted-direction="ascending"]::after { border-bottom-color: inherit; margin-top: 3px; }
+
+table[data-sortable].sortable-theme-bootstrap { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: rgb(51, 51, 51); background: white; }
+
+table[data-sortable].sortable-theme-bootstrap thead th { border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224); }
+
+table[data-sortable].sortable-theme-bootstrap tbody td { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(224, 224, 224); }
+
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"] { color: rgb(58, 135, 173); border-bottom-color: rgb(188, 232, 241); background: rgb(217, 237, 247); }
+
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"][data-sorted-direction="descending"]::after { border-top-color: rgb(58, 135, 173); }
+
+table[data-sortable].sortable-theme-bootstrap th[data-sorted="true"][data-sorted-direction="ascending"]::after { border-bottom-color: rgb(58, 135, 173); }
+
+table[data-sortable].sortable-theme-bootstrap.sortable-theme-bootstrap-striped tbody > tr:nth-child(2n+1) > td { background-color: rgb(249, 249, 249); }

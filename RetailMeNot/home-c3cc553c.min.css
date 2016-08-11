@@ -4,9 +4,9 @@ html { box-sizing: border-box; }
 
 *, ::after, ::before { box-sizing: inherit; }
 
-@font-face { font-family: Adelle; font-style: normal; font-weight: 100; src: url("..../font-face/adelle-lining-figures/adellelf-light-webfont.eot?#iefix") format("embedded-opentype"), url("..../font-face/adelle-lining-figures/adellelf-light-webfont.woff2") format("woff2"), url("..../font-face/adelle-lining-figures/adellelf-light-webfont.woff") format("woff"), url("..../font-face/adelle-lining-figures/adellelf-light-webfont.ttf") format("truetype"), url("..../font-face/adelle-lining-figures/adellelf-light-webfont.svg#Adelle") format("svg"); }
+@font-face { font-family: Adelle; font-style: normal; font-weight: 100; src: url("adellelf-light-webfont.eot?#iefix") format("embedded-opentype"), url("adellelf-light-webfont.woff2") format("woff2"), url("adellelf-light-webfont.woff") format("woff"), url("adellelf-light-webfont.ttf") format("truetype"), url("adellelf-light-webfont.svg#Adelle") format("svg"); }
 
-@font-face { font-family: rmn-iconfont; font-style: normal; font-weight: 400; src: url("..../font-face/rmn-iconfont/rmn-iconfont.eot?#iefix") format("embedded-opentype"), url("..../font-face/rmn-iconfont/rmn-iconfont.woff2") format("woff2"), url("..../font-face/rmn-iconfont/rmn-iconfont.woff") format("woff"), url("..../font-face/rmn-iconfont/rmn-iconfont.ttf") format("truetype"), url("..../font-face/rmn-iconfont/rmn-iconfont.svg#rmn-iconfont") format("svg"); }
+@font-face { font-family: rmn-iconfont; font-style: normal; font-weight: 400; src: url("rmn-iconfont.eot?#iefix") format("embedded-opentype"), url("rmn-iconfont.woff2") format("woff2"), url("rmn-iconfont.woff") format("woff"), url("rmn-iconfont.ttf") format("truetype"), url("rmn-iconfont.svg#rmn-iconfont") format("svg"); }
 
 .icon-thumbsup::before { content: "☝"; }
 

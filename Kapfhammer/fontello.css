@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-@font-face { font-family: fontello; src: url("http://www.cs.allegheny.edu/sites/gkapfham/font/fontello.eot?19642743#iefix") format("embedded-opentype"), url("fontello.woff_1964") format("woff"), url("http://www.cs.allegheny.edu/sites/gkapfham/font/fontello.ttf?19642743") format("truetype"), url("http://www.cs.allegheny.edu/sites/gkapfham/font/fontello.svg?19642743#fontello") format("svg"); font-weight: normal; font-style: normal; }
-
-[class^="icon-"]::before, [class*=" icon-"]::before { font-family: fontello; font-style: normal; font-weight: normal; speak: none; display: inline-block; text-decoration: inherit; width: 1em; margin-right: 0.2em; text-align: center; font-variant: normal; text-transform: none; line-height: 1em; }
-
-.icon-vcard::before { content: ""; }

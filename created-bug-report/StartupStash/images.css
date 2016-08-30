@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-div#breadcrumbs { }
-
-div#login-shadow, div#search div#search-shadow { background: url("pix.png"); }
-
-div#search div#adv-search-container { background: url("../images/pix-adv.png"); }
-
-div#map-trobber { background-image: url("../images/trobber.gif"); }

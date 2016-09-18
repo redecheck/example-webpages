@@ -1,21 +1,80 @@
-@charset "utf-8";
+@charset  "utf-8";
 
-#mask { position: absolute; top: 0px; left: 0px; z-index: 9000; display: none; background-color: rgb(221, 221, 238); }
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    display: none;
+    background-color: #dde;
+}
 
-.window, .window fieldset { color: rgb(0, 89, 161); }
+.window,.window fieldset {
+    color: #0059a1;
+}
 
-.window fieldset input, .window fieldset select, .window fieldset textarea { color: rgb(51, 51, 51); }
+.window fieldset input,.window fieldset select,.window fieldset textarea {
+    color: #333;
+}
 
-#boxes .window { position: fixed; display: none; z-index: 9999; padding: 0px; background-color: rgb(255, 255, 255); }
+#boxes .window {
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    padding: 0;
+    background-color: #fff;
+}
 
-.modalContent { position: relative; padding: 20px; color: rgb(66, 102, 204); }
+.modalContent {
+    position: relative;
+    padding: 20px;
+    color: #4266cc;
+}
 
-.modalContent textarea { width: 100%; height: 150px; margin-bottom: 5px; }
+.modalContent textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5px;
+}
 
-.modalContent p { margin: 0px 0px 5px; }
+.modalContent p {
+    margin: 0 0 5px;
+}
 
-.modalButton { color: rgb(255, 255, 255); position: absolute; bottom: 0px; right: 0px; border-width: 2px 0px 0px 2px; border-top-style: solid; border-top-color: rgb(255, 255, 255); border-left-style: solid; border-left-color: rgb(255, 255, 255); opacity: 1; padding: 0px 10px; line-height: 20px; cursor: pointer; font-weight: bold; border-radius: 10px 0px 0px; -webkit-background-clip: padding-box; background-color: rgb(228, 35, 67); background-clip: padding-box; }
+.modalButton {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 2px 0 0 2px;
+    border-top-style: solid;
+    border-top-color: #fff;
+    border-left-style: solid;
+    border-left-color: #fff;
+    opacity: 1;
+    padding: 0 10px;
+    line-height: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 10px 0 0;
+    -webkit-background-clip: padding-box;
+    background-color: #e42343;
+    background-clip: padding-box;
+}
 
-.headerBlue { padding: 5px; color: rgb(66, 102, 204); font-weight: bold; background-color: rgb(238, 238, 238); }
+.headerBlue {
+    padding: 5px;
+    color: #4266cc;
+    font-weight: 700;
+    background-color: #eee;
+}
 
-.close { float: right; padding: 4px 22px 4px 4px; width: 16px; height: 16px; background-image: url("close-icon.png"); background-position: right center; background-repeat: no-repeat; }
+.close {
+    float: right;
+    padding: 4px 22px 4px 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url(close-icon.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}

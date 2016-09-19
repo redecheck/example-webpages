@@ -5674,7 +5674,7 @@ button.close {
     line-height: 1;
 }
 
-@media all and (transform-3d),(-webkit-transform-3d) {
+/*@media all and (transform-3d),(-webkit-transform-3d) {
     .carousel-inner>.item {
         -webkit-transition: -webkit-transform .6s ease-in-out;
         -moz-transition: -moz-transform .6s ease-in-out;
@@ -5705,7 +5705,7 @@ button.close {
         transform: translate3d(0,0,0);
         left: 0;
     }
-}
+}*/
 
 .carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev {
     display: block;
@@ -7425,4 +7425,4 @@ span.icn24 {
 
 .pro-plans .btn {
     min-width: 120px;
-}
+}*/

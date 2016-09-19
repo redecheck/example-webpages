@@ -1,23 +1,71 @@
-@charset "utf-8";
+@charset  "utf-8";
 
-h1 { color: rgb(75, 75, 77); font-size: 60px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; }
+h1 {
+    color: #4b4b4d;
+    font-size: 60px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
 
-h2 { color: rgb(75, 75, 77); font-size: 40px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; }
+h2 {
+    color: #4b4b4d;
+    font-size: 40px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
 
-p, input { color: rgb(75, 75, 77); font-size: 28px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; }
+p,input {
+    color: #4b4b4d;
+    font-size: 28px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
 
-button, .button { font-size: 32px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; color: white; background-color: rgb(0, 140, 186); }
+button,.button {
+    font-size: 32px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+    color: #fff;
+    background-color: #008cba;
+}
 
-button:hover, .button:hover { background-color: rgb(0, 112, 149); }
+button:hover,.button:hover {
+    background-color: #007095;
+}
 
-#subhead { color: rgb(75, 75, 77); font-size: 25px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; margin-bottom: 50px; }
+#subhead {
+    color: #4b4b4d;
+    font-size: 25px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-.note { color: rgb(75, 75, 77); font-size: 16px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; }
+.note {
+    color: #4b4b4d;
+    font-size: 16px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
 
-.emphasis { color: rgb(75, 75, 77); font-size: 52px; font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; }
+.emphasis {
+    color: #4b4b4d;
+    font-size: 52px;
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
+}
 
-.mc_embed_signup { margin: auto; width: 60%; border: 3px solid rgb(138, 192, 7); padding: 10px; }
+.mc_embed_signup {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #8ac007;
+    padding: 10px;
+}
 
-.mc-field-group, .clear { text-align: center; }
+.mc-field-group,.clear {
+    text-align: center;
+}
 
-body { background-image: url("wet_snow.png"); }
+body {
+    background-image: url(wet_snow.png);
+}

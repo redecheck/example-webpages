@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>ICN-User</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="30 14.9999792 30 0 0 0 0 14.9999792 0 29.9999583 30 29.9999583"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-HEADER-MInimal" transform="translate(-280.000000, -36.000000)">
+            <g id="Video-Header" transform="translate(0.000000, -1.000000)">
+                <g id="ICN-User" transform="translate(280.000000, 37.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M23.4858333,23.4632917 L19.2429167,19.220375 C20.32875,18.1345417 21.0004167,16.6345417 21.0004167,14.9774583 C21.0004167,11.6637083 18.31375,8.97704167 15,8.97704167 C11.68625,8.97704167 8.99958333,11.6637083 8.99958333,14.9774583 C8.99958333,16.6345417 9.67125,18.1345417 10.7570833,19.220375 L6.51416667,23.4632917 C4.3425,21.291625 2.99916667,18.2912083 2.99916667,14.9774583 C2.99916667,8.34954167 8.37208333,2.976625 15,2.976625 C21.6279167,2.976625 27.0008333,8.34954167 27.0008333,14.9774583 C27.0008333,18.2912083 25.6575,21.291625 23.4858333,23.4632917 M0,14.9999583 C0,23.284125 6.71583333,29.9999583 15,29.9999583 C23.2841667,29.9999583 30,23.284125 30,14.9999583 C30,6.71579167 23.2841667,-4.16666667e-05 15,-4.16666667e-05 C6.71583333,-4.16666667e-05 0,6.71579167 0,14.9999583 Z" id="Fill-1" fill="#D3D3D3" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,26 +1,18 @@
-# README #
+# Welcome to the ReDeCheck RLF Repository
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This repository contains a collection of 26 responsive web pages collected from the URL generator http://randomusefulwebsites.com and used as part of the [ReDeCheck](https://github.com/redecheck/redecheck-tool) project. The web pages contain 33 distinct responsive layout failures, including element collisions, element protrusions, viewport protrusions, small-range layouts and wrapping elements.
 
-### What is this repository for? ###
-This is a repository containing a collection of web pages contains one or more of the categories of responsive layout faults, as part of the ReDeCheck project
+### How do I get set up?
+Getting set up with the collection of web pages is simple. Just cloning the repository will leave you with a collection of directories, each corresponding to an individual web page and containing an `index.html` file and a set of resources (CSS files, images etc) used to correctly render the web page offline.
 
-### How do I get set up? ###
+If you would prefer to use the original MHTML archives used during collection, they are also provided in a separate directory named `MHTML Files`.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Contributing to the Repository
+If you wish to contribute a web page containing a responsive layout failure, we encourage you to fork the repository and submit a pull request. If, after review, your submitted web page fits the scope of this repository, it will be merged into the main branch so others can use it.
 
-### Contribution guidelines ###
+### Problems or Praise?
 
-* Writing tests
-* Code review
-* Other guidelines
+If you have any problems with using any of the web pages contained in this repository, then please feel free to create an issue associated with this Git repository using the "Issues" link at the top of this site. The contributors to the
+`redecheck-rlf-examples` repository will do all that they can to resolve your issue and ensure that your issues are resolved. If you find the repository useful, then we also encourage you to "star" and "watch" the project!
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Thank you for your interest in responsive web testing, the ReDeCheck tool and its associated resources!
